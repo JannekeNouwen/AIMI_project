@@ -13,13 +13,16 @@ from nnunetv2.utilities.helpers import empty_cache
 
 
 class Uls23(SegmentationAlgorithm):
-    def __init__(self):
+    def __init__(self, output_dir: str, main_dir: str, tmp_dir: str):
         self.image_metadata = None  # Keep track of the metadata of the input volume
         self.id = None  # Keep track of batched volume file name for export
         self.z_size = 128  # Number of voxels in the z-dimension for each VOI
         self.xy_size = 256  # Number of voxels in the xy-dimensions for each VOI
         self.device = torch.device("cuda")
         self.predictor = None # nnUnet predictor
+        self.output_dir = output_dir
+        self.main_dir = main_dir
+        self.tmp_dir = tmp_dir
 
     def start_pipeline(self):
         """
@@ -28,7 +31,7 @@ class Uls23(SegmentationAlgorithm):
         start_time = time.time()
 
         # We need to create the correct output folder, determined by the interface, ourselves
-        os.makedirs("/output/images/ct-binary-uls/", exist_ok=True)
+        os.makedirs(f"{self.output_dir}images/ct-binary-uls/", exist_ok=True)
 
         self.load_model()
         spacings = self.load_data()
@@ -52,7 +55,7 @@ class Uls23(SegmentationAlgorithm):
         )
         # Initialize the network architecture, loads the checkpoint
         self.predictor.initialize_from_trained_model_folder(
-            "/opt/algorithm/nnunet/nnUNet_results/Dataset901_Filtered_FSUP/nnUNetTrainer_ULS_500_QuarterLR__nnUNetPlansNoRs__3d_fullres_resenc",
+            f"{main_dir}algorithm/nnunet/nnUNet_results/Dataset901_Filtered_FSUP/nnUNetTrainer_ULS_500_QuarterLR__nnUNetPlansNoRs__3d_fullres_resenc",
             use_folds=("all"),
             checkpoint_name="checkpoint_best.pth",
         )
@@ -88,7 +91,7 @@ class Uls23(SegmentationAlgorithm):
 
                 # Unstack the VOI's, perform optional preprocessing and save
                 # them to individual binary files for memory-efficient access
-                np.save(f"/tmp/voi_{i}.npy", np.array([voi])) # Add dummy batch dimension for nnUnet
+                np.save(f"{self.tmp_dir}voi_{i}.npy", np.array([voi])) # Add dummy batch dimension for nnUnet
 
         end_load_time = time.time()
         print(f"Data pre-processing runtime: {end_load_time - start_load_time}s")
@@ -105,7 +108,7 @@ class Uls23(SegmentationAlgorithm):
         predictions = []
         for i, voi_spacing in enumerate(spacings):
             # Load the 3D array from the binary file
-            voi = torch.from_numpy(np.load(f"/tmp/voi_{i}.npy"))
+            voi = torch.from_numpy(np.load(f"{self.tmp_dir}voi_{i}.npy"))
             voi = voi.to(dtype=torch.float32)
 
             print(f'\nPredicting image of shape: {voi.shape}, spacing: {voi_spacing}')
@@ -140,12 +143,24 @@ class Uls23(SegmentationAlgorithm):
         mask = sitk.GetImageFromArray(predictions)
         mask.CopyInformation(self.image_metadata)
 
-        sitk.WriteImage(mask, f"/output/images/ct-binary-uls/{self.id.name}")
-        print("Output dir contents:", os.listdir("/output/images/ct-binary-uls/"))
+        sitk.WriteImage(mask, f"{self.output_dir}images/ct-binary-uls/{self.id.name}")
+        print("Output dir contents:", os.listdir(f"{self.output_dir}images/ct-binary-uls/"))
         print("Output batched image shape:", predictions.shape)
         end_postprocessing_time = time.time()
         print(f"Postprocessing & saving runtime: {end_postprocessing_time - start_postprocessing_time}s")
 
 
 if __name__ == "__main__":
-    Uls23().start_pipeline()
+    output_dir = os.environ.get('OUTPUT_DIR', '/output/')
+    output_dir = output_dir if output_dir.endswith("/") else f"{output_dir}/"
+    print(f"Setting output dir to {output_dir}")
+
+    main_dir = os.environ.get('MAIN_DIR', '/opt/')
+    main_dir = main_dir if main_dir.endswith("/") else f"{main_dir}/"
+    print(f"Setting main dir to {main_dir}")
+
+    tmp_dir = os.environ.get('TMP_DIR', '/tmp/')
+    tmp_dir = tmp_dir if tmp_dir.endswith("/") else f"{tmp_dir}/"
+    print(f"Setting temp dir to {tmp_dir}")
+
+    Uls23(output_dir=output_dir, main_dir=main_dir, tmp_dir=tmp_dir).start_pipeline()
