@@ -17,14 +17,12 @@ class Augmenter:
     def augment_image_and_segmentation(self, image, segmentation):
         logging.info("Starting augmentation")
 
-        # Check if the image and segmentation are valid
         assert image.size > 0, "Image is empty"
         assert segmentation.size > 0, "Segmentation is empty"
         assert (
             image.shape[:2] == segmentation.shape[:2]
         ), f"Image and segmentation shape mismatch: {image.shape[:2]} vs {segmentation.shape[:2]}"
 
-        # Ensure the segmentation mask is 2D
         if segmentation.ndim == 3:
             segmentation = segmentation[..., 0]
 
@@ -34,7 +32,6 @@ class Augmenter:
         augmented_image = augmented["image"]
         augmented_segmentation = augmented["mask"]
 
-        # Ensure augmented image has the same shape as the original image
         if augmented_image.shape[-1] == 1:
             augmented_image = augmented_image[..., 0]
 
@@ -60,22 +57,21 @@ class Augmenter2D(Augmenter):
         original_masks = []
         augmented_masks = []
 
-        # Read and show the first 3 original images and masks
         for i, file_path in enumerate(npz_file_paths[:NUM_IMAGES_TO_SHOW]):
             data, seg = dataset.load_npz(file_path)
             original_image = data[0][0]
             original_images.append(original_image)
-            # Load corresponding ground truth segmentation
-            gt_segmentation_file = os.path.join(
-                GT_SEGMENTATIONS_PATH,
-                os.path.basename(file_path).replace(".npz", ".nii.gz"),
-            )
-            segmentation = (
-                dataset.load_nii(gt_segmentation_file)
-                if os.path.exists(gt_segmentation_file)
-                else np.zeros_like(original_image)
-            )
-            original_masks.append(segmentation)
+            original_mask = seg[0][0]
+            # gt_segmentation_file = os.path.join(
+            #     GT_SEGMENTATIONS_PATH,
+            #     os.path.basename(file_path).replace(".npz", ".nii.gz"),
+            # )
+            # segmentation = (
+            #     dataset.load_nii(gt_segmentation_file)
+            #     if os.path.exists(gt_segmentation_file)
+            #     else np.zeros_like(original_image)
+            # )
+            original_masks.append(original_mask)
 
         dataset.show_or_save_images(
             original_images, "Original Images", "original_images", save_plots
@@ -84,14 +80,12 @@ class Augmenter2D(Augmenter):
             original_masks, "Original Masks", "original_masks", save_plots, is_mask=True
         )
 
-        # Augment and show the first 3 augmented images and masks
         for file_path in npz_file_paths:
             data, seg = dataset.load_npz(file_path)
             original_image = data[0][0]
 
             logging.info(f"Original image shape: {original_image.shape}")
 
-            # Load corresponding ground truth segmentation
             gt_segmentation_file = os.path.join(
                 GT_SEGMENTATIONS_PATH,
                 os.path.basename(file_path).replace(".npz", ".nii.gz"),
@@ -116,7 +110,6 @@ class Augmenter2D(Augmenter):
                 augmented_images.append(augmented_image)
                 augmented_masks.append(augmented_segmentation)
 
-            # Save augmented image and segmentation in the same structure as input
             output_file_path = os.path.join(
                 output_path_img, os.path.relpath(file_path, input_path)
             )
@@ -132,7 +125,6 @@ class Augmenter2D(Augmenter):
             os.makedirs(os.path.dirname(output_segmentation_path), exist_ok=True)
             dataset.save_nii(augmented_segmentation, output_segmentation_path)
 
-            # Copy corresponding .pkl file if it exists
             pkl_file_path = file_path.replace(".npz", ".pkl")
             if os.path.exists(pkl_file_path):
                 metadata = dataset.load_pkl(pkl_file_path)
@@ -153,7 +145,6 @@ class Augmenter2D(Augmenter):
             is_mask=True,
         )
 
-        # Assert checks
         for file_path in npz_file_paths[:NUM_IMAGES_TO_SHOW]:
             data, seg = dataset.load_npz(file_path)
             original_image = data[0][0]

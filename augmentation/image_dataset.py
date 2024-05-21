@@ -5,7 +5,6 @@ import pickle
 import matplotlib.pyplot as plt
 import nibabel as nib
 import numpy as np
-
 from constants import *
 
 logging.basicConfig(
@@ -27,6 +26,7 @@ class ImageDataset:
         logging.info(f"Loading PKL file: {filename}")
         with open(filename, "rb") as file:
             metadata = pickle.load(file)
+        print(metadata)
         return metadata
 
     def save_pkl(self, metadata, filename):
@@ -50,11 +50,11 @@ class ImageDataset:
         logging.info(f"Showing or saving images: {title}")
         plt.figure(figsize=(10, 10))
         for i, img in enumerate(images[:NUM_IMAGES_TO_SHOW]):
-            # Ensure the image data passed to imshow is 2D or 3D with the last dimension being 3 for RGB
-            if img.ndim == 3 and img.shape[-1] not in [1, 3]:
-                img = img[..., img.shape[-1] // 2]  # Taking a middle slice for 3D data
-            if img.ndim == 4 and img.shape[-1] == 1:
-                img = img[..., 0, 0]  # Reduce to 2D by taking a slice
+
+            # if img.ndim == 3 and img.shape[-1] not in [1, 3]:
+            #     img = img[..., img.shape[-1] // 2]
+            # if img.ndim == 4 and img.shape[-1] == 1:
+            #     img = img[..., 0, 0]
 
             plt.subplot(1, NUM_IMAGES_TO_SHOW, i + 1)
             plt.imshow(img, cmap="gray" if is_mask else None)
