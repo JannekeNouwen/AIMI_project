@@ -19,8 +19,7 @@ os.makedirs(OUTPUT_PATH_3D, exist_ok=True)
 os.makedirs(OUTPUT_PATH_SEG, exist_ok=True)
 os.makedirs(SCRIPT_PLOTS_PATH, exist_ok=True)
 AUGMENTATION_CONFIG = [
-    A.HorizontalFlip(p=0.5),
-    A.RandomBrightnessContrast(p=0.2),
-    A.ShiftScaleRotate(shift_limit=0.0625, scale_limit=0.2, rotate_limit=45, p=0.2),
-    A.Normalize(mean=(0.5,), std=(0.5,)),
+    A.ElasticTransform(),
+    A.CoarseDropout(),
+    A.Sharpen(),
 ]
