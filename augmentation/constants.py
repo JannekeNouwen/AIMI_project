@@ -12,6 +12,7 @@ OUTPUT_PATH_3D = os.path.join(OUTPUT_PATH_BASE, "nnUNetPlans_3d_fullres")
 OUTPUT_PATH_SEG = os.path.join(OUTPUT_PATH_BASE, "gt_segmentations")
 SCRIPT_PLOTS_PATH = "script_plots"
 NUM_IMAGES_TO_SHOW = 3
+SLICES_TO_SHOW = 5
 SAVE_PLOTS = True
 os.makedirs(OUTPUT_PATH_2D, exist_ok=True)
 os.makedirs(OUTPUT_PATH_3D, exist_ok=True)

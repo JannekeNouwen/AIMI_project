@@ -2,7 +2,6 @@ import logging
 import os
 import pickle
 
-import matplotlib.pyplot as plt
 import nibabel as nib
 import numpy as np
 from constants import *
@@ -26,7 +25,6 @@ class ImageDataset:
         logging.info(f"Loading PKL file: {filename}")
         with open(filename, "rb") as file:
             metadata = pickle.load(file)
-        print(metadata)
         return metadata
 
     def save_pkl(self, metadata, filename):
@@ -43,34 +41,6 @@ class ImageDataset:
         logging.info(f"Saving NII file: {filename}")
         img = nib.Nifti1Image(data, np.eye(4))
         nib.save(img, filename)
-
-    def show_or_save_images(
-        self, images, title, file_prefix, save_plots, is_mask=False
-    ):
-        logging.info(f"Showing or saving images: {title}")
-        plt.figure(figsize=(10, 10))
-        for i, img in enumerate(images[:NUM_IMAGES_TO_SHOW]):
-
-            # if img.ndim == 3 and img.shape[-1] not in [1, 3]:
-            #     img = img[..., img.shape[-1] // 2]
-            # if img.ndim == 4 and img.shape[-1] == 1:
-            #     img = img[..., 0, 0]
-
-            plt.subplot(1, NUM_IMAGES_TO_SHOW, i + 1)
-            plt.imshow(img, cmap="gray" if is_mask else None)
-            plt.axis("off")
-        plt.suptitle(title)
-
-        if save_plots:
-            plt.savefig(
-                os.path.join(
-                    SCRIPT_PLOTS_PATH,
-                    f"{file_prefix}_{title.replace(' ', '_').lower()}.png",
-                )
-            )
-        else:
-            plt.show()
-        plt.close()
 
     def get_file_paths(self, extension):
         file_paths = []
