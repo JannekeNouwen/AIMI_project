@@ -50,5 +50,6 @@ class ImageDataset:
                 if fname.endswith(extension):
                     file_paths.append(os.path.join(root, fname))
         random.shuffle(file_paths)
-        file_paths = file_paths[:NUM_IMAGES_TO_PROCESS]
+        if NUM_IMAGES_TO_PROCESS != -1:
+          file_paths = file_paths[:NUM_IMAGES_TO_PROCESS]
         return file_paths
