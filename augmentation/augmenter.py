@@ -11,13 +11,18 @@ logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
+CACHE_FILE_NAME_PATH = "cache_filenames.npy"
+
+
 def get_tranformations_from_replay(replay):
     transformations = []
-    for replay_item in replay['transforms']:
-        if replay_item['applied'] == False:
+    for replay_item in replay["transforms"]:
+        if not replay_item["applied"]:
             continue
         transformations.append(replay_item["__class_fullname__"])
     return transformations
+
+
 class Augmenter:
     def __init__(self, augmentation_config):
         self.transform = A.ReplayCompose(augmentation_config)
@@ -38,19 +43,17 @@ class Augmenter:
         for i in range(image.shape[0]):
             transformation_done = False
             while not transformation_done:
-              augmented = self.transform(image=image[i], mask=segmentation[i])
-              augmented_image = augmented["image"]
-              augmented_segmentation = augmented["mask"]
-              replay = augmented["replay"]
+                augmented = self.transform(image=image[i], mask=segmentation[i])
+                augmented_image = augmented["image"]
+                augmented_segmentation = augmented["mask"]
+                replay = augmented["replay"]
 
-              image[i] = augmented_image
-              segmentation[i] = augmented_segmentation
-              transformations_applied_item = get_tranformations_from_replay(replay)
-              if transformations_applied_item.__len__() > 0:
-                transformations_applied.append(transformations_applied_item)
-                transformation_done = True
-
-
+                image[i] = augmented_image
+                segmentation[i] = augmented_segmentation
+                transformations_applied_item = get_tranformations_from_replay(replay)
+                if len(transformations_applied_item) > 0:
+                    transformations_applied.append(transformations_applied_item)
+                    transformation_done = True
 
         assert image.ndim == 3, "Image must be 3D after augmentation"
         assert segmentation.ndim == 3, "Segmentation must be 3D after augmentation"
@@ -85,8 +88,19 @@ class Augmenter2D(Augmenter):
         augmented_masks = []
         transformations = []
 
+        # Load cached filenames
+        if os.path.exists(CACHE_FILE_NAME_PATH):
+            with open(CACHE_FILE_NAME_PATH, "rb") as f:
+                cached_filenames = set(np.load(f))
+        else:
+            cached_filenames = set()
+
         logging.info(f"Processing {len(npz_file_paths)} files")
         for i, file_path in enumerate(npz_file_paths):
+            if file_path in cached_filenames:
+                logging.info(f"Skipping cached file: {file_path}")
+                continue
+
             data, seg = dataset.load_npz(file_path)
             original_image = data[0]
             original_images.append(original_image)
@@ -133,13 +147,19 @@ class Augmenter2D(Augmenter):
             pkl_file_path = file_path.replace(".npz", ".pkl")
             if os.path.exists(pkl_file_path):
                 metadata = dataset.load_pkl(pkl_file_path)
-                metadata['transformations_applied'] = transformations_applied
+                metadata["transformations_applied"] = transformations_applied
                 output_pkl_path = os.path.join(
                     output_path_img, os.path.relpath(pkl_file_path, input_path)
                 )
                 os.makedirs(os.path.dirname(output_pkl_path), exist_ok=True)
                 dataset.save_pkl(metadata, output_pkl_path)
 
+            # Update cache
+            cached_filenames.add(file_path)
+
+        # Save updated cache
+        with open(CACHE_FILE_NAME_PATH, "wb") as f:
+            np.save(f, list(cached_filenames))
 
         make_image_mask_seg_plot(
             original_images,
