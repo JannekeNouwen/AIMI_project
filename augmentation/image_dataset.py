@@ -1,6 +1,7 @@
 import logging
 import os
 import pickle
+import random
 
 import nibabel as nib
 import numpy as np
@@ -48,4 +49,6 @@ class ImageDataset:
             for fname in files:
                 if fname.endswith(extension):
                     file_paths.append(os.path.join(root, fname))
+        random.shuffle(file_paths)
+        file_paths = file_paths[:NUM_IMAGES_TO_PROCESS]
         return file_paths

@@ -11,60 +11,61 @@ logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
-
+def get_tranformations_from_replay(replay):
+    transformations = []
+    for replay_item in replay['transforms']:
+        if replay_item['applied'] == False:
+            continue
+        transformations.append(replay_item["__class_fullname__"])
+    return transformations
 class Augmenter:
     def __init__(self, augmentation_config):
-        self.transform = A.Compose(augmentation_config)
+        self.transform = A.ReplayCompose(augmentation_config)
 
-    def augment_image_and_segmentation(self, image, segmentation, segmentation_gt):
+    def augment_image_and_segmentation(self, image, segmentation):
         logging.info("Starting augmentation")
 
         assert image.ndim == 3, "Image must be 3D"
         assert segmentation.ndim == 3, "Segmentation must be 3D"
-        assert segmentation_gt.ndim == 3, "Segmentation GT must be 3D"
         assert image.size > 0, "Image is empty"
         assert segmentation.size > 0, "Segmentation is empty"
-        assert segmentation_gt.size > 0, "Segmentation GT is empty"
-        assert (
-            image.shape == segmentation.shape == segmentation_gt.shape
-        ), f"Image, segmentation, segmentation_gt shape mismatch: {image.shape[:2]} vs {segmentation.shape[:2]} vs {segmentation_gt.shape[:2]}"
 
         logging.info(f"Image shape before conversion: {image.shape}")
         logging.info(f"Segmentation shape before conversion: {segmentation.shape}")
-        logging.info(f"Segmentation shape before conversion: {segmentation_gt.shape}")
+
+        transformations_applied = []
 
         for i in range(image.shape[0]):
-            augmented = self.transform(
-                image=image[i], mask=segmentation[i], segmentation_gt=segmentation_gt[i]
-            )
-            augmented_image = augmented["image"]
-            augmented_segmentation = augmented["mask"]
-            augmented_segmentation_gt = augmented["segmentation_gt"]
+            transformation_done = False
+            while not transformation_done:
+              augmented = self.transform(image=image[i], mask=segmentation[i])
+              augmented_image = augmented["image"]
+              augmented_segmentation = augmented["mask"]
+              replay = augmented["replay"]
 
-            image[i] = augmented_image
-            segmentation[i] = augmented_segmentation
-            segmentation_gt[i] = augmented_segmentation_gt
+              image[i] = augmented_image
+              segmentation[i] = augmented_segmentation
+              transformations_applied_item = get_tranformations_from_replay(replay)
+              if transformations_applied_item.__len__() > 0:
+                transformations_applied.append(transformations_applied_item)
+                transformation_done = True
+
+
 
         assert image.ndim == 3, "Image must be 3D after augmentation"
         assert segmentation.ndim == 3, "Segmentation must be 3D after augmentation"
-        assert (
-            segmentation_gt.ndim == 3
-        ), "Segmentation GT must be 3D after augmentation"
+
         assert image.size > 0, "Image is empty after augmentation"
         assert segmentation.size > 0, "Segmentation is empty after augmentation"
-        assert segmentation_gt.size > 0, "Segmentation GT is empty after augmentation"
         assert (
-            image.shape == segmentation.shape == segmentation_gt.shape
-        ), f"Image, segmentation, segmentation_gt shape mismatch: {image.shape} vs {segmentation.shape} vs {segmentation_gt.shape}, after augmentation"
+            image.shape == segmentation.shape
+        ), f"Image, segmentation shape mismatch: {image.shape} vs {segmentation.shape}, after augmentation"
 
         logging.info(f"Image shape after conversion: {image.shape}")
         logging.info(f"Segmentation shape after conversion: {segmentation.shape}")
-        logging.info(f"Segmentation shape after conversion: {segmentation_gt.shape}")
 
-        logging.info(
-            f"Augmentation complete: {image.shape}, {segmentation.shape}, {segmentation_gt.shape}"
-        )
-        return image, segmentation, segmentation_gt
+        logging.info(f"Augmentation complete: {image.shape}, {segmentation.shape}")
+        return image, segmentation, transformations_applied
 
     def process_and_augment_images(
         self, dataset, input_path, output_path_img, output_path_seg, save_plots
@@ -82,11 +83,10 @@ class Augmenter2D(Augmenter):
         augmented_images = []
         original_masks = []
         augmented_masks = []
-        original_gt_segmentations = []
-        augmented_gt_segmentations = []
+        transformations = []
+
         logging.info(f"Processing {len(npz_file_paths)} files")
         for i, file_path in enumerate(npz_file_paths):
-            # data and seg are lists of 2D images, shape 1, 128, 256, 256
             data, seg = dataset.load_npz(file_path)
             original_image = data[0]
             original_images.append(original_image)
@@ -96,28 +96,18 @@ class Augmenter2D(Augmenter):
                 GT_SEGMENTATIONS_PATH,
                 os.path.basename(file_path).replace(".npz", ".nii.gz"),
             )
-            # segmentation_gt is exactly opposite
             segmentation_gt = dataset.load_nii(gt_segmentation_file)
 
-            original_gt_segmentation = segmentation_gt[:, :, :, 0]
-            logging.info(f"Segmentation GT shape: {original_gt_segmentation.shape}")
-            original_gt_segmentation = np.moveaxis(original_gt_segmentation, -1, 0)
-            logging.info(
-                f"Segmentation GT shape after moveaxis: {original_gt_segmentation.shape}"
-            )
-            original_gt_segmentations.append(original_gt_segmentation)
-
-            augmented_image, augmented_mask, augmented_gt_segmentation = (
+            augmented_image, augmented_mask, transformations_applied = (
                 self.augment_image_and_segmentation(
                     deepcopy(original_image),
                     deepcopy(original_mask),
-                    deepcopy(original_gt_segmentation),
                 )
             )
 
             augmented_images.append(augmented_image)
             augmented_masks.append(augmented_mask)
-            augmented_gt_segmentations.append(augmented_gt_segmentation)
+            transformations.append(transformations_applied)
 
             final_image = {
                 "data": np.expand_dims(augmented_image, axis=0),
@@ -135,46 +125,29 @@ class Augmenter2D(Augmenter):
                 output_path_seg,
                 os.path.relpath(gt_segmentation_file, GT_SEGMENTATIONS_PATH),
             )
-            os.makedirs(os.path.dirname(output_segmentation_gt_path), exist_ok=True)
-            logging.info(
-                f"Flipping segmentation GT shape: {augmented_gt_segmentation.shape}"
-            )
-            augmented_gt_segmentation = np.moveaxis(augmented_gt_segmentation, 0, -1)
-            logging.info(
-                f"Flipped segmentation GT shape: {augmented_gt_segmentation.shape}"
-            )
             dataset.save_nii(
-                np.expand_dims(augmented_gt_segmentation, -1),
+                segmentation_gt,
                 output_segmentation_gt_path,
             )
 
             pkl_file_path = file_path.replace(".npz", ".pkl")
             if os.path.exists(pkl_file_path):
                 metadata = dataset.load_pkl(pkl_file_path)
+                metadata['transformations_applied'] = transformations_applied
                 output_pkl_path = os.path.join(
                     output_path_img, os.path.relpath(pkl_file_path, input_path)
                 )
                 os.makedirs(os.path.dirname(output_pkl_path), exist_ok=True)
                 dataset.save_pkl(metadata, output_pkl_path)
-        slice_number_to_show = np.linspace(
-            0, original_images[0].shape[0] - 1, SLICES_TO_SHOW, dtype=int
-        )
+
+
         make_image_mask_seg_plot(
             original_images,
             original_masks,
-            original_gt_segmentations,
-            "Original Images",
-            "original_images",
-            save_plots,
-            slice_number_to_show,
-        )
-
-        make_image_mask_seg_plot(
             augmented_images,
             augmented_masks,
-            augmented_gt_segmentations,
-            "Augmented Images",
-            "augmented_images",
+            transformations,
+            "Original and Augmented Images and Masks",
+            "augmentations_2d",
             save_plots,
-            slice_number_to_show,
         )
