@@ -13,13 +13,14 @@ from nnunetv2.utilities.helpers import empty_cache
 
 
 class Uls23(SegmentationAlgorithm):
-    def __init__(self, output_dir: str, main_dir: str, tmp_dir: str):
+    def __init__(self, input_dir: str, output_dir: str, main_dir: str, tmp_dir: str):
         self.image_metadata = None  # Keep track of the metadata of the input volume
         self.id = None  # Keep track of batched volume file name for export
         self.z_size = 128  # Number of voxels in the z-dimension for each VOI
         self.xy_size = 256  # Number of voxels in the xy-dimensions for each VOI
         self.device = torch.device("cuda")
         self.predictor = None # nnUnet predictor
+        self.input_dir = input_dir
         self.output_dir = output_dir
         self.main_dir = main_dir
         self.tmp_dir = tmp_dir
@@ -71,17 +72,17 @@ class Uls23(SegmentationAlgorithm):
         """
         start_load_time = time.time()
         # Input directory is determined by the algorithm interface on GC
-        input_dir = Path("/input/images/stacked-3d-ct-lesion-volumes/")
+        _input_dir = Path(f"{self.input_dir}images/stacked-3d-ct-lesion-volumes/")
 
         # Load the spacings per VOI
-        with open(Path("/input/stacked-3d-volumetric-spacings.json"), 'r') as json_file:
+        with open(Path(f"{self.input_dir}stacked-3d-volumetric-spacings.json"), 'r') as json_file:
             spacings = json.load(json_file)
 
-        for input_file in input_dir.glob("*.mha"):
+        for input_file in _input_dir.glob("*.mha"):
             self.id = input_file
 
             # Load and keep track of the image metadata
-            self.image_metadata = sitk.ReadImage(input_dir / input_file)
+            self.image_metadata = sitk.ReadImage(_input_dir / input_file)
 
             # Now get the image data
             image_data = sitk.GetArrayFromImage(self.image_metadata)
@@ -151,6 +152,10 @@ class Uls23(SegmentationAlgorithm):
 
 
 if __name__ == "__main__":
+    input_dir = os.environ.get('INPUT_DIR', '/input/')
+    input_dir = input_dir if input_dir.endswith("/") else f"{input_dir}/"
+    print(f"Setting input dir to {input_dir}")
+
     output_dir = os.environ.get('OUTPUT_DIR', '/output/')
     output_dir = output_dir if output_dir.endswith("/") else f"{output_dir}/"
     print(f"Setting output dir to {output_dir}")
@@ -163,4 +168,4 @@ if __name__ == "__main__":
     tmp_dir = tmp_dir if tmp_dir.endswith("/") else f"{tmp_dir}/"
     print(f"Setting temp dir to {tmp_dir}")
 
-    Uls23(output_dir=output_dir, main_dir=main_dir, tmp_dir=tmp_dir).start_pipeline()
+    Uls23(input_dir=input_dir, output_dir=output_dir, main_dir=main_dir, tmp_dir=tmp_dir).start_pipeline()

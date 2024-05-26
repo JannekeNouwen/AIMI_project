@@ -11,12 +11,16 @@ from pathlib import Path
 from misc import load_predictions_json, long_and_short_axis_diameters, dice_coefficient, create_scores_dict, align_images, sape
 
 class ULS23_evaluator():
-    def __init__(self, output_dir: str):
+    def __init__(self, input_dir: str, output_dir: str, main_dir: str, tmp_dir: str):
         os.makedirs(output_dir, exist_ok=True)
 
+        self.input_dir = input_dir
         self.output_dir = output_dir
-        self._ground_truth_path = Path("/opt/app/ground-truth/")
-        self._predictions_path = Path("/input/")
+        self.main_dir = main_dir
+        self.tmp_dir = tmp_dir
+
+        self._ground_truth_path = Path(f"{main_dir}app/ground-truth/")
+        self._predictions_path = Path(self.input_dir)
         self._output_file = Path(f"{output_dir}metrics.json")
 
         self.stack_size = 100
@@ -122,8 +126,20 @@ class ULS23_evaluator():
             json.dump(scores, f)
 
 if __name__ == "__main__":
+    input_dir = os.environ.get('INPUT_DIR', '/input/')
+    input_dir = input_dir if input_dir.endswith("/") else f"{input_dir}/"
+    print(f"Setting input dir to {input_dir}")
+
     output_dir = os.environ.get('OUTPUT_DIR', '/output/')
     output_dir = output_dir if output_dir.endswith("/") else f"{output_dir}/"
     print(f"Setting output dir to {output_dir}")
 
-    ULS23_evaluator(output_dir=output_dir).run()
+    main_dir = os.environ.get('MAIN_DIR', '/opt/')
+    main_dir = main_dir if main_dir.endswith("/") else f"{main_dir}/"
+    print(f"Setting main dir to {main_dir}")
+
+    tmp_dir = os.environ.get('TMP_DIR', '/tmp/')
+    tmp_dir = tmp_dir if tmp_dir.endswith("/") else f"{tmp_dir}/"
+    print(f"Setting temp dir to {tmp_dir}")
+
+    ULS23_evaluator(input_dir=input_dir, output_dir=output_dir, main_dir=main_dir, tmp_dir=tmp_dir).run()

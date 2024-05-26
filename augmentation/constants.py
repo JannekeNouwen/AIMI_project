@@ -2,10 +2,10 @@ import os
 
 import albumentations as A
 
-INPUT_PATH_BASE = "nnUnet_preprocessed/Dataset501_RadboudumcBone"
+INPUT_PATH_BASE = "/home/ljulius/algorithm/nnunet/nnUNet_preprocessed/Dataset501_RadboudumcBone"
 INPUT_PATH_2D = os.path.join(INPUT_PATH_BASE, "nnUNetPlans_2d")
 INPUT_PATH_3D = os.path.join(INPUT_PATH_BASE, "nnUNetPlans_3d_fullres")
-OUTPUT_PATH_BASE = "nnUnet_preprocessed_augment/Dataset501_RadboudumcBone"
+OUTPUT_PATH_BASE = "/home/ljulius/algorithm/nnunet/nnUNet_preprocessed_augment/Dataset501_RadboudumcBone"
 GT_SEGMENTATIONS_PATH = os.path.join(INPUT_PATH_BASE, "gt_segmentations")
 OUTPUT_PATH_2D = os.path.join(OUTPUT_PATH_BASE, "nnUNetPlans_2d")
 OUTPUT_PATH_3D = os.path.join(OUTPUT_PATH_BASE, "nnUNetPlans_3d_fullres")

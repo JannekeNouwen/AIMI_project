@@ -191,8 +191,13 @@ def create_semi_supervised_lesion_data(
 
 
 def main():
-    archives_folder = "..."
-    output_path = "..."
+    archives_folder = os.environ.get('ARCHIVES_FOLDER')
+    archives_folder = archives_folder if archives_folder.endswith("/") else f"{archives_folder}/"
+    print(f"Setting archives_folder to {archives_folder}")
+    
+    output_path = os.environ.get('OUTPUT_PATH')
+    output_path = output_path if output_path.endswith("/") else f"{output_path}/"
+    print(f"Setting output_path to {output_path}")
     os.makedirs(output_path, exist_ok=True)
 
     ####################################################################################################################
@@ -202,18 +207,18 @@ def main():
     ####################################################################################################################
     # [Archive name, lesion mask], -1 for instance segmented datasets like NIH_LN
     fully_supervised_archives = [
-        ["NIH_LN/MED", -1],
-        ["NIH_LN/ABD", -1],
-        ["DeepLesion3D", 1],
+        # ["NIH_LN/MED", -1],
+        # ["NIH_LN/ABD", -1],
+        # ["DeepLesion3D", 1],
         ["diag_boneCT", 1],
-        ["LiTS", 2],
-        ["diag_pancreasCT", 1],
-        ["kits21-master", 2],
-        ["LIDC-IDRI", 1],
-        ["LNDb", 1],
-        ["MDSC/Task06_Lung", 1],
-        ["MDSC/Task07_Pancreas", 2],
-        ["MDSC/Task10_Colon", 1],
+        # ["LiTS", 2],
+        # ["diag_pancreasCT", 1],
+        # ["kits21-master", 2],
+        # ["LIDC-IDRI", 1],
+        # ["LNDb", 1],
+        # ["MDSC/Task06_Lung", 1],
+        # ["MDSC/Task07_Pancreas", 2],
+        # ["MDSC/Task10_Colon", 1],
     ]
     create_supervised_lesion_data(archives_folder, output_path, fully_supervised_archives)
 
@@ -225,13 +230,13 @@ def main():
     # rerunning the data generation for it.
     ####################################################################################################################
     # [Archive name, metadata_location]
-    partially_supervised_archives = [
-        ["CCC18_preprocessed", archives_folder + "/CCC18/combined_anno_ccc18_with_z.csv"],
-        ["DeepLesion_preprocessed", archives_folder + "/DeepLesion/DL_info.csv"],
-    ]
-    create_semi_supervised_lesion_data(
-        archives_folder, output_path, partially_supervised_archives, False
-    )
+    # partially_supervised_archives = [
+    #     ["CCC18_preprocessed", archives_folder + "/CCC18/combined_anno_ccc18_with_z.csv"],
+    #     ["DeepLesion_preprocessed", archives_folder + "/DeepLesion/DL_info.csv"],
+    # ]
+    # create_semi_supervised_lesion_data(
+    #     archives_folder, output_path, partially_supervised_archives, False
+    # )
 
 
 if __name__ == "__main__":
