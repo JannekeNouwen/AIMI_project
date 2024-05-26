@@ -21,6 +21,7 @@ parts/
 sdist/
 var/
 wheels/
+nnUnet_raw/
 nnUnet_preprocessed/
 nnUnet_preprocessed_augment/
 share/python-wheels/
