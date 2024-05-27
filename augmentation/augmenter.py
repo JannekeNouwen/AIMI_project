@@ -78,9 +78,9 @@ class Augmenter:
 
 class Augmenter2D(Augmenter):
     def process_and_augment_images(
-        self, dataset, input_path, output_path_img, output_path_seg, save_plots
+        self, dataset, input_path, output_path_img, output_path_seg, save_plots, dimension = "2D"
     ):
-        logging.info("Processing 2D images")
+        logging.info(f"Processing {dimension} images")
         npz_file_paths = dataset.get_file_paths(".npz")
         original_images = []
         augmented_images = []
@@ -168,6 +168,6 @@ class Augmenter2D(Augmenter):
             augmented_masks,
             transformations,
             "Original and Augmented Images and Masks",
-            "augmentations_2d",
+            f"augmentations_{dimension}",
             save_plots,
         )
