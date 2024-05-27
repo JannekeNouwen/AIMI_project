@@ -130,7 +130,7 @@ class Augmenter2D(Augmenter):
             )
             os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
             np.savez(
-                output_file_path, data=np.expand_dims(final_image, axis=0), seg=seg
+                output_file_path, data=np.expand_dims(final_image, axis=0), seg=seg, allow_pickle = True
             )
 
             output_segmentation_gt_path = os.path.join(
