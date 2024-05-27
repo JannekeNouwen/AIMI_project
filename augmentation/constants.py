@@ -23,6 +23,6 @@ os.makedirs(SCRIPT_PLOTS_PATH, exist_ok=True)
 AUGMENTATION_CONFIG = [
     A.ElasticTransform(),
     A.CoarseDropout(),
-   # A.OpticalDistortion(),
+    A.OpticalDistortion(),
     A.Sharpen(),
 ]

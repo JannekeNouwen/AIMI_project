@@ -11,17 +11,13 @@ logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
-CACHE_FILE_NAME_PATH = "cache_filenames.npy"
-
-
-def get_tranformations_from_replay(replay):
+def get_transformations_from_replay(replay):
     transformations = []
     for replay_item in replay["transforms"]:
         if not replay_item["applied"]:
             continue
         transformations.append(replay_item["__class_fullname__"])
     return transformations
-
 
 class Augmenter:
     def __init__(self, augmentation_config):
@@ -50,7 +46,7 @@ class Augmenter:
 
                 image[i] = augmented_image
                 segmentation[i] = augmented_segmentation
-                transformations_applied_item = get_tranformations_from_replay(replay)
+                transformations_applied_item = get_transformations_from_replay(replay)
                 if len(transformations_applied_item) > 0:
                     transformations_applied.append(transformations_applied_item)
                     transformation_done = True
@@ -96,6 +92,8 @@ class Augmenter2D(Augmenter):
             cached_filenames = set()
 
         logging.info(f"Processing {len(npz_file_paths)} files")
+        processed_count = 0
+
         for i, file_path in enumerate(npz_file_paths):
             if file_path in cached_filenames:
                 logging.info(f"Skipping cached file: {file_path}")
@@ -156,8 +154,14 @@ class Augmenter2D(Augmenter):
 
             # Update cache
             cached_filenames.add(file_path)
+            processed_count += 1
 
-        # Save updated cache
+            # Save cache every 10 images
+            if processed_count % 10 == 0:
+                with open(CACHE_FILE_NAME_PATH, "wb") as f:
+                    np.save(f, list(cached_filenames))
+
+        # Save final cache
         with open(CACHE_FILE_NAME_PATH, "wb") as f:
             np.save(f, list(cached_filenames))
 
