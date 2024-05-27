@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     logging.info("Starting 3D image processing")
 
-    augment_and_copy_images(INPUT_PATH_3D, OUTPUT_PATH_3D, OUTPUT_PATH_SEG)
+    copy_over_input_images(INPUT_PATH_3D, OUTPUT_PATH_3D)
 
     copy_over_jsons(
         json_files=["dataset.json", "dataset_fingerprint.json", "nnUNetPlans.json"]
