@@ -2,7 +2,6 @@ import logging
 import os
 import shutil
 
-import numpy as np
 from augmenter import Augmenter2D
 from constants import (
     AUGMENTATION_CONFIG,
@@ -12,9 +11,6 @@ from constants import (
     SAVE_PLOTS,
 )
 from image_dataset import ImageDataset
-
-
-
 
 
 def compare_directory_structure(dir1, dir2):
