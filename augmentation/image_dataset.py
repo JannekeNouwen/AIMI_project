@@ -53,3 +53,4 @@ class ImageDataset:
         if NUM_IMAGES_TO_PROCESS != -1:
           file_paths = file_paths[:NUM_IMAGES_TO_PROCESS]
         return file_paths
+

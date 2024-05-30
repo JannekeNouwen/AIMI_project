@@ -11,6 +11,8 @@ logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
+CACHE_FILE_NAME_PATH = "cache_filenames.npy"
+
 def get_transformations_from_replay(replay):
     transformations = []
     for replay_item in replay["transforms"]:
@@ -74,7 +76,7 @@ class Augmenter:
 
 class Augmenter2D(Augmenter):
     def process_and_augment_images(
-        self, dataset, input_path, output_path_img, output_path_seg, save_plots, dimension = "2D"
+        self, dataset, input_path, output_path_img, output_path_seg, save_plots, dimension="2D"
     ):
         logging.info(f"Processing {dimension} images")
         npz_file_paths = dataset.get_file_paths(".npz")
@@ -125,13 +127,26 @@ class Augmenter2D(Augmenter):
                 "data": np.expand_dims(augmented_image, axis=0),
                 "seg": np.expand_dims(augmented_mask, axis=0),
             }
+
+            # Assert that data types match
+            assert original_image.dtype == final_image["data"].dtype, (
+                f"Data type mismatch: original image {original_image.dtype} vs augmented {final_image['data'].dtype}"
+            )
+            assert original_mask.dtype == final_image["seg"].dtype, (
+                f"Data type mismatch: original mask {original_mask.dtype} vs augmented {final_image['seg'].dtype}"
+            )
+
             output_file_path = os.path.join(
                 output_path_img, os.path.relpath(file_path, input_path)
             )
             os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
             np.savez(
-                output_file_path, data=np.expand_dims(final_image, axis=0), seg=seg, allow_pickle = True
+                output_file_path, data=np.expand_dims(final_image, axis=0), seg=seg, allow_pickle=True
             )
+
+            convert_to_npy(output_file_path, overwrite_existing=True)
+
+            load_case(output_file_path)
 
             output_segmentation_gt_path = os.path.join(
                 output_path_seg,
@@ -151,6 +166,7 @@ class Augmenter2D(Augmenter):
                 )
                 os.makedirs(os.path.dirname(output_pkl_path), exist_ok=True)
                 dataset.save_pkl(metadata, output_pkl_path)
+
 
             # Update cache
             cached_filenames.add(file_path)
@@ -175,3 +191,35 @@ class Augmenter2D(Augmenter):
             f"augmentations_{dimension}",
             save_plots,
         )
+
+
+def isfile(f):
+    return os.path.isfile(f)
+
+
+def convert_to_npy(
+    npz_file: str, unpack_segmentation: bool = True, overwrite_existing: bool = False
+) -> None:
+    try:
+        a = np.load(
+            npz_file, allow_pickle=True
+        )  # inexpensive, no compression is done here. This just reads metadata
+        if overwrite_existing or not isfile(npz_file[:-3] + "npy"):
+            np.save(npz_file[:-3] + "npy", a["data"])
+        if unpack_segmentation and (
+            overwrite_existing or not isfile(npz_file[:-4] + "_seg.npy")
+        ):
+            np.save(npz_file[:-4] + "_seg.npy", a["seg"])
+    except KeyboardInterrupt:
+        if isfile(npz_file[:-3] + "npy"):
+            os.remove(npz_file[:-3] + "npy")
+        if isfile(npz_file[:-4] + "_seg.npy"):
+            os.remove(npz_file[:-4] + "_seg.npy")
+        raise KeyboardInterrupt
+
+
+def load_case(npz_file):
+    data = np.load(npz_file[:-4] + ".npy", allow_pickle=True)
+    seg = np.load(npz_file[:-4] + "_seg.npy", allow_pickle=True)
+
+

@@ -166,3 +166,7 @@ cython_debug/
 nnUnet_preprocessed_augment
 cache_filenames.npy
 script_plots/
+*.gz
+*.npy
+*.npz
+*.pkl
