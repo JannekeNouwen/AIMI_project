@@ -1,0 +1,2266 @@
+{
+    "foreground_mean": {
+        "Dice": 0.287932602303145,
+        "FN": 5596.7,
+        "FP": 7654.528571428571,
+        "IoU": 0.19714446261853458,
+        "TN": 8372161.621428572,
+        "TP": 3195.15,
+        "n_pred": 10849.67857142857,
+        "n_ref": 8791.85
+    },
+    "mean": {
+        "1": {
+            "Dice": 0.287932602303145,
+            "FN": 5596.7,
+            "FP": 7654.528571428571,
+            "IoU": 0.19714446261853458,
+            "TN": 8372161.621428572,
+            "TP": 3195.15,
+            "n_pred": 10849.67857142857,
+            "n_ref": 8791.85
+        }
+    },
+    "metric_per_case": [
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.4527637334545248,
+                    "FN": 4371,
+                    "FP": 5262,
+                    "IoU": 0.29262740490527245,
+                    "TN": 8374990,
+                    "TP": 3985,
+                    "n_pred": 9247,
+                    "n_ref": 8356
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00002_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00002_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.07059191004216774,
+                    "FN": 4714,
+                    "FP": 1237,
+                    "IoU": 0.03658734013275053,
+                    "TN": 8382431,
+                    "TP": 226,
+                    "n_pred": 1463,
+                    "n_ref": 4940
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00002_lesion_05.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00002_lesion_05.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.14109258887326773,
+                    "FN": 729,
+                    "FP": 33483,
+                    "IoU": 0.07590081573118686,
+                    "TN": 8351586,
+                    "TP": 2810,
+                    "n_pred": 36293,
+                    "n_ref": 3539
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00018_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00018_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.0365990990990991,
+                    "FN": 1771,
+                    "FP": 1651,
+                    "IoU": 0.01864066532836249,
+                    "TN": 8385121,
+                    "TP": 65,
+                    "n_pred": 1716,
+                    "n_ref": 1836
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00020_lesion_03.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00020_lesion_03.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.22193040052527904,
+                    "FN": 143,
+                    "FP": 2227,
+                    "IoU": 0.12481536189069424,
+                    "TN": 8385900,
+                    "TP": 338,
+                    "n_pred": 2565,
+                    "n_ref": 481
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00030_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00030_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.22279047466837143,
+                    "FN": 9246,
+                    "FP": 480,
+                    "IoU": 0.12535971223021583,
+                    "TN": 8377488,
+                    "TP": 1394,
+                    "n_pred": 1874,
+                    "n_ref": 10640
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00078_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00078_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6669542709232097,
+                    "FN": 1243,
+                    "FP": 2617,
+                    "IoU": 0.5003236245954693,
+                    "TN": 8380883,
+                    "TP": 3865,
+                    "n_pred": 6482,
+                    "n_ref": 5108
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00110_lesion_02.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00110_lesion_02.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.0,
+                    "FN": 97,
+                    "FP": 2528,
+                    "IoU": 0.0,
+                    "TN": 8385983,
+                    "TP": 0,
+                    "n_pred": 2528,
+                    "n_ref": 97
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00131_lesion_03.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00131_lesion_03.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.0025070510811657787,
+                    "FN": 1048,
+                    "FP": 2135,
+                    "IoU": 0.0012550988390335738,
+                    "TN": 8385421,
+                    "TP": 4,
+                    "n_pred": 2139,
+                    "n_ref": 1052
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00143_lesion_07.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00143_lesion_07.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.08894352447754718,
+                    "FN": 77,
+                    "FP": 12522,
+                    "IoU": 0.04654154684425609,
+                    "TN": 8375394,
+                    "TP": 615,
+                    "n_pred": 13137,
+                    "n_ref": 692
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00143_lesion_08.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00143_lesion_08.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.34782608695652173,
+                    "FN": 32,
+                    "FP": 1018,
+                    "IoU": 0.21052631578947367,
+                    "TN": 8387278,
+                    "TP": 280,
+                    "n_pred": 1298,
+                    "n_ref": 312
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00143_lesion_09.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00143_lesion_09.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.0024937655860349127,
+                    "FN": 41784,
+                    "FP": 616,
+                    "IoU": 0.0012484394506866417,
+                    "TN": 8346155,
+                    "TP": 53,
+                    "n_pred": 669,
+                    "n_ref": 41837
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00147_lesion_02.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00147_lesion_02.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.08623219117790891,
+                    "FN": 865,
+                    "FP": 55191,
+                    "IoU": 0.04505885760038159,
+                    "TN": 8329907,
+                    "TP": 2645,
+                    "n_pred": 57836,
+                    "n_ref": 3510
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00149_lesion_03.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00149_lesion_03.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.4378826203306573,
+                    "FN": 12348,
+                    "FP": 18320,
+                    "IoU": 0.2803135193485556,
+                    "TN": 8345995,
+                    "TP": 11945,
+                    "n_pred": 30265,
+                    "n_ref": 24293
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00194_lesion_03.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00194_lesion_03.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.5828530259365994,
+                    "FN": 57,
+                    "FP": 1101,
+                    "IoU": 0.411286222674123,
+                    "TN": 8386641,
+                    "TP": 809,
+                    "n_pred": 1910,
+                    "n_ref": 866
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00194_lesion_07.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00194_lesion_07.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.14518457413899774,
+                    "FN": 3803,
+                    "FP": 342,
+                    "IoU": 0.07827440515899489,
+                    "TN": 8384111,
+                    "TP": 352,
+                    "n_pred": 694,
+                    "n_ref": 4155
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00198_lesion_09.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00198_lesion_09.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.015798292507779463,
+                    "FN": 4482,
+                    "FP": 7853,
+                    "IoU": 0.007962039568923919,
+                    "TN": 8376174,
+                    "TP": 99,
+                    "n_pred": 7952,
+                    "n_ref": 4581
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00203_lesion_02.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00203_lesion_02.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7033707865168539,
+                    "FN": 1851,
+                    "FP": 1053,
+                    "IoU": 0.5424610051993067,
+                    "TN": 8382261,
+                    "TP": 3443,
+                    "n_pred": 4496,
+                    "n_ref": 5294
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00203_lesion_11.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00203_lesion_11.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.14090019569471623,
+                    "FN": 505,
+                    "FP": 1690,
+                    "IoU": 0.07578947368421053,
+                    "TN": 8386233,
+                    "TP": 180,
+                    "n_pred": 1870,
+                    "n_ref": 685
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00209_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00209_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.31561605826758,
+                    "FN": 1513,
+                    "FP": 6380,
+                    "IoU": 0.18737774117162564,
+                    "TN": 8378895,
+                    "TP": 1820,
+                    "n_pred": 8200,
+                    "n_ref": 3333
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00209_lesion_05.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00209_lesion_05.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.025885092104362118,
+                    "FN": 32,
+                    "FP": 14193,
+                    "IoU": 0.013112251977244346,
+                    "TN": 8374194,
+                    "TP": 189,
+                    "n_pred": 14382,
+                    "n_ref": 221
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00209_lesion_09.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00209_lesion_09.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.47780874056956435,
+                    "FN": 2373,
+                    "FP": 5310,
+                    "IoU": 0.31389533845329526,
+                    "TN": 8377410,
+                    "TP": 3515,
+                    "n_pred": 8825,
+                    "n_ref": 5888
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00209_lesion_13.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00209_lesion_13.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.5106382978723404,
+                    "FN": 1327,
+                    "FP": 4147,
+                    "IoU": 0.34285714285714286,
+                    "TN": 8380278,
+                    "TP": 2856,
+                    "n_pred": 7003,
+                    "n_ref": 4183
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00217_lesion_04.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00217_lesion_04.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.564008873809213,
+                    "FN": 140,
+                    "FP": 3201,
+                    "IoU": 0.39276626681206833,
+                    "TN": 8383106,
+                    "TP": 2161,
+                    "n_pred": 5362,
+                    "n_ref": 2301
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00217_lesion_05.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00217_lesion_05.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.030849284519606023,
+                    "FN": 77,
+                    "FP": 5138,
+                    "IoU": 0.015666289165722914,
+                    "TN": 8383310,
+                    "TP": 83,
+                    "n_pred": 5221,
+                    "n_ref": 160
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00217_lesion_06.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00217_lesion_06.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6880043033889188,
+                    "FN": 2248,
+                    "FP": 1232,
+                    "IoU": 0.5243952439524395,
+                    "TN": 8381291,
+                    "TP": 3837,
+                    "n_pred": 5069,
+                    "n_ref": 6085
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00222_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00222_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8579901009528378,
+                    "FN": 6957,
+                    "FP": 6069,
+                    "IoU": 0.7512983045669772,
+                    "TN": 8336232,
+                    "TP": 39350,
+                    "n_pred": 45419,
+                    "n_ref": 46307
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00222_lesion_03.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00222_lesion_03.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.08524001794526694,
+                    "FN": 5,
+                    "FP": 4073,
+                    "IoU": 0.04451733833177132,
+                    "TN": 8384340,
+                    "TP": 190,
+                    "n_pred": 4263,
+                    "n_ref": 195
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00222_lesion_04.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00222_lesion_04.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.04182047460735985,
+                    "FN": 261,
+                    "FP": 41530,
+                    "IoU": 0.02135681333864131,
+                    "TN": 8345905,
+                    "TP": 912,
+                    "n_pred": 42442,
+                    "n_ref": 1173
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00222_lesion_09.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00222_lesion_09.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.5342223965483428,
+                    "FN": 841,
+                    "FP": 1534,
+                    "IoU": 0.36446347337436447,
+                    "TN": 8384871,
+                    "TP": 1362,
+                    "n_pred": 2896,
+                    "n_ref": 2203
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00222_lesion_15.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00222_lesion_15.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.31421942326814717,
+                    "FN": 7,
+                    "FP": 2062,
+                    "IoU": 0.18639402280770742,
+                    "TN": 8386065,
+                    "TP": 474,
+                    "n_pred": 2536,
+                    "n_ref": 481
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00222_lesion_19.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00222_lesion_19.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.17037037037037037,
+                    "FN": 508,
+                    "FP": 612,
+                    "IoU": 0.0931174089068826,
+                    "TN": 8387373,
+                    "TP": 115,
+                    "n_pred": 727,
+                    "n_ref": 623
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00223_lesion_09.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00223_lesion_09.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.33782051282051284,
+                    "FN": 279,
+                    "FP": 1787,
+                    "IoU": 0.20323949093713845,
+                    "TN": 8386015,
+                    "TP": 527,
+                    "n_pred": 2314,
+                    "n_ref": 806
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00223_lesion_10.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00223_lesion_10.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.2410791993037424,
+                    "FN": 156,
+                    "FP": 1588,
+                    "IoU": 0.13706086095992084,
+                    "TN": 8386587,
+                    "TP": 277,
+                    "n_pred": 1865,
+                    "n_ref": 433
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00223_lesion_14.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00223_lesion_14.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.08257827732538135,
+                    "FN": 7,
+                    "FP": 7992,
+                    "IoU": 0.04306735255413327,
+                    "TN": 8380249,
+                    "TP": 360,
+                    "n_pred": 8352,
+                    "n_ref": 367
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00228_lesion_12.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00228_lesion_12.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.016782627029306347,
+                    "FN": 180,
+                    "FP": 23137,
+                    "IoU": 0.008462323524408913,
+                    "TN": 8365092,
+                    "TP": 199,
+                    "n_pred": 23336,
+                    "n_ref": 379
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00229_lesion_04.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00229_lesion_04.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.0,
+                    "FN": 4286,
+                    "FP": 7157,
+                    "IoU": 0.0,
+                    "TN": 8377165,
+                    "TP": 0,
+                    "n_pred": 7157,
+                    "n_ref": 4286
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00233_lesion_02.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00233_lesion_02.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.0963855421686747,
+                    "FN": 1248,
+                    "FP": 252,
+                    "IoU": 0.05063291139240506,
+                    "TN": 8387028,
+                    "TP": 80,
+                    "n_pred": 332,
+                    "n_ref": 1328
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00238_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00238_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.242886781268524,
+                    "FN": 4712,
+                    "FP": 5506,
+                    "IoU": 0.13823058109133846,
+                    "TN": 8376751,
+                    "TP": 1639,
+                    "n_pred": 7145,
+                    "n_ref": 6351
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00240_lesion_02.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00240_lesion_02.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.002730491915184095,
+                    "FN": 45688,
+                    "FP": 1062,
+                    "IoU": 0.0013671124022728244,
+                    "TN": 8341794,
+                    "TP": 64,
+                    "n_pred": 1126,
+                    "n_ref": 45752
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00245_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00245_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7507053869861527,
+                    "FN": 3016,
+                    "FP": 2727,
+                    "IoU": 0.60090340514246,
+                    "TN": 8374218,
+                    "TP": 8647,
+                    "n_pred": 11374,
+                    "n_ref": 11663
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00245_lesion_02.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00245_lesion_02.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.020293474867311895,
+                    "FN": 13562,
+                    "FP": 5266,
+                    "IoU": 0.010250749093202964,
+                    "TN": 8369585,
+                    "TP": 195,
+                    "n_pred": 5461,
+                    "n_ref": 13757
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00245_lesion_03.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00245_lesion_03.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.17805461595577923,
+                    "FN": 48019,
+                    "FP": 51609,
+                    "IoU": 0.0977277461306478,
+                    "TN": 8278189,
+                    "TP": 10791,
+                    "n_pred": 62400,
+                    "n_ref": 58810
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00261_lesion_02.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00261_lesion_02.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.222626079054975,
+                    "FN": 14916,
+                    "FP": 10749,
+                    "IoU": 0.1252556237218814,
+                    "TN": 8359268,
+                    "TP": 3675,
+                    "n_pred": 14424,
+                    "n_ref": 18591
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00261_lesion_05.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00261_lesion_05.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.008217677136596055,
+                    "FN": 244,
+                    "FP": 21480,
+                    "IoU": 0.004125790776565509,
+                    "TN": 8366794,
+                    "TP": 90,
+                    "n_pred": 21570,
+                    "n_ref": 334
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00273_lesion_05.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00273_lesion_05.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.11374326029597338,
+                    "FN": 5906,
+                    "FP": 55898,
+                    "IoU": 0.06030104911053672,
+                    "TN": 8322838,
+                    "TP": 3966,
+                    "n_pred": 59864,
+                    "n_ref": 9872
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00273_lesion_09.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00273_lesion_09.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.20123452385199986,
+                    "FN": 2206,
+                    "FP": 20181,
+                    "IoU": 0.1118736858809061,
+                    "TN": 8363401,
+                    "TP": 2820,
+                    "n_pred": 23001,
+                    "n_ref": 5026
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00273_lesion_15.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00273_lesion_15.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.24318766066838046,
+                    "FN": 2913,
+                    "FP": 31,
+                    "IoU": 0.13842551946151596,
+                    "TN": 8385191,
+                    "TP": 473,
+                    "n_pred": 504,
+                    "n_ref": 3386
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00283_lesion_02.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00283_lesion_02.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.3976939706942109,
+                    "FN": 11336,
+                    "FP": 1201,
+                    "IoU": 0.24820100743583592,
+                    "TN": 8371932,
+                    "TP": 4139,
+                    "n_pred": 5340,
+                    "n_ref": 15475
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00292_lesion_02.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00292_lesion_02.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6120646475439944,
+                    "FN": 40086,
+                    "FP": 6384,
+                    "IoU": 0.44098930577776707,
+                    "TN": 8305479,
+                    "TP": 36659,
+                    "n_pred": 43043,
+                    "n_ref": 76745
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00292_lesion_03.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00292_lesion_03.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.2727272727272727,
+                    "FN": 175,
+                    "FP": 2033,
+                    "IoU": 0.15789473684210525,
+                    "TN": 8385986,
+                    "TP": 414,
+                    "n_pred": 2447,
+                    "n_ref": 589
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00293_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00293_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.13507014028056114,
+                    "FN": 2660,
+                    "FP": 1656,
+                    "IoU": 0.07242639157532775,
+                    "TN": 8383955,
+                    "TP": 337,
+                    "n_pred": 1993,
+                    "n_ref": 2997
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00298_lesion_02.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00298_lesion_02.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.020071220459695695,
+                    "FN": 2282,
+                    "FP": 745,
+                    "IoU": 0.010137344669718771,
+                    "TN": 8385550,
+                    "TP": 31,
+                    "n_pred": 776,
+                    "n_ref": 2313
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00298_lesion_04.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00298_lesion_04.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.028042959427207637,
+                    "FN": 1058,
+                    "FP": 2200,
+                    "IoU": 0.01422087745839637,
+                    "TN": 8385303,
+                    "TP": 47,
+                    "n_pred": 2247,
+                    "n_ref": 1105
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00298_lesion_06.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00298_lesion_06.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.1141732283464567,
+                    "FN": 1534,
+                    "FP": 2066,
+                    "IoU": 0.060542797494780795,
+                    "TN": 8384776,
+                    "TP": 232,
+                    "n_pred": 2298,
+                    "n_ref": 1766
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00298_lesion_12.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00298_lesion_12.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6133958765135813,
+                    "FN": 2277,
+                    "FP": 4811,
+                    "IoU": 0.4423727480135316,
+                    "TN": 8375897,
+                    "TP": 5623,
+                    "n_pred": 10434,
+                    "n_ref": 7900
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00299_lesion_03.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00299_lesion_03.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7148892226811866,
+                    "FN": 4732,
+                    "FP": 1342,
+                    "IoU": 0.556286069106582,
+                    "TN": 8374919,
+                    "TP": 7615,
+                    "n_pred": 8957,
+                    "n_ref": 12347
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00299_lesion_04.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00299_lesion_04.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.09243969564513518,
+                    "FN": 3470,
+                    "FP": 7742,
+                    "IoU": 0.04845964525163371,
+                    "TN": 8376825,
+                    "TP": 571,
+                    "n_pred": 8313,
+                    "n_ref": 4041
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00299_lesion_06.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00299_lesion_06.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.23758058844215216,
+                    "FN": 3244,
+                    "FP": 29277,
+                    "IoU": 0.13480366074279027,
+                    "TN": 8351020,
+                    "TP": 5067,
+                    "n_pred": 34344,
+                    "n_ref": 8311
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00299_lesion_07.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00299_lesion_07.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.0,
+                    "FN": 492,
+                    "FP": 146,
+                    "IoU": 0.0,
+                    "TN": 8387970,
+                    "TP": 0,
+                    "n_pred": 146,
+                    "n_ref": 492
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00302_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00302_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.049250340754202634,
+                    "FN": 409,
+                    "FP": 10054,
+                    "IoU": 0.025246879075833797,
+                    "TN": 8377874,
+                    "TP": 271,
+                    "n_pred": 10325,
+                    "n_ref": 680
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00309_lesion_04.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00309_lesion_04.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.46152520465316677,
+                    "FN": 11401,
+                    "FP": 1097,
+                    "IoU": 0.299988798028453,
+                    "TN": 8370754,
+                    "TP": 5356,
+                    "n_pred": 6453,
+                    "n_ref": 16757
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00316_lesion_03.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00316_lesion_03.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.037062966555607105,
+                    "FN": 19336,
+                    "FP": 94825,
+                    "IoU": 0.018881383317004417,
+                    "TN": 8272250,
+                    "TP": 2197,
+                    "n_pred": 97022,
+                    "n_ref": 21533
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00316_lesion_06.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00316_lesion_06.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.5898123324396782,
+                    "FN": 821,
+                    "FP": 4075,
+                    "IoU": 0.41825095057034223,
+                    "TN": 8380192,
+                    "TP": 3520,
+                    "n_pred": 7595,
+                    "n_ref": 4341
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00316_lesion_10.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00316_lesion_10.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.3261455525606469,
+                    "FN": 595,
+                    "FP": 3905,
+                    "IoU": 0.19484702093397746,
+                    "TN": 8383019,
+                    "TP": 1089,
+                    "n_pred": 4994,
+                    "n_ref": 1684
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00316_lesion_13.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00316_lesion_13.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.027836753951403632,
+                    "FN": 2287,
+                    "FP": 1834,
+                    "IoU": 0.014114832535885167,
+                    "TN": 8384428,
+                    "TP": 59,
+                    "n_pred": 1893,
+                    "n_ref": 2346
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00346_lesion_14.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00346_lesion_14.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6565646495862826,
+                    "FN": 2580,
+                    "FP": 865,
+                    "IoU": 0.4887206886316414,
+                    "TN": 8381870,
+                    "TP": 3293,
+                    "n_pred": 4158,
+                    "n_ref": 5873
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00374_lesion_04.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00374_lesion_04.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7179946284691137,
+                    "FN": 138,
+                    "FP": 492,
+                    "IoU": 0.5600558659217877,
+                    "TN": 8387176,
+                    "TP": 802,
+                    "n_pred": 1294,
+                    "n_ref": 940
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00374_lesion_06.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00374_lesion_06.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.17800647989327234,
+                    "FN": 67,
+                    "FP": 4246,
+                    "IoU": 0.09769874476987447,
+                    "TN": 8383828,
+                    "TP": 467,
+                    "n_pred": 4713,
+                    "n_ref": 534
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00384_lesion_02.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00384_lesion_02.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.28175196115054163,
+                    "FN": 6376,
+                    "FP": 9006,
+                    "IoU": 0.1639763030599489,
+                    "TN": 8370209,
+                    "TP": 3017,
+                    "n_pred": 12023,
+                    "n_ref": 9393
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00411_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00411_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.024936538748693445,
+                    "FN": 10756,
+                    "FP": 2304,
+                    "IoU": 0.012625689876767219,
+                    "TN": 8375381,
+                    "TP": 167,
+                    "n_pred": 2471,
+                    "n_ref": 10923
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00444_lesion_02.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00444_lesion_02.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.560242179616549,
+                    "FN": 1717,
+                    "FP": 462,
+                    "IoU": 0.3891225119147743,
+                    "TN": 8385041,
+                    "TP": 1388,
+                    "n_pred": 1850,
+                    "n_ref": 3105
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00451_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00451_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.17528215131670616,
+                    "FN": 46143,
+                    "FP": 1209,
+                    "IoU": 0.09605986560781918,
+                    "TN": 8336224,
+                    "TP": 5032,
+                    "n_pred": 6241,
+                    "n_ref": 51175
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00469_lesion_02.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00469_lesion_02.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.2671353251318102,
+                    "FN": 1668,
+                    "FP": 0,
+                    "IoU": 0.15415821501014199,
+                    "TN": 8386636,
+                    "TP": 304,
+                    "n_pred": 304,
+                    "n_ref": 1972
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00480_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00480_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7157030448169689,
+                    "FN": 1531,
+                    "FP": 131,
+                    "IoU": 0.5572722429408631,
+                    "TN": 8384854,
+                    "TP": 2092,
+                    "n_pred": 2223,
+                    "n_ref": 3623
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00497_lesion_03.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00497_lesion_03.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6185819070904646,
+                    "FN": 268,
+                    "FP": 44,
+                    "IoU": 0.44778761061946903,
+                    "TN": 8388043,
+                    "TP": 253,
+                    "n_pred": 297,
+                    "n_ref": 521
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00497_lesion_04.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00497_lesion_04.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8909910694978327,
+                    "FN": 9836,
+                    "FP": 23939,
+                    "IoU": 0.8034119879398857,
+                    "TN": 8216802,
+                    "TP": 138031,
+                    "n_pred": 161970,
+                    "n_ref": 147867
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00501_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00501_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.43494252873563216,
+                    "FN": 218,
+                    "FP": 2240,
+                    "IoU": 0.2779083431257344,
+                    "TN": 8385204,
+                    "TP": 946,
+                    "n_pred": 3186,
+                    "n_ref": 1164
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00504_lesion_04.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00504_lesion_04.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7415553809897879,
+                    "FN": 545,
+                    "FP": 2416,
+                    "IoU": 0.5892634207240949,
+                    "TN": 8381399,
+                    "TP": 4248,
+                    "n_pred": 6664,
+                    "n_ref": 4793
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00507_lesion_05.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00507_lesion_05.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.640967274662252,
+                    "FN": 10825,
+                    "FP": 1320,
+                    "IoU": 0.4716349082049943,
+                    "TN": 8365622,
+                    "TP": 10841,
+                    "n_pred": 12161,
+                    "n_ref": 21666
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00522_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00522_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.0,
+                    "FN": 4783,
+                    "FP": 4174,
+                    "IoU": 0.0,
+                    "TN": 8379651,
+                    "TP": 0,
+                    "n_pred": 4174,
+                    "n_ref": 4783
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00523_lesion_03.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00523_lesion_03.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.019766397124887692,
+                    "FN": 30542,
+                    "FP": 6,
+                    "IoU": 0.009981851179673321,
+                    "TN": 8357752,
+                    "TP": 308,
+                    "n_pred": 314,
+                    "n_ref": 30850
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00575_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00575_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7056655918931368,
+                    "FN": 391,
+                    "FP": 248,
+                    "IoU": 0.5451957295373665,
+                    "TN": 8387203,
+                    "TP": 766,
+                    "n_pred": 1014,
+                    "n_ref": 1157
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00578_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00578_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.07059660353872144,
+                    "FN": 9435,
+                    "FP": 1018,
+                    "IoU": 0.03658986175115207,
+                    "TN": 8377758,
+                    "TP": 397,
+                    "n_pred": 1415,
+                    "n_ref": 9832
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00639_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00639_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.44685144763395246,
+                    "FN": 2545,
+                    "FP": 10886,
+                    "IoU": 0.28770683071701314,
+                    "TN": 8369752,
+                    "TP": 5425,
+                    "n_pred": 16311,
+                    "n_ref": 7970
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00639_lesion_02.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00639_lesion_02.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.2727748995867047,
+                    "FN": 3369,
+                    "FP": 9124,
+                    "IoU": 0.15792666486923698,
+                    "TN": 8373772,
+                    "TP": 2343,
+                    "n_pred": 11467,
+                    "n_ref": 5712
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00639_lesion_07.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00639_lesion_07.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.5592768945202163,
+                    "FN": 1890,
+                    "FP": 3571,
+                    "IoU": 0.3881917992381806,
+                    "TN": 8379682,
+                    "TP": 3465,
+                    "n_pred": 7036,
+                    "n_ref": 5355
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00639_lesion_09.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00639_lesion_09.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.1121131741821397,
+                    "FN": 14681,
+                    "FP": 382,
+                    "IoU": 0.05938553765455227,
+                    "TN": 8372594,
+                    "TP": 951,
+                    "n_pred": 1333,
+                    "n_ref": 15632
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00797_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00797_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.12954899997671657,
+                    "FN": 36581,
+                    "FP": 804,
+                    "IoU": 0.06926083600965967,
+                    "TN": 8348441,
+                    "TP": 2782,
+                    "n_pred": 3586,
+                    "n_ref": 39363
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00798_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00798_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.255047821466525,
+                    "FN": 214,
+                    "FP": 5394,
+                    "IoU": 0.146163215590743,
+                    "TN": 8382040,
+                    "TP": 960,
+                    "n_pred": 6354,
+                    "n_ref": 1174
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00816_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00816_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.0,
+                    "FN": 57,
+                    "FP": 77,
+                    "IoU": 0.0,
+                    "TN": 8388474,
+                    "TP": 0,
+                    "n_pred": 77,
+                    "n_ref": 57
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00816_lesion_02.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00816_lesion_02.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.5982438134336868,
+                    "FN": 3378,
+                    "FP": 145,
+                    "IoU": 0.42678164659941425,
+                    "TN": 8382462,
+                    "TP": 2623,
+                    "n_pred": 2768,
+                    "n_ref": 6001
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00816_lesion_03.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00816_lesion_03.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.3145516903478687,
+                    "FN": 2783,
+                    "FP": 15,
+                    "IoU": 0.1866279069767442,
+                    "TN": 8385168,
+                    "TP": 642,
+                    "n_pred": 657,
+                    "n_ref": 3425
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00818_lesion_02.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00818_lesion_02.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.4663023679417122,
+                    "FN": 12,
+                    "FP": 2625,
+                    "IoU": 0.30403800475059384,
+                    "TN": 8384819,
+                    "TP": 1152,
+                    "n_pred": 3777,
+                    "n_ref": 1164
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00818_lesion_05.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00818_lesion_05.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.3074444086368031,
+                    "FN": 66,
+                    "FP": 2083,
+                    "IoU": 0.18164508758568165,
+                    "TN": 8385982,
+                    "TP": 477,
+                    "n_pred": 2560,
+                    "n_ref": 543
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00818_lesion_09.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00818_lesion_09.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.125,
+                    "FN": 68,
+                    "FP": 1486,
+                    "IoU": 0.06666666666666667,
+                    "TN": 8386943,
+                    "TP": 111,
+                    "n_pred": 1597,
+                    "n_ref": 179
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00855_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00855_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.2978936810431294,
+                    "FN": 139,
+                    "FP": 1261,
+                    "IoU": 0.17501473187978786,
+                    "TN": 8386911,
+                    "TP": 297,
+                    "n_pred": 1558,
+                    "n_ref": 436
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00855_lesion_02.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00855_lesion_02.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.0,
+                    "FN": 4041,
+                    "FP": 1149,
+                    "IoU": 0.0,
+                    "TN": 8383418,
+                    "TP": 0,
+                    "n_pred": 1149,
+                    "n_ref": 4041
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_00934_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_00934_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.17331631024577082,
+                    "FN": 67,
+                    "FP": 5113,
+                    "IoU": 0.0948803075310152,
+                    "TN": 8382885,
+                    "TP": 543,
+                    "n_pred": 5656,
+                    "n_ref": 610
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01004_lesion_03.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01004_lesion_03.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.2585551330798479,
+                    "FN": 136,
+                    "FP": 254,
+                    "IoU": 0.14847161572052403,
+                    "TN": 8388150,
+                    "TP": 68,
+                    "n_pred": 322,
+                    "n_ref": 204
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01012_lesion_04.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01012_lesion_04.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.2296947749612002,
+                    "FN": 103,
+                    "FP": 2875,
+                    "IoU": 0.12974868497954412,
+                    "TN": 8385186,
+                    "TP": 444,
+                    "n_pred": 3319,
+                    "n_ref": 547
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01012_lesion_07.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01012_lesion_07.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8201870055142652,
+                    "FN": 1379,
+                    "FP": 121,
+                    "IoU": 0.6951839057102215,
+                    "TN": 8383687,
+                    "TP": 3421,
+                    "n_pred": 3542,
+                    "n_ref": 4800
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01022_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01022_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.05182874506597212,
+                    "FN": 4994,
+                    "FP": 88929,
+                    "IoU": 0.026603793139185407,
+                    "TN": 8292118,
+                    "TP": 2567,
+                    "n_pred": 91496,
+                    "n_ref": 7561
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01052_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01052_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.022389049526487518,
+                    "FN": 32973,
+                    "FP": 3880,
+                    "IoU": 0.011321260898725687,
+                    "TN": 8351333,
+                    "TP": 422,
+                    "n_pred": 4302,
+                    "n_ref": 33395
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01052_lesion_07.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01052_lesion_07.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6680867544539117,
+                    "FN": 244,
+                    "FP": 1470,
+                    "IoU": 0.5015993021227101,
+                    "TN": 8385169,
+                    "TP": 1725,
+                    "n_pred": 3195,
+                    "n_ref": 1969
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01052_lesion_08.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01052_lesion_08.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.010770414331245192,
+                    "FN": 17748,
+                    "FP": 254,
+                    "IoU": 0.0054143646408839775,
+                    "TN": 8370508,
+                    "TP": 98,
+                    "n_pred": 352,
+                    "n_ref": 17846
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01052_lesion_09.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01052_lesion_09.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.17053326003298516,
+                    "FN": 65,
+                    "FP": 15023,
+                    "IoU": 0.0932147364625278,
+                    "TN": 8371969,
+                    "TP": 1551,
+                    "n_pred": 16574,
+                    "n_ref": 1616
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01052_lesion_14.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01052_lesion_14.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.02246595989530822,
+                    "FN": 0,
+                    "FP": 95987,
+                    "IoU": 0.011360593263981873,
+                    "TN": 8291518,
+                    "TP": 1103,
+                    "n_pred": 97090,
+                    "n_ref": 1103
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01052_lesion_17.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01052_lesion_17.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.30487394957983194,
+                    "FN": 337,
+                    "FP": 3799,
+                    "IoU": 0.17985326194725362,
+                    "TN": 8383565,
+                    "TP": 907,
+                    "n_pred": 4706,
+                    "n_ref": 1244
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01052_lesion_20.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01052_lesion_20.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.0,
+                    "FN": 421,
+                    "FP": 550,
+                    "IoU": 0.0,
+                    "TN": 8387637,
+                    "TP": 0,
+                    "n_pred": 550,
+                    "n_ref": 421
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01052_lesion_21.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01052_lesion_21.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.060388064238309946,
+                    "FN": 31,
+                    "FP": 18516,
+                    "IoU": 0.03113409601420885,
+                    "TN": 8369465,
+                    "TP": 596,
+                    "n_pred": 19112,
+                    "n_ref": 627
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01056_lesion_02.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01056_lesion_02.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6050836949783013,
+                    "FN": 1380,
+                    "FP": 531,
+                    "IoU": 0.43377777777777776,
+                    "TN": 8385233,
+                    "TP": 1464,
+                    "n_pred": 1995,
+                    "n_ref": 2844
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01072_lesion_04.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01072_lesion_04.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.020089656317449776,
+                    "FN": 35300,
+                    "FP": 112,
+                    "IoU": 0.010146750524109014,
+                    "TN": 8352833,
+                    "TP": 363,
+                    "n_pred": 475,
+                    "n_ref": 35663
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01072_lesion_06.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01072_lesion_06.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.12251613719782306,
+                    "FN": 1166,
+                    "FP": 5767,
+                    "IoU": 0.06525549413509506,
+                    "TN": 8381191,
+                    "TP": 484,
+                    "n_pred": 6251,
+                    "n_ref": 1650
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01083_lesion_06.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01083_lesion_06.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.07446962043584933,
+                    "FN": 6204,
+                    "FP": 209,
+                    "IoU": 0.038674861340128916,
+                    "TN": 8381937,
+                    "TP": 258,
+                    "n_pred": 467,
+                    "n_ref": 6462
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01107_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01107_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.716000360978251,
+                    "FN": 946,
+                    "FP": 2201,
+                    "IoU": 0.5576328366601069,
+                    "TN": 8381494,
+                    "TP": 3967,
+                    "n_pred": 6168,
+                    "n_ref": 4913
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01140_lesion_02.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01140_lesion_02.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.4755700325732899,
+                    "FN": 35,
+                    "FP": 126,
+                    "IoU": 0.31196581196581197,
+                    "TN": 8388374,
+                    "TP": 73,
+                    "n_pred": 199,
+                    "n_ref": 108
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01140_lesion_05.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01140_lesion_05.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.0910248249522597,
+                    "FN": 27,
+                    "FP": 5685,
+                    "IoU": 0.04768256085361787,
+                    "TN": 8382610,
+                    "TP": 286,
+                    "n_pred": 5971,
+                    "n_ref": 313
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01140_lesion_12.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01140_lesion_12.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6520681265206812,
+                    "FN": 19,
+                    "FP": 267,
+                    "IoU": 0.48375451263537905,
+                    "TN": 8388054,
+                    "TP": 268,
+                    "n_pred": 535,
+                    "n_ref": 287
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01154_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01154_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.12962962962962962,
+                    "FN": 486,
+                    "FP": 7974,
+                    "IoU": 0.06930693069306931,
+                    "TN": 8379518,
+                    "TP": 630,
+                    "n_pred": 8604,
+                    "n_ref": 1116
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01162_lesion_09.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01162_lesion_09.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.5432044198895027,
+                    "FN": 526,
+                    "FP": 1541,
+                    "IoU": 0.372876213592233,
+                    "TN": 8385312,
+                    "TP": 1229,
+                    "n_pred": 2770,
+                    "n_ref": 1755
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01162_lesion_10.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01162_lesion_10.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.42531242631454846,
+                    "FN": 19387,
+                    "FP": 111,
+                    "IoU": 0.2700932130423389,
+                    "TN": 8361895,
+                    "TP": 7215,
+                    "n_pred": 7326,
+                    "n_ref": 26602
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01171_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01171_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.3146551724137931,
+                    "FN": 68,
+                    "FP": 8518,
+                    "IoU": 0.1867007672634271,
+                    "TN": 8378051,
+                    "TP": 1971,
+                    "n_pred": 10489,
+                    "n_ref": 2039
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01171_lesion_05.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01171_lesion_05.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7934782608695652,
+                    "FN": 257,
+                    "FP": 237,
+                    "IoU": 0.6576576576576577,
+                    "TN": 8387165,
+                    "TP": 949,
+                    "n_pred": 1186,
+                    "n_ref": 1206
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01171_lesion_10.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01171_lesion_10.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.42695818450770284,
+                    "FN": 75,
+                    "FP": 15808,
+                    "IoU": 0.27142201834862384,
+                    "TN": 8366808,
+                    "TP": 5917,
+                    "n_pred": 21725,
+                    "n_ref": 5992
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01171_lesion_12.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01171_lesion_12.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.0,
+                    "FN": 3561,
+                    "FP": 457,
+                    "IoU": 0.0,
+                    "TN": 8384590,
+                    "TP": 0,
+                    "n_pred": 457,
+                    "n_ref": 3561
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01172_lesion_04.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01172_lesion_04.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.020826595951102776,
+                    "FN": 14791,
+                    "FP": 348,
+                    "IoU": 0.010522875816993463,
+                    "TN": 8373308,
+                    "TP": 161,
+                    "n_pred": 509,
+                    "n_ref": 14952
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01172_lesion_05.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01172_lesion_05.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.2615453327378294,
+                    "FN": 1693,
+                    "FP": 6574,
+                    "IoU": 0.1504470249717398,
+                    "TN": 8378877,
+                    "TP": 1464,
+                    "n_pred": 8038,
+                    "n_ref": 3157
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01173_lesion_02.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01173_lesion_02.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.5590833134399618,
+                    "FN": 310,
+                    "FP": 1537,
+                    "IoU": 0.3880053015241882,
+                    "TN": 8385590,
+                    "TP": 1171,
+                    "n_pred": 2708,
+                    "n_ref": 1481
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01173_lesion_05.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01173_lesion_05.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.12813544219202494,
+                    "FN": 580,
+                    "FP": 18989,
+                    "IoU": 0.06845337268529537,
+                    "TN": 8367601,
+                    "TP": 1438,
+                    "n_pred": 20427,
+                    "n_ref": 2018
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01173_lesion_11.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01173_lesion_11.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.015277917378631017,
+                    "FN": 4844,
+                    "FP": 4953,
+                    "IoU": 0.007697761571963942,
+                    "TN": 8378735,
+                    "TP": 76,
+                    "n_pred": 5029,
+                    "n_ref": 4920
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01173_lesion_18.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01173_lesion_18.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.005633802816901409,
+                    "FN": 646,
+                    "FP": 413,
+                    "IoU": 0.002824858757062147,
+                    "TN": 8387546,
+                    "TP": 3,
+                    "n_pred": 416,
+                    "n_ref": 649
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01187_lesion_05.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01187_lesion_05.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.74609375,
+                    "FN": 206,
+                    "FP": 704,
+                    "IoU": 0.5950155763239875,
+                    "TN": 8386361,
+                    "TP": 1337,
+                    "n_pred": 2041,
+                    "n_ref": 1543
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01188_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01188_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.023131542346826732,
+                    "FN": 49372,
+                    "FP": 4008,
+                    "IoU": 0.011701103458490706,
+                    "TN": 8334596,
+                    "TP": 632,
+                    "n_pred": 4640,
+                    "n_ref": 50004
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01222_lesion_03.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01222_lesion_03.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.5489006823351024,
+                    "FN": 1559,
+                    "FP": 821,
+                    "IoU": 0.3782654127481714,
+                    "TN": 8384780,
+                    "TP": 1448,
+                    "n_pred": 2269,
+                    "n_ref": 3007
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01222_lesion_05.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01222_lesion_05.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.26699937616968183,
+                    "FN": 30,
+                    "FP": 1145,
+                    "IoU": 0.15406767458603313,
+                    "TN": 8387219,
+                    "TP": 214,
+                    "n_pred": 1359,
+                    "n_ref": 244
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01222_lesion_11.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01222_lesion_11.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.32591529073941133,
+                    "FN": 80,
+                    "FP": 859,
+                    "IoU": 0.1946826758147513,
+                    "TN": 8387442,
+                    "TP": 227,
+                    "n_pred": 1086,
+                    "n_ref": 307
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01298_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01298_lesion_01.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.17894736842105263,
+                    "FN": 38,
+                    "FP": 2458,
+                    "IoU": 0.09826589595375723,
+                    "TN": 8385840,
+                    "TP": 272,
+                    "n_pred": 2730,
+                    "n_ref": 310
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01298_lesion_07.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01298_lesion_07.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.39667914699658147,
+                    "FN": 8371,
+                    "FP": 10160,
+                    "IoU": 0.2474109572351054,
+                    "TN": 8363985,
+                    "TP": 6092,
+                    "n_pred": 16252,
+                    "n_ref": 14463
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01298_lesion_11.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01298_lesion_11.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.5930157708400386,
+                    "FN": 4452,
+                    "FP": 606,
+                    "IoU": 0.4214800411757978,
+                    "TN": 8379865,
+                    "TP": 3685,
+                    "n_pred": 4291,
+                    "n_ref": 8137
+                }
+            },
+            "prediction_file": "/home/ljulius/algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR_Mix__nnUNetPlans__2d/fold_0/validation/bone_01319_lesion_01.nii.gz",
+            "reference_file": "/scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/gt_segmentations/bone_01319_lesion_01.nii.gz"
+        }
+    ]
+}

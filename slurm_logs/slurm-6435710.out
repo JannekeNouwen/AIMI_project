@@ -1,0 +1,109 @@
+Hello, this is a ULS job training
+The starting time is Thu May 30 02:48:01 CEST 2024
+This version is trained on nnUNet_preprocessed
+Training on 2d
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+Using device: cuda:0
+
+#######################################################################
+Please cite the following paper when using nnU-Net:
+Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+#######################################################################
+
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:28: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn("The verbose parameter is deprecated. Please use get_last_lr() "
+
+This is the configuration used by this training:
+Configuration name: 2d
+ {'data_identifier': 'nnUNetPlans_2d', 'preprocessor_name': 'DefaultPreprocessor', 'batch_size': 49, 'patch_size': [256, 256], 'median_image_size_in_voxels': [255.0, 255.0], 'spacing': [0.7578125, 0.7578125], 'normalization_schemes': ['CTNormalization'], 'use_mask_for_norm': [False], 'UNet_class_name': 'PlainConvUNet', 'UNet_base_num_features': 32, 'n_conv_per_stage_encoder': [2, 2, 2, 2, 2, 2, 2], 'n_conv_per_stage_decoder': [2, 2, 2, 2, 2, 2], 'num_pool_per_axis': [6, 6], 'pool_op_kernel_sizes': [[1, 1], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2]], 'conv_kernel_sizes': [[3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3]], 'unet_max_num_features': 512, 'resampling_fn_data': 'no_resampling_data_or_seg_to_shape', 'resampling_fn_seg': 'no_resampling_data_or_seg_to_shape', 'resampling_fn_data_kwargs': {'is_seg': False, 'order': 3, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_seg_kwargs': {'is_seg': True, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_probabilities': 'no_resampling_data_or_seg_to_shape', 'resampling_fn_probabilities_kwargs': {'is_seg': False, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'batch_dice': True} 
+
+These are the global plan.json settings:
+ {'dataset_name': 'Dataset501_RadboudumcBone', 'plans_name': 'nnUNetPlans', 'original_median_spacing_after_transp': [0.800000011920929, 0.7578125, 0.7578125], 'original_median_shape_after_transp': [128, 256, 256], 'image_reader_writer': 'SimpleITKIO', 'transpose_forward': [0, 1, 2], 'transpose_backward': [0, 1, 2], 'experiment_planner_used': 'ExperimentPlannerNoResampling', 'label_manager': 'LabelManager', 'foreground_intensity_properties_per_channel': {'0': {'max': 2782.0, 'mean': 1175.083251953125, 'median': 1230.0, 'min': -935.0, 'percentile_00_5': 33.0, 'percentile_99_5': 2269.0, 'std': 513.393310546875}}} 
+
+2024-05-30 02:50:17.692665: unpacking dataset...
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+2024-05-30 02:50:35.212591: unpacking done...
+2024-05-30 02:50:35.220998: do_dummy_2d_data_aug: False
+2024-05-30 02:50:35.235502: Using splits from existing split file: /scratch-local/ljulius.6435710/nnUNet_preprocessed/Dataset501_RadboudumcBone/splits_final.json
+2024-05-30 02:50:35.236500: The split file contains 5 splits.
+2024-05-30 02:50:35.236601: Desired fold for training: 0
+2024-05-30 02:50:35.236665: This split has 557 training and 140 validation cases.
+2024-05-30 02:50:35.679061: Unable to plot network architecture:
+2024-05-30 02:50:35.679198: No module named 'IPython'
+2024-05-30 02:50:35.717127: 
+2024-05-30 02:50:35.717263: Epoch 0
+2024-05-30 02:50:35.717458: Current learning rate: 0.005
+Traceback (most recent call last):
+  File "/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/batchgenerators/dataloading/nondet_multi_threaded_augmenter.py", line 53, in producer
+    item = next(data_loader)
+  File "/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/batchgenerators/dataloading/data_loader.py", line 126, in __next__
+    return self.generate_train_batch()
+  File "/gpfs/home4/ljulius/algorithm/nnunet/nnunetv2/training/dataloading/data_loader_2d.py", line 59, in generate_train_batch
+    augmented = transform(image=data, mask=seg)
+  File "/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/composition.py", line 528, in __call__
+    result = super().__call__(force_apply=force_apply, **kwargs)
+  File "/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/composition.py", line 256, in __call__
+    data = t(**data)
+  File "/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py", line 93, in __call__
+    params_dependent_on_targets = self.get_params_dependent_on_targets(targets_as_params)
+  File "/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/augmentations/dropout/coarse_dropout.py", line 215, in get_params_dependent_on_targets
+    hole_height, hole_width = self.calculate_hole_dimensions(
+  File "/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/augmentations/dropout/coarse_dropout.py", line 199, in calculate_hole_dimensions
+    hole_height = random_utils.randint(min_height, max_height + 1)
+  File "/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/random_utils.py", line 102, in randint
+    return random_state.randint(low, high, size, dtype)
+  File "mtrand.pyx", line 763, in numpy.random.mtrand.RandomState.randint
+  File "_bounded_integers.pyx", line 1338, in numpy.random._bounded_integers._rand_int32
+ValueError: low >= high
+Exception in background worker 3:
+ low >= high
+using pin_memory on device 0
+Traceback (most recent call last):
+  File "/home/ljulius/miniconda3/envs/uls/bin/nnUNetv2_train", line 8, in <module>
+    sys.exit(run_training_entry())
+  File "/gpfs/home4/ljulius/algorithm/nnunet/nnunetv2/run/run_training.py", line 268, in run_training_entry
+    run_training(args.dataset_name_or_id, args.configuration, args.fold, args.tr, args.p, args.pretrained_weights,
+  File "/gpfs/home4/ljulius/algorithm/nnunet/nnunetv2/run/run_training.py", line 204, in run_training
+    nnunet_trainer.run_training()
+  File "/gpfs/home4/ljulius/algorithm/nnunet/nnunetv2/training/nnUNetTrainer/nnUNetTrainer.py", line 1275, in run_training
+    train_outputs.append(self.train_step(next(self.dataloader_train)))
+  File "/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/batchgenerators/dataloading/nondet_multi_threaded_augmenter.py", line 196, in __next__
+    item = self.__get_next_item()
+  File "/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/batchgenerators/dataloading/nondet_multi_threaded_augmenter.py", line 181, in __get_next_item
+    raise RuntimeError("One or more background workers are no longer alive. Exiting. Please check the "
+RuntimeError: One or more background workers are no longer alive. Exiting. Please check the print statements above for the actual error message
+Done at Thu May 30 02:48:01 CEST 2024
+
+JOB STATISTICS
+==============
+Job ID: 6435710
+Cluster: snellius
+User/Group: ljulius/ljulius
+State: RUNNING
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 00:49:12 core-walltime
+Job Wall-clock time: 00:02:44
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 20.00 GB (20.00 GB/node)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

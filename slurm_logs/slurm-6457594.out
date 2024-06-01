@@ -1,0 +1,124 @@
+Hello, this is a ULS job training
+The starting time is Sat Jun  1 00:29:37 CEST 2024
+This version is trained on nnUNet_preprocessed
+Training on 2d
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+Using device: cuda:0
+
+#######################################################################
+Please cite the following paper when using nnU-Net:
+Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+#######################################################################
+
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:28: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn("The verbose parameter is deprecated. Please use get_last_lr() "
+
+This is the configuration used by this training:
+Configuration name: 2d
+ {'data_identifier': 'nnUNetPlans_2d', 'preprocessor_name': 'DefaultPreprocessor', 'batch_size': 49, 'patch_size': [256, 256], 'median_image_size_in_voxels': [255.0, 255.0], 'spacing': [0.7578125, 0.7578125], 'normalization_schemes': ['CTNormalization'], 'use_mask_for_norm': [False], 'UNet_class_name': 'PlainConvUNet', 'UNet_base_num_features': 32, 'n_conv_per_stage_encoder': [2, 2, 2, 2, 2, 2, 2], 'n_conv_per_stage_decoder': [2, 2, 2, 2, 2, 2], 'num_pool_per_axis': [6, 6], 'pool_op_kernel_sizes': [[1, 1], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2]], 'conv_kernel_sizes': [[3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3]], 'unet_max_num_features': 512, 'resampling_fn_data': 'no_resampling_data_or_seg_to_shape', 'resampling_fn_seg': 'no_resampling_data_or_seg_to_shape', 'resampling_fn_data_kwargs': {'is_seg': False, 'order': 3, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_seg_kwargs': {'is_seg': True, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_probabilities': 'no_resampling_data_or_seg_to_shape', 'resampling_fn_probabilities_kwargs': {'is_seg': False, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'batch_dice': True} 
+
+These are the global plan.json settings:
+ {'dataset_name': 'Dataset501_RadboudumcBone', 'plans_name': 'nnUNetPlans', 'original_median_spacing_after_transp': [0.800000011920929, 0.7578125, 0.7578125], 'original_median_shape_after_transp': [128, 256, 256], 'image_reader_writer': 'SimpleITKIO', 'transpose_forward': [0, 1, 2], 'transpose_backward': [0, 1, 2], 'experiment_planner_used': 'ExperimentPlannerNoResampling', 'label_manager': 'LabelManager', 'foreground_intensity_properties_per_channel': {'0': {'max': 2782.0, 'mean': 1175.083251953125, 'median': 1230.0, 'min': -935.0, 'percentile_00_5': 33.0, 'percentile_99_5': 2269.0, 'std': 513.393310546875}}} 
+
+2024-06-01 00:31:53.424567: unpacking dataset...
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+2024-06-01 00:32:13.958374: unpacking done...
+2024-06-01 00:32:13.966995: do_dummy_2d_data_aug: False
+2024-06-01 00:32:14.014156: Using splits from existing split file: /scratch-local/ljulius.6457594/nnUNet_preprocessed/Dataset501_RadboudumcBone/splits_final.json
+2024-06-01 00:32:14.015068: The split file contains 5 splits.
+2024-06-01 00:32:14.015167: Desired fold for training: 0
+2024-06-01 00:32:14.015234: This split has 557 training and 140 validation cases.
+2024-06-01 00:32:14.441470: Unable to plot network architecture:
+2024-06-01 00:32:14.441621: No module named 'IPython'
+2024-06-01 00:32:14.484381: 
+2024-06-01 00:32:14.484539: Epoch 0
+2024-06-01 00:32:14.484753: Current learning rate: 0.005
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/torch/nn/modules/conv.py:456: UserWarning: Applied workaround for CuDNN issue, install nvrtc.so (Triggered internally at ../aten/src/ATen/native/cudnn/Conv_v8.cpp:84.)
+  return F.conv2d(input, weight, bias, self.stride,
+../aten/src/ATen/native/cuda/NLLLoss2d.cu:106: nll_loss2d_forward_kernel: block: [6,0,0], thread: [785,0,0] Assertion `t >= 0 && t < n_classes` failed.
+../aten/src/ATen/native/cuda/NLLLoss2d.cu:106: nll_loss2d_forward_kernel: block: [29,0,0], thread: [384,0,0] Assertion `t >= 0 && t < n_classes` failed.
+../aten/src/ATen/native/cuda/NLLLoss2d.cu:106: nll_loss2d_forward_kernel: block: [29,0,0], thread: [385,0,0] Assertion `t >= 0 && t < n_classes` failed.
+../aten/src/ATen/native/cuda/NLLLoss2d.cu:106: nll_loss2d_forward_kernel: block: [29,0,0], thread: [388,0,0] Assertion `t >= 0 && t < n_classes` failed.
+../aten/src/ATen/native/cuda/NLLLoss2d.cu:106: nll_loss2d_forward_kernel: block: [29,0,0], thread: [389,0,0] Assertion `t >= 0 && t < n_classes` failed.
+../aten/src/ATen/native/cuda/NLLLoss2d.cu:106: nll_loss2d_forward_kernel: block: [29,0,0], thread: [392,0,0] Assertion `t >= 0 && t < n_classes` failed.
+../aten/src/ATen/native/cuda/NLLLoss2d.cu:106: nll_loss2d_forward_kernel: block: [29,0,0], thread: [393,0,0] Assertion `t >= 0 && t < n_classes` failed.
+../aten/src/ATen/native/cuda/NLLLoss2d.cu:106: nll_loss2d_forward_kernel: block: [29,0,0], thread: [396,0,0] Assertion `t >= 0 && t < n_classes` failed.
+../aten/src/ATen/native/cuda/NLLLoss2d.cu:106: nll_loss2d_forward_kernel: block: [29,0,0], thread: [397,0,0] Assertion `t >= 0 && t < n_classes` failed.
+../aten/src/ATen/native/cuda/NLLLoss2d.cu:106: nll_loss2d_forward_kernel: block: [29,0,0], thread: [400,0,0] Assertion `t >= 0 && t < n_classes` failed.
+../aten/src/ATen/native/cuda/NLLLoss2d.cu:106: nll_loss2d_forward_kernel: block: [29,0,0], thread: [401,0,0] Assertion `t >= 0 && t < n_classes` failed.
+../aten/src/ATen/native/cuda/NLLLoss2d.cu:106: nll_loss2d_forward_kernel: block: [29,0,0], thread: [404,0,0] Assertion `t >= 0 && t < n_classes` failed.
+../aten/src/ATen/native/cuda/NLLLoss2d.cu:106: nll_loss2d_forward_kernel: block: [29,0,0], thread: [405,0,0] Assertion `t >= 0 && t < n_classes` failed.
+../aten/src/ATen/native/cuda/NLLLoss2d.cu:106: nll_loss2d_forward_kernel: block: [29,0,0], thread: [408,0,0] Assertion `t >= 0 && t < n_classes` failed.
+../aten/src/ATen/native/cuda/NLLLoss2d.cu:106: nll_loss2d_forward_kernel: block: [29,0,0], thread: [409,0,0] Assertion `t >= 0 && t < n_classes` failed.
+../aten/src/ATen/native/cuda/NLLLoss2d.cu:106: nll_loss2d_forward_kernel: block: [29,0,0], thread: [412,0,0] Assertion `t >= 0 && t < n_classes` failed.
+../aten/src/ATen/native/cuda/NLLLoss2d.cu:106: nll_loss2d_forward_kernel: block: [29,0,0], thread: [413,0,0] Assertion `t >= 0 && t < n_classes` failed.
+using pin_memory on device 0
+Traceback (most recent call last):
+  File "/home/ljulius/miniconda3/envs/uls/bin/nnUNetv2_train", line 8, in <module>
+    sys.exit(run_training_entry())
+  File "/gpfs/home4/ljulius/algorithm/nnunet/nnunetv2/run/run_training.py", line 268, in run_training_entry
+    run_training(args.dataset_name_or_id, args.configuration, args.fold, args.tr, args.p, args.pretrained_weights,
+  File "/gpfs/home4/ljulius/algorithm/nnunet/nnunetv2/run/run_training.py", line 204, in run_training
+    nnunet_trainer.run_training()
+  File "/gpfs/home4/ljulius/algorithm/nnunet/nnunetv2/training/nnUNetTrainer/nnUNetTrainer.py", line 1275, in run_training
+    train_outputs.append(self.train_step(next(self.dataloader_train)))
+  File "/gpfs/home4/ljulius/algorithm/nnunet/nnunetv2/training/nnUNetTrainer/nnUNetTrainer.py", line 911, in train_step
+    self.grad_scaler.step(self.optimizer)
+  File "/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/torch/amp/grad_scaler.py", line 453, in step
+    retval = self._maybe_opt_step(optimizer, optimizer_state, *args, **kwargs)
+  File "/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/torch/amp/grad_scaler.py", line 350, in _maybe_opt_step
+    if not sum(v.item() for v in optimizer_state["found_inf_per_device"].values()):
+  File "/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/torch/amp/grad_scaler.py", line 350, in <genexpr>
+    if not sum(v.item() for v in optimizer_state["found_inf_per_device"].values()):
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Exception in thread Thread-4:
+Traceback (most recent call last):
+  File "/home/ljulius/miniconda3/envs/uls/lib/python3.9/threading.py", line 980, in _bootstrap_inner
+    self.run()
+  File "/home/ljulius/miniconda3/envs/uls/lib/python3.9/threading.py", line 917, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/batchgenerators/dataloading/nondet_multi_threaded_augmenter.py", line 125, in results_loop
+    raise e
+  File "/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/batchgenerators/dataloading/nondet_multi_threaded_augmenter.py", line 103, in results_loop
+    raise RuntimeError("One or more background workers are no longer alive. Exiting. Please check the "
+RuntimeError: One or more background workers are no longer alive. Exiting. Please check the print statements above for the actual error message
+/var/spool/slurm/slurmd/job6457594/slurm_script: line 39: 3718768 Aborted                 nnUNetv2_train $DATASET_ID $DIMENSION 0 -tr nnUNetTrainer_ULS_50_HalfLR_Augment
+Done at Sat Jun  1 00:29:37 CEST 2024
+
+JOB STATISTICS
+==============
+Job ID: 6457594
+Cluster: snellius
+User/Group: ljulius/ljulius
+State: RUNNING
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 00:54:36 core-walltime
+Job Wall-clock time: 00:03:02
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 10.00 GB (10.00 GB/node)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

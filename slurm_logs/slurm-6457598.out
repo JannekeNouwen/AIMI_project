@@ -1,0 +1,1118 @@
+Hello, this is a ULS job training
+The starting time is Sat Jun  1 00:39:19 CEST 2024
+This version is trained on nnUNet_preprocessed
+This version loads the best checkpoint of the nnUnet trained on bones without augmentations
+Training on 2d
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+Using device: cuda:0
+
+#######################################################################
+Please cite the following paper when using nnU-Net:
+Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+#######################################################################
+
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:28: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn("The verbose parameter is deprecated. Please use get_last_lr() "
+################### Loading pretrained weights from file  algorithm/nnunet/nnUNet_results/Dataset501_RadboudumcBone/nnUNetTrainer_ULS_50_HalfLR__nnUNetPlans__2d/fold_0/checkpoint_best.pth ###################
+Below is the list of overlapping blocks in pretrained model and nnUNet architecture:
+encoder.stages.0.0.convs.0.conv.weight shape torch.Size([32, 1, 3, 3])
+encoder.stages.0.0.convs.0.conv.bias shape torch.Size([32])
+encoder.stages.0.0.convs.0.norm.weight shape torch.Size([32])
+encoder.stages.0.0.convs.0.norm.bias shape torch.Size([32])
+encoder.stages.0.0.convs.0.all_modules.0.weight shape torch.Size([32, 1, 3, 3])
+encoder.stages.0.0.convs.0.all_modules.0.bias shape torch.Size([32])
+encoder.stages.0.0.convs.0.all_modules.1.weight shape torch.Size([32])
+encoder.stages.0.0.convs.0.all_modules.1.bias shape torch.Size([32])
+encoder.stages.0.0.convs.1.conv.weight shape torch.Size([32, 32, 3, 3])
+encoder.stages.0.0.convs.1.conv.bias shape torch.Size([32])
+encoder.stages.0.0.convs.1.norm.weight shape torch.Size([32])
+encoder.stages.0.0.convs.1.norm.bias shape torch.Size([32])
+encoder.stages.0.0.convs.1.all_modules.0.weight shape torch.Size([32, 32, 3, 3])
+encoder.stages.0.0.convs.1.all_modules.0.bias shape torch.Size([32])
+encoder.stages.0.0.convs.1.all_modules.1.weight shape torch.Size([32])
+encoder.stages.0.0.convs.1.all_modules.1.bias shape torch.Size([32])
+encoder.stages.1.0.convs.0.conv.weight shape torch.Size([64, 32, 3, 3])
+encoder.stages.1.0.convs.0.conv.bias shape torch.Size([64])
+encoder.stages.1.0.convs.0.norm.weight shape torch.Size([64])
+encoder.stages.1.0.convs.0.norm.bias shape torch.Size([64])
+encoder.stages.1.0.convs.0.all_modules.0.weight shape torch.Size([64, 32, 3, 3])
+encoder.stages.1.0.convs.0.all_modules.0.bias shape torch.Size([64])
+encoder.stages.1.0.convs.0.all_modules.1.weight shape torch.Size([64])
+encoder.stages.1.0.convs.0.all_modules.1.bias shape torch.Size([64])
+encoder.stages.1.0.convs.1.conv.weight shape torch.Size([64, 64, 3, 3])
+encoder.stages.1.0.convs.1.conv.bias shape torch.Size([64])
+encoder.stages.1.0.convs.1.norm.weight shape torch.Size([64])
+encoder.stages.1.0.convs.1.norm.bias shape torch.Size([64])
+encoder.stages.1.0.convs.1.all_modules.0.weight shape torch.Size([64, 64, 3, 3])
+encoder.stages.1.0.convs.1.all_modules.0.bias shape torch.Size([64])
+encoder.stages.1.0.convs.1.all_modules.1.weight shape torch.Size([64])
+encoder.stages.1.0.convs.1.all_modules.1.bias shape torch.Size([64])
+encoder.stages.2.0.convs.0.conv.weight shape torch.Size([128, 64, 3, 3])
+encoder.stages.2.0.convs.0.conv.bias shape torch.Size([128])
+encoder.stages.2.0.convs.0.norm.weight shape torch.Size([128])
+encoder.stages.2.0.convs.0.norm.bias shape torch.Size([128])
+encoder.stages.2.0.convs.0.all_modules.0.weight shape torch.Size([128, 64, 3, 3])
+encoder.stages.2.0.convs.0.all_modules.0.bias shape torch.Size([128])
+encoder.stages.2.0.convs.0.all_modules.1.weight shape torch.Size([128])
+encoder.stages.2.0.convs.0.all_modules.1.bias shape torch.Size([128])
+encoder.stages.2.0.convs.1.conv.weight shape torch.Size([128, 128, 3, 3])
+encoder.stages.2.0.convs.1.conv.bias shape torch.Size([128])
+encoder.stages.2.0.convs.1.norm.weight shape torch.Size([128])
+encoder.stages.2.0.convs.1.norm.bias shape torch.Size([128])
+encoder.stages.2.0.convs.1.all_modules.0.weight shape torch.Size([128, 128, 3, 3])
+encoder.stages.2.0.convs.1.all_modules.0.bias shape torch.Size([128])
+encoder.stages.2.0.convs.1.all_modules.1.weight shape torch.Size([128])
+encoder.stages.2.0.convs.1.all_modules.1.bias shape torch.Size([128])
+encoder.stages.3.0.convs.0.conv.weight shape torch.Size([256, 128, 3, 3])
+encoder.stages.3.0.convs.0.conv.bias shape torch.Size([256])
+encoder.stages.3.0.convs.0.norm.weight shape torch.Size([256])
+encoder.stages.3.0.convs.0.norm.bias shape torch.Size([256])
+encoder.stages.3.0.convs.0.all_modules.0.weight shape torch.Size([256, 128, 3, 3])
+encoder.stages.3.0.convs.0.all_modules.0.bias shape torch.Size([256])
+encoder.stages.3.0.convs.0.all_modules.1.weight shape torch.Size([256])
+encoder.stages.3.0.convs.0.all_modules.1.bias shape torch.Size([256])
+encoder.stages.3.0.convs.1.conv.weight shape torch.Size([256, 256, 3, 3])
+encoder.stages.3.0.convs.1.conv.bias shape torch.Size([256])
+encoder.stages.3.0.convs.1.norm.weight shape torch.Size([256])
+encoder.stages.3.0.convs.1.norm.bias shape torch.Size([256])
+encoder.stages.3.0.convs.1.all_modules.0.weight shape torch.Size([256, 256, 3, 3])
+encoder.stages.3.0.convs.1.all_modules.0.bias shape torch.Size([256])
+encoder.stages.3.0.convs.1.all_modules.1.weight shape torch.Size([256])
+encoder.stages.3.0.convs.1.all_modules.1.bias shape torch.Size([256])
+encoder.stages.4.0.convs.0.conv.weight shape torch.Size([512, 256, 3, 3])
+encoder.stages.4.0.convs.0.conv.bias shape torch.Size([512])
+encoder.stages.4.0.convs.0.norm.weight shape torch.Size([512])
+encoder.stages.4.0.convs.0.norm.bias shape torch.Size([512])
+encoder.stages.4.0.convs.0.all_modules.0.weight shape torch.Size([512, 256, 3, 3])
+encoder.stages.4.0.convs.0.all_modules.0.bias shape torch.Size([512])
+encoder.stages.4.0.convs.0.all_modules.1.weight shape torch.Size([512])
+encoder.stages.4.0.convs.0.all_modules.1.bias shape torch.Size([512])
+encoder.stages.4.0.convs.1.conv.weight shape torch.Size([512, 512, 3, 3])
+encoder.stages.4.0.convs.1.conv.bias shape torch.Size([512])
+encoder.stages.4.0.convs.1.norm.weight shape torch.Size([512])
+encoder.stages.4.0.convs.1.norm.bias shape torch.Size([512])
+encoder.stages.4.0.convs.1.all_modules.0.weight shape torch.Size([512, 512, 3, 3])
+encoder.stages.4.0.convs.1.all_modules.0.bias shape torch.Size([512])
+encoder.stages.4.0.convs.1.all_modules.1.weight shape torch.Size([512])
+encoder.stages.4.0.convs.1.all_modules.1.bias shape torch.Size([512])
+encoder.stages.5.0.convs.0.conv.weight shape torch.Size([512, 512, 3, 3])
+encoder.stages.5.0.convs.0.conv.bias shape torch.Size([512])
+encoder.stages.5.0.convs.0.norm.weight shape torch.Size([512])
+encoder.stages.5.0.convs.0.norm.bias shape torch.Size([512])
+encoder.stages.5.0.convs.0.all_modules.0.weight shape torch.Size([512, 512, 3, 3])
+encoder.stages.5.0.convs.0.all_modules.0.bias shape torch.Size([512])
+encoder.stages.5.0.convs.0.all_modules.1.weight shape torch.Size([512])
+encoder.stages.5.0.convs.0.all_modules.1.bias shape torch.Size([512])
+encoder.stages.5.0.convs.1.conv.weight shape torch.Size([512, 512, 3, 3])
+encoder.stages.5.0.convs.1.conv.bias shape torch.Size([512])
+encoder.stages.5.0.convs.1.norm.weight shape torch.Size([512])
+encoder.stages.5.0.convs.1.norm.bias shape torch.Size([512])
+encoder.stages.5.0.convs.1.all_modules.0.weight shape torch.Size([512, 512, 3, 3])
+encoder.stages.5.0.convs.1.all_modules.0.bias shape torch.Size([512])
+encoder.stages.5.0.convs.1.all_modules.1.weight shape torch.Size([512])
+encoder.stages.5.0.convs.1.all_modules.1.bias shape torch.Size([512])
+encoder.stages.6.0.convs.0.conv.weight shape torch.Size([512, 512, 3, 3])
+encoder.stages.6.0.convs.0.conv.bias shape torch.Size([512])
+encoder.stages.6.0.convs.0.norm.weight shape torch.Size([512])
+encoder.stages.6.0.convs.0.norm.bias shape torch.Size([512])
+encoder.stages.6.0.convs.0.all_modules.0.weight shape torch.Size([512, 512, 3, 3])
+encoder.stages.6.0.convs.0.all_modules.0.bias shape torch.Size([512])
+encoder.stages.6.0.convs.0.all_modules.1.weight shape torch.Size([512])
+encoder.stages.6.0.convs.0.all_modules.1.bias shape torch.Size([512])
+encoder.stages.6.0.convs.1.conv.weight shape torch.Size([512, 512, 3, 3])
+encoder.stages.6.0.convs.1.conv.bias shape torch.Size([512])
+encoder.stages.6.0.convs.1.norm.weight shape torch.Size([512])
+encoder.stages.6.0.convs.1.norm.bias shape torch.Size([512])
+encoder.stages.6.0.convs.1.all_modules.0.weight shape torch.Size([512, 512, 3, 3])
+encoder.stages.6.0.convs.1.all_modules.0.bias shape torch.Size([512])
+encoder.stages.6.0.convs.1.all_modules.1.weight shape torch.Size([512])
+encoder.stages.6.0.convs.1.all_modules.1.bias shape torch.Size([512])
+decoder.encoder.stages.0.0.convs.0.conv.weight shape torch.Size([32, 1, 3, 3])
+decoder.encoder.stages.0.0.convs.0.conv.bias shape torch.Size([32])
+decoder.encoder.stages.0.0.convs.0.norm.weight shape torch.Size([32])
+decoder.encoder.stages.0.0.convs.0.norm.bias shape torch.Size([32])
+decoder.encoder.stages.0.0.convs.0.all_modules.0.weight shape torch.Size([32, 1, 3, 3])
+decoder.encoder.stages.0.0.convs.0.all_modules.0.bias shape torch.Size([32])
+decoder.encoder.stages.0.0.convs.0.all_modules.1.weight shape torch.Size([32])
+decoder.encoder.stages.0.0.convs.0.all_modules.1.bias shape torch.Size([32])
+decoder.encoder.stages.0.0.convs.1.conv.weight shape torch.Size([32, 32, 3, 3])
+decoder.encoder.stages.0.0.convs.1.conv.bias shape torch.Size([32])
+decoder.encoder.stages.0.0.convs.1.norm.weight shape torch.Size([32])
+decoder.encoder.stages.0.0.convs.1.norm.bias shape torch.Size([32])
+decoder.encoder.stages.0.0.convs.1.all_modules.0.weight shape torch.Size([32, 32, 3, 3])
+decoder.encoder.stages.0.0.convs.1.all_modules.0.bias shape torch.Size([32])
+decoder.encoder.stages.0.0.convs.1.all_modules.1.weight shape torch.Size([32])
+decoder.encoder.stages.0.0.convs.1.all_modules.1.bias shape torch.Size([32])
+decoder.encoder.stages.1.0.convs.0.conv.weight shape torch.Size([64, 32, 3, 3])
+decoder.encoder.stages.1.0.convs.0.conv.bias shape torch.Size([64])
+decoder.encoder.stages.1.0.convs.0.norm.weight shape torch.Size([64])
+decoder.encoder.stages.1.0.convs.0.norm.bias shape torch.Size([64])
+decoder.encoder.stages.1.0.convs.0.all_modules.0.weight shape torch.Size([64, 32, 3, 3])
+decoder.encoder.stages.1.0.convs.0.all_modules.0.bias shape torch.Size([64])
+decoder.encoder.stages.1.0.convs.0.all_modules.1.weight shape torch.Size([64])
+decoder.encoder.stages.1.0.convs.0.all_modules.1.bias shape torch.Size([64])
+decoder.encoder.stages.1.0.convs.1.conv.weight shape torch.Size([64, 64, 3, 3])
+decoder.encoder.stages.1.0.convs.1.conv.bias shape torch.Size([64])
+decoder.encoder.stages.1.0.convs.1.norm.weight shape torch.Size([64])
+decoder.encoder.stages.1.0.convs.1.norm.bias shape torch.Size([64])
+decoder.encoder.stages.1.0.convs.1.all_modules.0.weight shape torch.Size([64, 64, 3, 3])
+decoder.encoder.stages.1.0.convs.1.all_modules.0.bias shape torch.Size([64])
+decoder.encoder.stages.1.0.convs.1.all_modules.1.weight shape torch.Size([64])
+decoder.encoder.stages.1.0.convs.1.all_modules.1.bias shape torch.Size([64])
+decoder.encoder.stages.2.0.convs.0.conv.weight shape torch.Size([128, 64, 3, 3])
+decoder.encoder.stages.2.0.convs.0.conv.bias shape torch.Size([128])
+decoder.encoder.stages.2.0.convs.0.norm.weight shape torch.Size([128])
+decoder.encoder.stages.2.0.convs.0.norm.bias shape torch.Size([128])
+decoder.encoder.stages.2.0.convs.0.all_modules.0.weight shape torch.Size([128, 64, 3, 3])
+decoder.encoder.stages.2.0.convs.0.all_modules.0.bias shape torch.Size([128])
+decoder.encoder.stages.2.0.convs.0.all_modules.1.weight shape torch.Size([128])
+decoder.encoder.stages.2.0.convs.0.all_modules.1.bias shape torch.Size([128])
+decoder.encoder.stages.2.0.convs.1.conv.weight shape torch.Size([128, 128, 3, 3])
+decoder.encoder.stages.2.0.convs.1.conv.bias shape torch.Size([128])
+decoder.encoder.stages.2.0.convs.1.norm.weight shape torch.Size([128])
+decoder.encoder.stages.2.0.convs.1.norm.bias shape torch.Size([128])
+decoder.encoder.stages.2.0.convs.1.all_modules.0.weight shape torch.Size([128, 128, 3, 3])
+decoder.encoder.stages.2.0.convs.1.all_modules.0.bias shape torch.Size([128])
+decoder.encoder.stages.2.0.convs.1.all_modules.1.weight shape torch.Size([128])
+decoder.encoder.stages.2.0.convs.1.all_modules.1.bias shape torch.Size([128])
+decoder.encoder.stages.3.0.convs.0.conv.weight shape torch.Size([256, 128, 3, 3])
+decoder.encoder.stages.3.0.convs.0.conv.bias shape torch.Size([256])
+decoder.encoder.stages.3.0.convs.0.norm.weight shape torch.Size([256])
+decoder.encoder.stages.3.0.convs.0.norm.bias shape torch.Size([256])
+decoder.encoder.stages.3.0.convs.0.all_modules.0.weight shape torch.Size([256, 128, 3, 3])
+decoder.encoder.stages.3.0.convs.0.all_modules.0.bias shape torch.Size([256])
+decoder.encoder.stages.3.0.convs.0.all_modules.1.weight shape torch.Size([256])
+decoder.encoder.stages.3.0.convs.0.all_modules.1.bias shape torch.Size([256])
+decoder.encoder.stages.3.0.convs.1.conv.weight shape torch.Size([256, 256, 3, 3])
+decoder.encoder.stages.3.0.convs.1.conv.bias shape torch.Size([256])
+decoder.encoder.stages.3.0.convs.1.norm.weight shape torch.Size([256])
+decoder.encoder.stages.3.0.convs.1.norm.bias shape torch.Size([256])
+decoder.encoder.stages.3.0.convs.1.all_modules.0.weight shape torch.Size([256, 256, 3, 3])
+decoder.encoder.stages.3.0.convs.1.all_modules.0.bias shape torch.Size([256])
+decoder.encoder.stages.3.0.convs.1.all_modules.1.weight shape torch.Size([256])
+decoder.encoder.stages.3.0.convs.1.all_modules.1.bias shape torch.Size([256])
+decoder.encoder.stages.4.0.convs.0.conv.weight shape torch.Size([512, 256, 3, 3])
+decoder.encoder.stages.4.0.convs.0.conv.bias shape torch.Size([512])
+decoder.encoder.stages.4.0.convs.0.norm.weight shape torch.Size([512])
+decoder.encoder.stages.4.0.convs.0.norm.bias shape torch.Size([512])
+decoder.encoder.stages.4.0.convs.0.all_modules.0.weight shape torch.Size([512, 256, 3, 3])
+decoder.encoder.stages.4.0.convs.0.all_modules.0.bias shape torch.Size([512])
+decoder.encoder.stages.4.0.convs.0.all_modules.1.weight shape torch.Size([512])
+decoder.encoder.stages.4.0.convs.0.all_modules.1.bias shape torch.Size([512])
+decoder.encoder.stages.4.0.convs.1.conv.weight shape torch.Size([512, 512, 3, 3])
+decoder.encoder.stages.4.0.convs.1.conv.bias shape torch.Size([512])
+decoder.encoder.stages.4.0.convs.1.norm.weight shape torch.Size([512])
+decoder.encoder.stages.4.0.convs.1.norm.bias shape torch.Size([512])
+decoder.encoder.stages.4.0.convs.1.all_modules.0.weight shape torch.Size([512, 512, 3, 3])
+decoder.encoder.stages.4.0.convs.1.all_modules.0.bias shape torch.Size([512])
+decoder.encoder.stages.4.0.convs.1.all_modules.1.weight shape torch.Size([512])
+decoder.encoder.stages.4.0.convs.1.all_modules.1.bias shape torch.Size([512])
+decoder.encoder.stages.5.0.convs.0.conv.weight shape torch.Size([512, 512, 3, 3])
+decoder.encoder.stages.5.0.convs.0.conv.bias shape torch.Size([512])
+decoder.encoder.stages.5.0.convs.0.norm.weight shape torch.Size([512])
+decoder.encoder.stages.5.0.convs.0.norm.bias shape torch.Size([512])
+decoder.encoder.stages.5.0.convs.0.all_modules.0.weight shape torch.Size([512, 512, 3, 3])
+decoder.encoder.stages.5.0.convs.0.all_modules.0.bias shape torch.Size([512])
+decoder.encoder.stages.5.0.convs.0.all_modules.1.weight shape torch.Size([512])
+decoder.encoder.stages.5.0.convs.0.all_modules.1.bias shape torch.Size([512])
+decoder.encoder.stages.5.0.convs.1.conv.weight shape torch.Size([512, 512, 3, 3])
+decoder.encoder.stages.5.0.convs.1.conv.bias shape torch.Size([512])
+decoder.encoder.stages.5.0.convs.1.norm.weight shape torch.Size([512])
+decoder.encoder.stages.5.0.convs.1.norm.bias shape torch.Size([512])
+decoder.encoder.stages.5.0.convs.1.all_modules.0.weight shape torch.Size([512, 512, 3, 3])
+decoder.encoder.stages.5.0.convs.1.all_modules.0.bias shape torch.Size([512])
+decoder.encoder.stages.5.0.convs.1.all_modules.1.weight shape torch.Size([512])
+decoder.encoder.stages.5.0.convs.1.all_modules.1.bias shape torch.Size([512])
+decoder.encoder.stages.6.0.convs.0.conv.weight shape torch.Size([512, 512, 3, 3])
+decoder.encoder.stages.6.0.convs.0.conv.bias shape torch.Size([512])
+decoder.encoder.stages.6.0.convs.0.norm.weight shape torch.Size([512])
+decoder.encoder.stages.6.0.convs.0.norm.bias shape torch.Size([512])
+decoder.encoder.stages.6.0.convs.0.all_modules.0.weight shape torch.Size([512, 512, 3, 3])
+decoder.encoder.stages.6.0.convs.0.all_modules.0.bias shape torch.Size([512])
+decoder.encoder.stages.6.0.convs.0.all_modules.1.weight shape torch.Size([512])
+decoder.encoder.stages.6.0.convs.0.all_modules.1.bias shape torch.Size([512])
+decoder.encoder.stages.6.0.convs.1.conv.weight shape torch.Size([512, 512, 3, 3])
+decoder.encoder.stages.6.0.convs.1.conv.bias shape torch.Size([512])
+decoder.encoder.stages.6.0.convs.1.norm.weight shape torch.Size([512])
+decoder.encoder.stages.6.0.convs.1.norm.bias shape torch.Size([512])
+decoder.encoder.stages.6.0.convs.1.all_modules.0.weight shape torch.Size([512, 512, 3, 3])
+decoder.encoder.stages.6.0.convs.1.all_modules.0.bias shape torch.Size([512])
+decoder.encoder.stages.6.0.convs.1.all_modules.1.weight shape torch.Size([512])
+decoder.encoder.stages.6.0.convs.1.all_modules.1.bias shape torch.Size([512])
+decoder.stages.0.convs.0.conv.weight shape torch.Size([512, 1024, 3, 3])
+decoder.stages.0.convs.0.conv.bias shape torch.Size([512])
+decoder.stages.0.convs.0.norm.weight shape torch.Size([512])
+decoder.stages.0.convs.0.norm.bias shape torch.Size([512])
+decoder.stages.0.convs.0.all_modules.0.weight shape torch.Size([512, 1024, 3, 3])
+decoder.stages.0.convs.0.all_modules.0.bias shape torch.Size([512])
+decoder.stages.0.convs.0.all_modules.1.weight shape torch.Size([512])
+decoder.stages.0.convs.0.all_modules.1.bias shape torch.Size([512])
+decoder.stages.0.convs.1.conv.weight shape torch.Size([512, 512, 3, 3])
+decoder.stages.0.convs.1.conv.bias shape torch.Size([512])
+decoder.stages.0.convs.1.norm.weight shape torch.Size([512])
+decoder.stages.0.convs.1.norm.bias shape torch.Size([512])
+decoder.stages.0.convs.1.all_modules.0.weight shape torch.Size([512, 512, 3, 3])
+decoder.stages.0.convs.1.all_modules.0.bias shape torch.Size([512])
+decoder.stages.0.convs.1.all_modules.1.weight shape torch.Size([512])
+decoder.stages.0.convs.1.all_modules.1.bias shape torch.Size([512])
+decoder.stages.1.convs.0.conv.weight shape torch.Size([512, 1024, 3, 3])
+decoder.stages.1.convs.0.conv.bias shape torch.Size([512])
+decoder.stages.1.convs.0.norm.weight shape torch.Size([512])
+decoder.stages.1.convs.0.norm.bias shape torch.Size([512])
+decoder.stages.1.convs.0.all_modules.0.weight shape torch.Size([512, 1024, 3, 3])
+decoder.stages.1.convs.0.all_modules.0.bias shape torch.Size([512])
+decoder.stages.1.convs.0.all_modules.1.weight shape torch.Size([512])
+decoder.stages.1.convs.0.all_modules.1.bias shape torch.Size([512])
+decoder.stages.1.convs.1.conv.weight shape torch.Size([512, 512, 3, 3])
+decoder.stages.1.convs.1.conv.bias shape torch.Size([512])
+decoder.stages.1.convs.1.norm.weight shape torch.Size([512])
+decoder.stages.1.convs.1.norm.bias shape torch.Size([512])
+decoder.stages.1.convs.1.all_modules.0.weight shape torch.Size([512, 512, 3, 3])
+decoder.stages.1.convs.1.all_modules.0.bias shape torch.Size([512])
+decoder.stages.1.convs.1.all_modules.1.weight shape torch.Size([512])
+decoder.stages.1.convs.1.all_modules.1.bias shape torch.Size([512])
+decoder.stages.2.convs.0.conv.weight shape torch.Size([256, 512, 3, 3])
+decoder.stages.2.convs.0.conv.bias shape torch.Size([256])
+decoder.stages.2.convs.0.norm.weight shape torch.Size([256])
+decoder.stages.2.convs.0.norm.bias shape torch.Size([256])
+decoder.stages.2.convs.0.all_modules.0.weight shape torch.Size([256, 512, 3, 3])
+decoder.stages.2.convs.0.all_modules.0.bias shape torch.Size([256])
+decoder.stages.2.convs.0.all_modules.1.weight shape torch.Size([256])
+decoder.stages.2.convs.0.all_modules.1.bias shape torch.Size([256])
+decoder.stages.2.convs.1.conv.weight shape torch.Size([256, 256, 3, 3])
+decoder.stages.2.convs.1.conv.bias shape torch.Size([256])
+decoder.stages.2.convs.1.norm.weight shape torch.Size([256])
+decoder.stages.2.convs.1.norm.bias shape torch.Size([256])
+decoder.stages.2.convs.1.all_modules.0.weight shape torch.Size([256, 256, 3, 3])
+decoder.stages.2.convs.1.all_modules.0.bias shape torch.Size([256])
+decoder.stages.2.convs.1.all_modules.1.weight shape torch.Size([256])
+decoder.stages.2.convs.1.all_modules.1.bias shape torch.Size([256])
+decoder.stages.3.convs.0.conv.weight shape torch.Size([128, 256, 3, 3])
+decoder.stages.3.convs.0.conv.bias shape torch.Size([128])
+decoder.stages.3.convs.0.norm.weight shape torch.Size([128])
+decoder.stages.3.convs.0.norm.bias shape torch.Size([128])
+decoder.stages.3.convs.0.all_modules.0.weight shape torch.Size([128, 256, 3, 3])
+decoder.stages.3.convs.0.all_modules.0.bias shape torch.Size([128])
+decoder.stages.3.convs.0.all_modules.1.weight shape torch.Size([128])
+decoder.stages.3.convs.0.all_modules.1.bias shape torch.Size([128])
+decoder.stages.3.convs.1.conv.weight shape torch.Size([128, 128, 3, 3])
+decoder.stages.3.convs.1.conv.bias shape torch.Size([128])
+decoder.stages.3.convs.1.norm.weight shape torch.Size([128])
+decoder.stages.3.convs.1.norm.bias shape torch.Size([128])
+decoder.stages.3.convs.1.all_modules.0.weight shape torch.Size([128, 128, 3, 3])
+decoder.stages.3.convs.1.all_modules.0.bias shape torch.Size([128])
+decoder.stages.3.convs.1.all_modules.1.weight shape torch.Size([128])
+decoder.stages.3.convs.1.all_modules.1.bias shape torch.Size([128])
+decoder.stages.4.convs.0.conv.weight shape torch.Size([64, 128, 3, 3])
+decoder.stages.4.convs.0.conv.bias shape torch.Size([64])
+decoder.stages.4.convs.0.norm.weight shape torch.Size([64])
+decoder.stages.4.convs.0.norm.bias shape torch.Size([64])
+decoder.stages.4.convs.0.all_modules.0.weight shape torch.Size([64, 128, 3, 3])
+decoder.stages.4.convs.0.all_modules.0.bias shape torch.Size([64])
+decoder.stages.4.convs.0.all_modules.1.weight shape torch.Size([64])
+decoder.stages.4.convs.0.all_modules.1.bias shape torch.Size([64])
+decoder.stages.4.convs.1.conv.weight shape torch.Size([64, 64, 3, 3])
+decoder.stages.4.convs.1.conv.bias shape torch.Size([64])
+decoder.stages.4.convs.1.norm.weight shape torch.Size([64])
+decoder.stages.4.convs.1.norm.bias shape torch.Size([64])
+decoder.stages.4.convs.1.all_modules.0.weight shape torch.Size([64, 64, 3, 3])
+decoder.stages.4.convs.1.all_modules.0.bias shape torch.Size([64])
+decoder.stages.4.convs.1.all_modules.1.weight shape torch.Size([64])
+decoder.stages.4.convs.1.all_modules.1.bias shape torch.Size([64])
+decoder.stages.5.convs.0.conv.weight shape torch.Size([32, 64, 3, 3])
+decoder.stages.5.convs.0.conv.bias shape torch.Size([32])
+decoder.stages.5.convs.0.norm.weight shape torch.Size([32])
+decoder.stages.5.convs.0.norm.bias shape torch.Size([32])
+decoder.stages.5.convs.0.all_modules.0.weight shape torch.Size([32, 64, 3, 3])
+decoder.stages.5.convs.0.all_modules.0.bias shape torch.Size([32])
+decoder.stages.5.convs.0.all_modules.1.weight shape torch.Size([32])
+decoder.stages.5.convs.0.all_modules.1.bias shape torch.Size([32])
+decoder.stages.5.convs.1.conv.weight shape torch.Size([32, 32, 3, 3])
+decoder.stages.5.convs.1.conv.bias shape torch.Size([32])
+decoder.stages.5.convs.1.norm.weight shape torch.Size([32])
+decoder.stages.5.convs.1.norm.bias shape torch.Size([32])
+decoder.stages.5.convs.1.all_modules.0.weight shape torch.Size([32, 32, 3, 3])
+decoder.stages.5.convs.1.all_modules.0.bias shape torch.Size([32])
+decoder.stages.5.convs.1.all_modules.1.weight shape torch.Size([32])
+decoder.stages.5.convs.1.all_modules.1.bias shape torch.Size([32])
+decoder.transpconvs.0.weight shape torch.Size([512, 512, 2, 2])
+decoder.transpconvs.0.bias shape torch.Size([512])
+decoder.transpconvs.1.weight shape torch.Size([512, 512, 2, 2])
+decoder.transpconvs.1.bias shape torch.Size([512])
+decoder.transpconvs.2.weight shape torch.Size([512, 256, 2, 2])
+decoder.transpconvs.2.bias shape torch.Size([256])
+decoder.transpconvs.3.weight shape torch.Size([256, 128, 2, 2])
+decoder.transpconvs.3.bias shape torch.Size([128])
+decoder.transpconvs.4.weight shape torch.Size([128, 64, 2, 2])
+decoder.transpconvs.4.bias shape torch.Size([64])
+decoder.transpconvs.5.weight shape torch.Size([64, 32, 2, 2])
+decoder.transpconvs.5.bias shape torch.Size([32])
+################### Done ###################
+
+This is the configuration used by this training:
+Configuration name: 2d
+ {'data_identifier': 'nnUNetPlans_2d', 'preprocessor_name': 'DefaultPreprocessor', 'batch_size': 49, 'patch_size': [256, 256], 'median_image_size_in_voxels': [255.0, 255.0], 'spacing': [0.7578125, 0.7578125], 'normalization_schemes': ['CTNormalization'], 'use_mask_for_norm': [False], 'UNet_class_name': 'PlainConvUNet', 'UNet_base_num_features': 32, 'n_conv_per_stage_encoder': [2, 2, 2, 2, 2, 2, 2], 'n_conv_per_stage_decoder': [2, 2, 2, 2, 2, 2], 'num_pool_per_axis': [6, 6], 'pool_op_kernel_sizes': [[1, 1], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2]], 'conv_kernel_sizes': [[3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3]], 'unet_max_num_features': 512, 'resampling_fn_data': 'no_resampling_data_or_seg_to_shape', 'resampling_fn_seg': 'no_resampling_data_or_seg_to_shape', 'resampling_fn_data_kwargs': {'is_seg': False, 'order': 3, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_seg_kwargs': {'is_seg': True, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_probabilities': 'no_resampling_data_or_seg_to_shape', 'resampling_fn_probabilities_kwargs': {'is_seg': False, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'batch_dice': True} 
+
+These are the global plan.json settings:
+ {'dataset_name': 'Dataset501_RadboudumcBone', 'plans_name': 'nnUNetPlans', 'original_median_spacing_after_transp': [0.800000011920929, 0.7578125, 0.7578125], 'original_median_shape_after_transp': [128, 256, 256], 'image_reader_writer': 'SimpleITKIO', 'transpose_forward': [0, 1, 2], 'transpose_backward': [0, 1, 2], 'experiment_planner_used': 'ExperimentPlannerNoResampling', 'label_manager': 'LabelManager', 'foreground_intensity_properties_per_channel': {'0': {'max': 2782.0, 'mean': 1175.083251953125, 'median': 1230.0, 'min': -935.0, 'percentile_00_5': 33.0, 'percentile_99_5': 2269.0, 'std': 513.393310546875}}} 
+
+2024-06-01 00:41:36.694721: unpacking dataset...
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+2024-06-01 00:42:04.206326: unpacking done...
+2024-06-01 00:42:04.215750: do_dummy_2d_data_aug: False
+2024-06-01 00:42:04.269207: Using splits from existing split file: /scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/splits_final.json
+2024-06-01 00:42:04.270689: The split file contains 5 splits.
+2024-06-01 00:42:04.270894: Desired fold for training: 0
+2024-06-01 00:42:04.271048: This split has 557 training and 140 validation cases.
+2024-06-01 00:42:04.750400: Unable to plot network architecture:
+2024-06-01 00:42:04.750669: No module named 'IPython'
+2024-06-01 00:42:04.819276: 
+2024-06-01 00:42:04.819553: Epoch 0
+2024-06-01 00:42:04.819961: Current learning rate: 0.005
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/torch/nn/modules/conv.py:456: UserWarning: Applied workaround for CuDNN issue, install nvrtc.so (Triggered internally at ../aten/src/ATen/native/cudnn/Conv_v8.cpp:84.)
+  return F.conv2d(input, weight, bias, self.stride,
+using pin_memory on device 0
+using pin_memory on device 0
+2024-06-01 00:49:28.665777: train_loss -0.3441
+2024-06-01 00:49:28.666421: val_loss -0.2899
+2024-06-01 00:49:28.666661: Pseudo dice [0.3467]
+2024-06-01 00:49:28.666921: Epoch time: 443.85 s
+2024-06-01 00:49:28.667134: Yayy! New best EMA pseudo Dice: 0.3467
+2024-06-01 00:49:32.258178: 
+2024-06-01 00:49:32.258543: Epoch 1
+2024-06-01 00:49:32.258811: Current learning rate: 0.00491
+2024-06-01 00:55:45.549486: train_loss -0.4232
+2024-06-01 00:55:45.557736: val_loss -0.3621
+2024-06-01 00:55:45.558017: Pseudo dice [0.407]
+2024-06-01 00:55:45.558315: Epoch time: 373.29 s
+2024-06-01 00:55:45.558524: Yayy! New best EMA pseudo Dice: 0.3527
+2024-06-01 00:55:49.585745: 
+2024-06-01 00:55:49.586097: Epoch 2
+2024-06-01 00:55:49.586394: Current learning rate: 0.00482
+2024-06-01 01:02:02.594678: train_loss -0.4335
+2024-06-01 01:02:02.598177: val_loss -0.3179
+2024-06-01 01:02:02.598423: Pseudo dice [0.3597]
+2024-06-01 01:02:02.598650: Epoch time: 373.01 s
+2024-06-01 01:02:02.598846: Yayy! New best EMA pseudo Dice: 0.3534
+2024-06-01 01:02:06.827922: 
+2024-06-01 01:02:06.828491: Epoch 3
+2024-06-01 01:02:06.828756: Current learning rate: 0.00473
+2024-06-01 01:08:23.226398: train_loss -0.4491
+2024-06-01 01:08:23.231762: val_loss -0.3253
+2024-06-01 01:08:23.232027: Pseudo dice [0.3655]
+2024-06-01 01:08:23.232313: Epoch time: 376.4 s
+2024-06-01 01:08:23.232602: Yayy! New best EMA pseudo Dice: 0.3546
+2024-06-01 01:08:27.489966: 
+2024-06-01 01:08:27.490333: Epoch 4
+2024-06-01 01:08:27.490605: Current learning rate: 0.00464
+2024-06-01 01:14:36.688220: train_loss -0.4516
+2024-06-01 01:14:36.689620: val_loss -0.3635
+2024-06-01 01:14:36.689868: Pseudo dice [0.403]
+2024-06-01 01:14:36.690117: Epoch time: 369.2 s
+2024-06-01 01:14:36.690310: Yayy! New best EMA pseudo Dice: 0.3594
+2024-06-01 01:14:40.846680: 
+2024-06-01 01:14:40.847267: Epoch 5
+2024-06-01 01:14:40.847533: Current learning rate: 0.00455
+2024-06-01 01:20:51.676190: train_loss -0.4749
+2024-06-01 01:20:51.681592: val_loss -0.3108
+2024-06-01 01:20:51.681825: Pseudo dice [0.3478]
+2024-06-01 01:20:51.682109: Epoch time: 370.83 s
+2024-06-01 01:20:55.545196: 
+2024-06-01 01:20:55.545837: Epoch 6
+2024-06-01 01:20:55.546115: Current learning rate: 0.00446
+2024-06-01 01:27:08.468013: train_loss -0.4781
+2024-06-01 01:27:08.469376: val_loss -0.2854
+2024-06-01 01:27:08.469618: Pseudo dice [0.3185]
+2024-06-01 01:27:08.469853: Epoch time: 372.93 s
+2024-06-01 01:27:12.022842: 
+2024-06-01 01:27:12.023500: Epoch 7
+2024-06-01 01:27:12.023776: Current learning rate: 0.00437
+2024-06-01 01:33:24.716662: train_loss -0.4704
+2024-06-01 01:33:24.734574: val_loss -0.377
+2024-06-01 01:33:24.734828: Pseudo dice [0.4241]
+2024-06-01 01:33:24.735124: Epoch time: 372.7 s
+2024-06-01 01:33:24.735332: Yayy! New best EMA pseudo Dice: 0.3613
+2024-06-01 01:33:28.930927: 
+2024-06-01 01:33:28.931623: Epoch 8
+2024-06-01 01:33:28.931907: Current learning rate: 0.00427
+2024-06-01 01:39:33.518819: train_loss -0.4846
+2024-06-01 01:39:33.519822: val_loss -0.3387
+2024-06-01 01:39:33.520077: Pseudo dice [0.3797]
+2024-06-01 01:39:33.520303: Epoch time: 364.59 s
+2024-06-01 01:39:33.520496: Yayy! New best EMA pseudo Dice: 0.3631
+2024-06-01 01:39:37.669043: 
+2024-06-01 01:39:37.669679: Epoch 9
+2024-06-01 01:39:37.670024: Current learning rate: 0.00418
+2024-06-01 01:45:49.277489: train_loss -0.4985
+2024-06-01 01:45:49.283975: val_loss -0.3837
+2024-06-01 01:45:49.284227: Pseudo dice [0.4162]
+2024-06-01 01:45:49.284514: Epoch time: 371.61 s
+2024-06-01 01:45:49.284722: Yayy! New best EMA pseudo Dice: 0.3684
+2024-06-01 01:45:53.632733: 
+2024-06-01 01:45:53.633087: Epoch 10
+2024-06-01 01:45:53.633349: Current learning rate: 0.00409
+2024-06-01 01:52:09.459679: train_loss -0.5062
+2024-06-01 01:52:09.460604: val_loss -0.3587
+2024-06-01 01:52:09.460852: Pseudo dice [0.4005]
+2024-06-01 01:52:09.461099: Epoch time: 375.83 s
+2024-06-01 01:52:09.461297: Yayy! New best EMA pseudo Dice: 0.3716
+2024-06-01 01:52:13.452487: 
+2024-06-01 01:52:13.453126: Epoch 11
+2024-06-01 01:52:13.453388: Current learning rate: 0.004
+2024-06-01 01:58:37.920541: train_loss -0.4914
+2024-06-01 01:58:37.928687: val_loss -0.3372
+2024-06-01 01:58:37.928955: Pseudo dice [0.3715]
+2024-06-01 01:58:37.929237: Epoch time: 384.47 s
+2024-06-01 01:58:41.387102: 
+2024-06-01 01:58:41.387779: Epoch 12
+2024-06-01 01:58:41.388052: Current learning rate: 0.00391
+2024-06-01 02:04:57.790402: train_loss -0.4961
+2024-06-01 02:04:57.791427: val_loss -0.3921
+2024-06-01 02:04:57.791680: Pseudo dice [0.4362]
+2024-06-01 02:04:57.791929: Epoch time: 376.41 s
+2024-06-01 02:04:57.792133: Yayy! New best EMA pseudo Dice: 0.3781
+2024-06-01 02:05:02.046204: 
+2024-06-01 02:05:02.046537: Epoch 13
+2024-06-01 02:05:02.046791: Current learning rate: 0.00381
+2024-06-01 02:11:18.136735: train_loss -0.5093
+2024-06-01 02:11:18.139730: val_loss -0.3353
+2024-06-01 02:11:18.139985: Pseudo dice [0.3756]
+2024-06-01 02:11:18.143113: Epoch time: 376.09 s
+2024-06-01 02:11:21.665873: 
+2024-06-01 02:11:21.666213: Epoch 14
+2024-06-01 02:11:21.667756: Current learning rate: 0.00372
+2024-06-01 02:17:32.709555: train_loss -0.5085
+2024-06-01 02:17:32.721089: val_loss -0.3575
+2024-06-01 02:17:32.721401: Pseudo dice [0.4053]
+2024-06-01 02:17:32.721725: Epoch time: 371.05 s
+2024-06-01 02:17:32.721951: Yayy! New best EMA pseudo Dice: 0.3806
+2024-06-01 02:17:37.451926: 
+2024-06-01 02:17:37.452717: Epoch 15
+2024-06-01 02:17:37.453144: Current learning rate: 0.00363
+2024-06-01 02:23:53.042332: train_loss -0.5223
+2024-06-01 02:23:53.052351: val_loss -0.3659
+2024-06-01 02:23:53.052609: Pseudo dice [0.406]
+2024-06-01 02:23:53.052988: Epoch time: 375.59 s
+2024-06-01 02:23:53.053199: Yayy! New best EMA pseudo Dice: 0.3831
+2024-06-01 02:23:57.237786: 
+2024-06-01 02:23:57.238429: Epoch 16
+2024-06-01 02:23:57.238693: Current learning rate: 0.00353
+2024-06-01 02:30:09.318501: train_loss -0.5213
+2024-06-01 02:30:09.327217: val_loss -0.3697
+2024-06-01 02:30:09.327509: Pseudo dice [0.411]
+2024-06-01 02:30:09.327804: Epoch time: 372.08 s
+2024-06-01 02:30:09.328028: Yayy! New best EMA pseudo Dice: 0.3859
+2024-06-01 02:30:13.719026: 
+2024-06-01 02:30:13.719362: Epoch 17
+2024-06-01 02:30:13.719620: Current learning rate: 0.00344
+2024-06-01 02:36:29.087654: train_loss -0.5221
+2024-06-01 02:36:29.099069: val_loss -0.4127
+2024-06-01 02:36:29.099322: Pseudo dice [0.4549]
+2024-06-01 02:36:29.099622: Epoch time: 375.37 s
+2024-06-01 02:36:29.100256: Yayy! New best EMA pseudo Dice: 0.3928
+2024-06-01 02:36:33.269421: 
+2024-06-01 02:36:33.270001: Epoch 18
+2024-06-01 02:36:33.270266: Current learning rate: 0.00335
+2024-06-01 02:42:48.850198: train_loss -0.5393
+2024-06-01 02:42:48.857562: val_loss -0.3491
+2024-06-01 02:42:48.857817: Pseudo dice [0.3962]
+2024-06-01 02:42:48.858131: Epoch time: 375.58 s
+2024-06-01 02:42:48.858332: Yayy! New best EMA pseudo Dice: 0.3931
+2024-06-01 02:42:53.492607: 
+2024-06-01 02:42:53.493356: Epoch 19
+2024-06-01 02:42:53.493622: Current learning rate: 0.00325
+2024-06-01 02:49:06.682633: train_loss -0.5276
+2024-06-01 02:49:06.693130: val_loss -0.3484
+2024-06-01 02:49:06.693394: Pseudo dice [0.3854]
+2024-06-01 02:49:06.693698: Epoch time: 373.19 s
+2024-06-01 02:49:10.411019: 
+2024-06-01 02:49:10.411367: Epoch 20
+2024-06-01 02:49:10.411617: Current learning rate: 0.00316
+2024-06-01 02:55:20.603737: train_loss -0.5282
+2024-06-01 02:55:20.607438: val_loss -0.3718
+2024-06-01 02:55:20.607746: Pseudo dice [0.4135]
+2024-06-01 02:55:20.608070: Epoch time: 370.2 s
+2024-06-01 02:55:20.608278: Yayy! New best EMA pseudo Dice: 0.3945
+2024-06-01 02:55:24.943735: 
+2024-06-01 02:55:24.944248: Epoch 21
+2024-06-01 02:55:24.944514: Current learning rate: 0.00306
+2024-06-01 03:01:42.583549: train_loss -0.5327
+2024-06-01 03:01:42.600173: val_loss -0.2892
+2024-06-01 03:01:42.600448: Pseudo dice [0.3257]
+2024-06-01 03:01:42.600754: Epoch time: 377.64 s
+2024-06-01 03:01:46.141304: 
+2024-06-01 03:01:46.141693: Epoch 22
+2024-06-01 03:01:46.141962: Current learning rate: 0.00297
+2024-06-01 03:08:03.278696: train_loss -0.5559
+2024-06-01 03:08:03.285713: val_loss -0.3792
+2024-06-01 03:08:03.285971: Pseudo dice [0.4297]
+2024-06-01 03:08:03.286279: Epoch time: 377.14 s
+2024-06-01 03:08:06.835471: 
+2024-06-01 03:08:06.835825: Epoch 23
+2024-06-01 03:08:06.836097: Current learning rate: 0.00287
+2024-06-01 03:14:17.311646: train_loss -0.5221
+2024-06-01 03:14:17.319225: val_loss -0.3166
+2024-06-01 03:14:17.319482: Pseudo dice [0.3563]
+2024-06-01 03:14:17.319772: Epoch time: 370.48 s
+2024-06-01 03:14:20.979997: 
+2024-06-01 03:14:20.980352: Epoch 24
+2024-06-01 03:14:20.980612: Current learning rate: 0.00278
+2024-06-01 03:20:31.669340: train_loss -0.557
+2024-06-01 03:20:31.678949: val_loss -0.4067
+2024-06-01 03:20:31.679217: Pseudo dice [0.4565]
+2024-06-01 03:20:31.679524: Epoch time: 370.69 s
+2024-06-01 03:20:31.679727: Yayy! New best EMA pseudo Dice: 0.3951
+2024-06-01 03:20:35.943981: 
+2024-06-01 03:20:35.944345: Epoch 25
+2024-06-01 03:20:35.944631: Current learning rate: 0.00268
+2024-06-01 03:26:51.425405: train_loss -0.559
+2024-06-01 03:26:51.437783: val_loss -0.3111
+2024-06-01 03:26:51.438132: Pseudo dice [0.3404]
+2024-06-01 03:26:51.438443: Epoch time: 375.48 s
+2024-06-01 03:26:54.965527: 
+2024-06-01 03:26:54.965906: Epoch 26
+2024-06-01 03:26:54.966169: Current learning rate: 0.00258
+2024-06-01 03:33:19.918901: train_loss -0.5522
+2024-06-01 03:33:19.924706: val_loss -0.4113
+2024-06-01 03:33:19.924978: Pseudo dice [0.4478]
+2024-06-01 03:33:19.925282: Epoch time: 384.96 s
+2024-06-01 03:33:19.925483: Yayy! New best EMA pseudo Dice: 0.3954
+2024-06-01 03:33:24.206207: 
+2024-06-01 03:33:24.206555: Epoch 27
+2024-06-01 03:33:24.206806: Current learning rate: 0.00249
+2024-06-01 03:39:58.515175: train_loss -0.5663
+2024-06-01 03:39:58.524398: val_loss -0.3441
+2024-06-01 03:39:58.524665: Pseudo dice [0.3775]
+2024-06-01 03:39:58.525006: Epoch time: 394.31 s
+2024-06-01 03:40:02.108002: 
+2024-06-01 03:40:02.108337: Epoch 28
+2024-06-01 03:40:02.108593: Current learning rate: 0.00239
+2024-06-01 03:46:19.449694: train_loss -0.5694
+2024-06-01 03:46:19.455277: val_loss -0.3322
+2024-06-01 03:46:19.455532: Pseudo dice [0.3724]
+2024-06-01 03:46:19.455814: Epoch time: 377.34 s
+2024-06-01 03:46:23.041587: 
+2024-06-01 03:46:23.041973: Epoch 29
+2024-06-01 03:46:23.042244: Current learning rate: 0.00229
+2024-06-01 03:52:37.911738: train_loss -0.5837
+2024-06-01 03:52:37.918218: val_loss -0.3503
+2024-06-01 03:52:37.918483: Pseudo dice [0.3901]
+2024-06-01 03:52:37.919432: Epoch time: 374.87 s
+2024-06-01 03:52:41.540396: 
+2024-06-01 03:52:41.540738: Epoch 30
+2024-06-01 03:52:41.541002: Current learning rate: 0.00219
+2024-06-01 03:58:46.200576: train_loss -0.5717
+2024-06-01 03:58:46.206326: val_loss -0.3754
+2024-06-01 03:58:46.206644: Pseudo dice [0.4219]
+2024-06-01 03:58:46.206968: Epoch time: 364.66 s
+2024-06-01 03:58:49.837011: 
+2024-06-01 03:58:49.837344: Epoch 31
+2024-06-01 03:58:49.837600: Current learning rate: 0.00209
+2024-06-01 04:05:08.942478: train_loss -0.5736
+2024-06-01 04:05:08.949803: val_loss -0.3603
+2024-06-01 04:05:08.950089: Pseudo dice [0.4049]
+2024-06-01 04:05:08.950415: Epoch time: 379.11 s
+2024-06-01 04:05:08.950620: Yayy! New best EMA pseudo Dice: 0.3955
+2024-06-01 04:05:13.330924: 
+2024-06-01 04:05:13.331289: Epoch 32
+2024-06-01 04:05:13.331598: Current learning rate: 0.00199
+2024-06-01 04:11:33.335248: train_loss -0.5809
+2024-06-01 04:11:33.341867: val_loss -0.3691
+2024-06-01 04:11:33.342121: Pseudo dice [0.4124]
+2024-06-01 04:11:33.342389: Epoch time: 380.01 s
+2024-06-01 04:11:33.342590: Yayy! New best EMA pseudo Dice: 0.3972
+2024-06-01 04:11:37.541589: 
+2024-06-01 04:11:37.541950: Epoch 33
+2024-06-01 04:11:37.542213: Current learning rate: 0.00189
+2024-06-01 04:17:50.765471: train_loss -0.6014
+2024-06-01 04:17:50.771904: val_loss -0.3028
+2024-06-01 04:17:50.772170: Pseudo dice [0.3448]
+2024-06-01 04:17:50.772505: Epoch time: 373.23 s
+2024-06-01 04:17:54.427364: 
+2024-06-01 04:17:54.427716: Epoch 34
+2024-06-01 04:17:54.428113: Current learning rate: 0.00179
+2024-06-01 04:24:05.656625: train_loss -0.579
+2024-06-01 04:24:05.663506: val_loss -0.3821
+2024-06-01 04:24:05.663774: Pseudo dice [0.4254]
+2024-06-01 04:24:05.664152: Epoch time: 371.23 s
+2024-06-01 04:24:09.344464: 
+2024-06-01 04:24:09.344806: Epoch 35
+2024-06-01 04:24:09.345078: Current learning rate: 0.00169
+2024-06-01 04:30:16.698605: train_loss -0.601
+2024-06-01 04:30:16.704484: val_loss -0.4138
+2024-06-01 04:30:16.704740: Pseudo dice [0.4611]
+2024-06-01 04:30:16.705081: Epoch time: 367.36 s
+2024-06-01 04:30:16.705289: Yayy! New best EMA pseudo Dice: 0.4019
+2024-06-01 04:30:21.155200: 
+2024-06-01 04:30:21.155550: Epoch 36
+2024-06-01 04:30:21.155827: Current learning rate: 0.00159
+2024-06-01 04:36:35.806385: train_loss -0.6048
+2024-06-01 04:36:35.813098: val_loss -0.3717
+2024-06-01 04:36:35.813359: Pseudo dice [0.432]
+2024-06-01 04:36:35.813688: Epoch time: 374.65 s
+2024-06-01 04:36:35.813901: Yayy! New best EMA pseudo Dice: 0.4049
+2024-06-01 04:36:40.635118: 
+2024-06-01 04:36:40.635483: Epoch 37
+2024-06-01 04:36:40.637584: Current learning rate: 0.00149
+2024-06-01 04:42:45.036685: train_loss -0.595
+2024-06-01 04:42:45.044267: val_loss -0.3798
+2024-06-01 04:42:45.044545: Pseudo dice [0.4256]
+2024-06-01 04:42:45.044840: Epoch time: 364.4 s
+2024-06-01 04:42:45.045066: Yayy! New best EMA pseudo Dice: 0.4069
+2024-06-01 04:42:49.455141: 
+2024-06-01 04:42:49.455578: Epoch 38
+2024-06-01 04:42:49.455848: Current learning rate: 0.00138
+2024-06-01 04:49:11.204854: train_loss -0.5958
+2024-06-01 04:49:11.218205: val_loss -0.4064
+2024-06-01 04:49:11.218477: Pseudo dice [0.4494]
+2024-06-01 04:49:11.218807: Epoch time: 381.75 s
+2024-06-01 04:49:11.219027: Yayy! New best EMA pseudo Dice: 0.4112
+2024-06-01 04:49:15.640552: 
+2024-06-01 04:49:15.640946: Epoch 39
+2024-06-01 04:49:15.641214: Current learning rate: 0.00128
+2024-06-01 04:55:32.120468: train_loss -0.6176
+2024-06-01 04:55:32.127909: val_loss -0.4128
+2024-06-01 04:55:32.128152: Pseudo dice [0.4607]
+2024-06-01 04:55:32.128421: Epoch time: 376.48 s
+2024-06-01 04:55:32.128622: Yayy! New best EMA pseudo Dice: 0.4161
+2024-06-01 04:55:36.462291: 
+2024-06-01 04:55:36.462711: Epoch 40
+2024-06-01 04:55:36.462985: Current learning rate: 0.00117
+2024-06-01 05:01:50.211251: train_loss -0.6015
+2024-06-01 05:01:50.219794: val_loss -0.4001
+2024-06-01 05:01:50.220061: Pseudo dice [0.4386]
+2024-06-01 05:01:50.220373: Epoch time: 373.75 s
+2024-06-01 05:01:50.220575: Yayy! New best EMA pseudo Dice: 0.4184
+2024-06-01 05:01:54.578281: 
+2024-06-01 05:01:54.578921: Epoch 41
+2024-06-01 05:01:54.579724: Current learning rate: 0.00107
+2024-06-01 05:08:02.787995: train_loss -0.6156
+2024-06-01 05:08:02.794217: val_loss -0.3441
+2024-06-01 05:08:02.794503: Pseudo dice [0.4057]
+2024-06-01 05:08:02.794780: Epoch time: 368.21 s
+2024-06-01 05:08:06.387405: 
+2024-06-01 05:08:06.387753: Epoch 42
+2024-06-01 05:08:06.388018: Current learning rate: 0.00096
+2024-06-01 05:14:19.493431: train_loss -0.6175
+2024-06-01 05:14:19.500648: val_loss -0.3604
+2024-06-01 05:14:19.500932: Pseudo dice [0.3969]
+2024-06-01 05:14:19.501240: Epoch time: 373.11 s
+2024-06-01 05:14:23.091792: 
+2024-06-01 05:14:23.092164: Epoch 43
+2024-06-01 05:14:23.092414: Current learning rate: 0.00085
+2024-06-01 05:20:34.298295: train_loss -0.6193
+2024-06-01 05:20:34.304052: val_loss -0.3855
+2024-06-01 05:20:34.304301: Pseudo dice [0.4313]
+2024-06-01 05:20:34.304605: Epoch time: 371.21 s
+2024-06-01 05:20:37.817940: 
+2024-06-01 05:20:37.818277: Epoch 44
+2024-06-01 05:20:37.818528: Current learning rate: 0.00074
+2024-06-01 05:26:53.717131: train_loss -0.6398
+2024-06-01 05:26:53.724966: val_loss -0.3834
+2024-06-01 05:26:53.725217: Pseudo dice [0.4351]
+2024-06-01 05:26:53.725504: Epoch time: 375.9 s
+2024-06-01 05:26:53.725703: Yayy! New best EMA pseudo Dice: 0.4186
+2024-06-01 05:26:58.000066: 
+2024-06-01 05:26:58.000411: Epoch 45
+2024-06-01 05:26:58.000669: Current learning rate: 0.00063
+2024-06-01 05:33:15.646253: train_loss -0.635
+2024-06-01 05:33:15.653246: val_loss -0.3698
+2024-06-01 05:33:15.653514: Pseudo dice [0.4156]
+2024-06-01 05:33:15.653805: Epoch time: 377.65 s
+2024-06-01 05:33:19.595663: 
+2024-06-01 05:33:19.596011: Epoch 46
+2024-06-01 05:33:19.596273: Current learning rate: 0.00051
+2024-06-01 05:39:28.292829: train_loss -0.6253
+2024-06-01 05:39:28.304644: val_loss -0.3414
+2024-06-01 05:39:28.304954: Pseudo dice [0.3788]
+2024-06-01 05:39:28.305303: Epoch time: 368.7 s
+2024-06-01 05:39:31.922923: 
+2024-06-01 05:39:31.923355: Epoch 47
+2024-06-01 05:39:31.923617: Current learning rate: 0.0004
+2024-06-01 05:45:51.344203: train_loss -0.6334
+2024-06-01 05:45:51.350024: val_loss -0.3707
+2024-06-01 05:45:51.350276: Pseudo dice [0.4209]
+2024-06-01 05:45:51.350553: Epoch time: 379.42 s
+2024-06-01 05:45:54.859700: 
+2024-06-01 05:45:54.860057: Epoch 48
+2024-06-01 05:45:54.860317: Current learning rate: 0.00028
+2024-06-01 05:52:03.998234: train_loss -0.6463
+2024-06-01 05:52:04.004099: val_loss -0.3999
+2024-06-01 05:52:04.004354: Pseudo dice [0.4464]
+2024-06-01 05:52:04.004842: Epoch time: 369.14 s
+2024-06-01 05:52:07.616910: 
+2024-06-01 05:52:07.617543: Epoch 49
+2024-06-01 05:52:07.617807: Current learning rate: 0.00015
+2024-06-01 05:58:23.378647: train_loss -0.6415
+2024-06-01 05:58:23.384103: val_loss -0.3728
+2024-06-01 05:58:23.384370: Pseudo dice [0.4187]
+2024-06-01 05:58:23.384706: Epoch time: 375.76 s
+2024-06-01 05:58:27.846589: Training done.
+2024-06-01 05:58:28.198741: Using splits from existing split file: /scratch-local/ljulius.6457598/nnUNet_preprocessed/Dataset501_RadboudumcBone/splits_final.json
+2024-06-01 05:58:28.211942: The split file contains 5 splits.
+2024-06-01 05:58:28.212182: Desired fold for training: 0
+2024-06-01 05:58:28.212339: This split has 557 training and 140 validation cases.
+2024-06-01 05:58:28.216029: predicting bone_00002_lesion_01
+2024-06-01 05:58:28.366367: bone_00002_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 05:58:35.775555: predicting bone_00002_lesion_05
+2024-06-01 05:58:35.800469: bone_00002_lesion_05, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 05:58:42.225491: predicting bone_00018_lesion_01
+2024-06-01 05:58:42.293941: bone_00018_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+2024-06-01 05:58:48.833699: predicting bone_00020_lesion_03
+2024-06-01 05:58:48.920893: bone_00020_lesion_03, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 05:58:55.259103: predicting bone_00030_lesion_01
+2024-06-01 05:58:55.405076: bone_00030_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 05:59:01.687507: predicting bone_00078_lesion_01
+2024-06-01 05:59:01.832991: bone_00078_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 05:59:08.125589: predicting bone_00110_lesion_02
+2024-06-01 05:59:08.268909: bone_00110_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 05:59:14.558391: predicting bone_00131_lesion_03
+2024-06-01 05:59:14.734662: bone_00131_lesion_03, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 05:59:21.010533: predicting bone_00143_lesion_07
+2024-06-01 05:59:21.131934: bone_00143_lesion_07, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 05:59:27.440410: predicting bone_00143_lesion_08
+2024-06-01 05:59:27.554250: bone_00143_lesion_08, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 05:59:33.875583: predicting bone_00143_lesion_09
+2024-06-01 05:59:33.982164: bone_00143_lesion_09, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 05:59:40.304686: predicting bone_00147_lesion_02
+2024-06-01 05:59:40.451722: bone_00147_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 05:59:46.739719: predicting bone_00149_lesion_03
+2024-06-01 05:59:46.887750: bone_00149_lesion_03, shape torch.Size([1, 104, 256, 167]), rank 0
+2024-06-01 05:59:52.027176: predicting bone_00194_lesion_03
+2024-06-01 05:59:52.181053: bone_00194_lesion_03, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 05:59:58.546847: predicting bone_00194_lesion_07
+2024-06-01 05:59:58.691497: bone_00194_lesion_07, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:00:05.062891: predicting bone_00198_lesion_09
+2024-06-01 06:00:05.210131: bone_00198_lesion_09, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:00:11.584840: predicting bone_00203_lesion_02
+2024-06-01 06:00:11.715244: bone_00203_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:00:18.008317: predicting bone_00203_lesion_11
+2024-06-01 06:00:18.082725: bone_00203_lesion_11, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:00:24.396623: predicting bone_00209_lesion_01
+2024-06-01 06:00:24.529122: bone_00209_lesion_01, shape torch.Size([1, 116, 256, 256]), rank 0
+2024-06-01 06:00:30.292597: predicting bone_00209_lesion_05
+2024-06-01 06:00:30.489773: bone_00209_lesion_05, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:00:36.820323: predicting bone_00209_lesion_09
+2024-06-01 06:00:36.969420: bone_00209_lesion_09, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:00:43.265764: predicting bone_00209_lesion_13
+2024-06-01 06:00:43.396148: bone_00209_lesion_13, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:00:49.757271: predicting bone_00217_lesion_04
+2024-06-01 06:00:49.923692: bone_00217_lesion_04, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:00:56.269450: predicting bone_00217_lesion_05
+2024-06-01 06:00:56.407552: bone_00217_lesion_05, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:01:02.702385: predicting bone_00217_lesion_06
+2024-06-01 06:01:02.838832: bone_00217_lesion_06, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:01:09.141974: predicting bone_00222_lesion_01
+2024-06-01 06:01:09.295439: bone_00222_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:01:15.598908: predicting bone_00222_lesion_03
+2024-06-01 06:01:15.759167: bone_00222_lesion_03, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:01:22.076139: predicting bone_00222_lesion_04
+2024-06-01 06:01:22.240097: bone_00222_lesion_04, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:01:28.531371: predicting bone_00222_lesion_09
+2024-06-01 06:01:28.703921: bone_00222_lesion_09, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:01:35.031177: predicting bone_00222_lesion_15
+2024-06-01 06:01:35.200205: bone_00222_lesion_15, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:01:41.533998: predicting bone_00222_lesion_19
+2024-06-01 06:01:41.674281: bone_00222_lesion_19, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:01:48.016689: predicting bone_00223_lesion_09
+2024-06-01 06:01:48.205690: bone_00223_lesion_09, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:01:54.507145: predicting bone_00223_lesion_10
+2024-06-01 06:01:54.625432: bone_00223_lesion_10, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:02:00.926375: predicting bone_00223_lesion_14
+2024-06-01 06:02:01.086672: bone_00223_lesion_14, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:02:07.371042: predicting bone_00228_lesion_12
+2024-06-01 06:02:07.533046: bone_00228_lesion_12, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:02:13.840846: predicting bone_00229_lesion_04
+2024-06-01 06:02:13.987321: bone_00229_lesion_04, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:02:20.315461: predicting bone_00233_lesion_02
+2024-06-01 06:02:20.472053: bone_00233_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:02:26.770481: predicting bone_00238_lesion_01
+2024-06-01 06:02:26.896115: bone_00238_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:02:33.209029: predicting bone_00240_lesion_02
+2024-06-01 06:02:33.378843: bone_00240_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:02:39.682187: predicting bone_00245_lesion_01
+2024-06-01 06:02:39.873405: bone_00245_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:02:46.195627: predicting bone_00245_lesion_02
+2024-06-01 06:02:46.326027: bone_00245_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:02:52.646126: predicting bone_00245_lesion_03
+2024-06-01 06:02:52.863617: bone_00245_lesion_03, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:02:59.185421: predicting bone_00261_lesion_02
+2024-06-01 06:02:59.366798: bone_00261_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:03:05.694140: predicting bone_00261_lesion_05
+2024-06-01 06:03:05.855732: bone_00261_lesion_05, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:03:12.200965: predicting bone_00273_lesion_05
+2024-06-01 06:03:12.381985: bone_00273_lesion_05, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:03:18.680060: predicting bone_00273_lesion_09
+2024-06-01 06:03:18.825593: bone_00273_lesion_09, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:03:25.133374: predicting bone_00273_lesion_15
+2024-06-01 06:03:25.323143: bone_00273_lesion_15, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:03:31.627440: predicting bone_00283_lesion_02
+2024-06-01 06:03:31.755366: bone_00283_lesion_02, shape torch.Size([1, 69, 256, 256]), rank 0
+2024-06-01 06:03:35.166940: predicting bone_00292_lesion_02
+2024-06-01 06:03:35.329417: bone_00292_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:03:41.621501: predicting bone_00292_lesion_03
+2024-06-01 06:03:41.774317: bone_00292_lesion_03, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:03:48.092365: predicting bone_00293_lesion_01
+2024-06-01 06:03:48.284400: bone_00293_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:03:54.599028: predicting bone_00298_lesion_02
+2024-06-01 06:03:54.737455: bone_00298_lesion_02, shape torch.Size([1, 128, 256, 244]), rank 0
+2024-06-01 06:04:01.059260: predicting bone_00298_lesion_04
+2024-06-01 06:04:01.189615: bone_00298_lesion_04, shape torch.Size([1, 118, 256, 256]), rank 0
+2024-06-01 06:04:07.010962: predicting bone_00298_lesion_06
+2024-06-01 06:04:07.162810: bone_00298_lesion_06, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:04:13.445534: predicting bone_00298_lesion_12
+2024-06-01 06:04:13.595410: bone_00298_lesion_12, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:04:19.886769: predicting bone_00299_lesion_03
+2024-06-01 06:04:20.058081: bone_00299_lesion_03, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:04:26.356667: predicting bone_00299_lesion_04
+2024-06-01 06:04:26.598272: bone_00299_lesion_04, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:04:32.887229: predicting bone_00299_lesion_06
+2024-06-01 06:04:33.007260: bone_00299_lesion_06, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:04:39.314134: predicting bone_00299_lesion_07
+2024-06-01 06:04:39.527782: bone_00299_lesion_07, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:04:45.829133: predicting bone_00302_lesion_01
+2024-06-01 06:04:46.013514: bone_00302_lesion_01, shape torch.Size([1, 103, 256, 256]), rank 0
+2024-06-01 06:04:51.093799: predicting bone_00309_lesion_04
+2024-06-01 06:04:51.260220: bone_00309_lesion_04, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:04:57.550873: predicting bone_00316_lesion_03
+2024-06-01 06:04:57.682281: bone_00316_lesion_03, shape torch.Size([1, 128, 256, 220]), rank 0
+2024-06-01 06:05:04.041919: predicting bone_00316_lesion_06
+2024-06-01 06:05:04.196505: bone_00316_lesion_06, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:05:10.463680: predicting bone_00316_lesion_10
+2024-06-01 06:05:10.674630: bone_00316_lesion_10, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:05:17.004371: predicting bone_00316_lesion_13
+2024-06-01 06:05:17.149290: bone_00316_lesion_13, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:05:23.425758: predicting bone_00346_lesion_14
+2024-06-01 06:05:23.567999: bone_00346_lesion_14, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:05:29.870736: predicting bone_00374_lesion_04
+2024-06-01 06:05:30.056431: bone_00374_lesion_04, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:05:36.350167: predicting bone_00374_lesion_06
+2024-06-01 06:05:36.538092: bone_00374_lesion_06, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:05:42.814148: predicting bone_00384_lesion_02
+2024-06-01 06:05:42.987177: bone_00384_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:05:49.272547: predicting bone_00411_lesion_01
+2024-06-01 06:05:49.443874: bone_00411_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:05:55.736536: predicting bone_00444_lesion_02
+2024-06-01 06:05:55.906000: bone_00444_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:06:02.183169: predicting bone_00451_lesion_01
+2024-06-01 06:06:02.338243: bone_00451_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:06:08.618160: predicting bone_00469_lesion_02
+2024-06-01 06:06:08.766076: bone_00469_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:06:15.075925: predicting bone_00480_lesion_01
+2024-06-01 06:06:15.242953: bone_00480_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:06:21.556491: predicting bone_00497_lesion_03
+2024-06-01 06:06:21.700844: bone_00497_lesion_03, shape torch.Size([1, 91, 256, 256]), rank 0
+2024-06-01 06:06:26.162745: predicting bone_00497_lesion_04
+2024-06-01 06:06:26.285826: bone_00497_lesion_04, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:06:32.597110: predicting bone_00501_lesion_01
+2024-06-01 06:06:32.723871: bone_00501_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:06:38.992992: predicting bone_00504_lesion_04
+2024-06-01 06:06:39.149060: bone_00504_lesion_04, shape torch.Size([1, 128, 256, 241]), rank 0
+2024-06-01 06:06:45.431860: predicting bone_00507_lesion_05
+2024-06-01 06:06:45.588761: bone_00507_lesion_05, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:06:51.922496: predicting bone_00522_lesion_01
+2024-06-01 06:06:52.177598: bone_00522_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:06:58.478848: predicting bone_00523_lesion_03
+2024-06-01 06:06:58.648531: bone_00523_lesion_03, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:07:04.951970: predicting bone_00575_lesion_01
+2024-06-01 06:07:05.172260: bone_00575_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:07:11.429790: predicting bone_00578_lesion_01
+2024-06-01 06:07:11.578718: bone_00578_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:07:17.866503: predicting bone_00639_lesion_01
+2024-06-01 06:07:18.018506: bone_00639_lesion_01, shape torch.Size([1, 128, 256, 219]), rank 0
+2024-06-01 06:07:24.338476: predicting bone_00639_lesion_02
+2024-06-01 06:07:24.559413: bone_00639_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:07:30.871680: predicting bone_00639_lesion_07
+2024-06-01 06:07:31.017907: bone_00639_lesion_07, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:07:37.381801: predicting bone_00639_lesion_09
+2024-06-01 06:07:37.543963: bone_00639_lesion_09, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:07:43.864851: predicting bone_00797_lesion_01
+2024-06-01 06:07:44.034465: bone_00797_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:07:50.301726: predicting bone_00798_lesion_01
+2024-06-01 06:07:50.506596: bone_00798_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:07:56.776030: predicting bone_00816_lesion_01
+2024-06-01 06:07:56.886206: bone_00816_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:08:03.169350: predicting bone_00816_lesion_02
+2024-06-01 06:08:03.281740: bone_00816_lesion_02, shape torch.Size([1, 128, 255, 256]), rank 0
+2024-06-01 06:08:09.582567: predicting bone_00816_lesion_03
+2024-06-01 06:08:09.772695: bone_00816_lesion_03, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:08:16.063840: predicting bone_00818_lesion_02
+2024-06-01 06:08:16.235502: bone_00818_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:08:22.454911: predicting bone_00818_lesion_05
+2024-06-01 06:08:22.607564: bone_00818_lesion_05, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:08:28.888789: predicting bone_00818_lesion_09
+2024-06-01 06:08:29.026049: bone_00818_lesion_09, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:08:35.309298: predicting bone_00855_lesion_01
+2024-06-01 06:08:35.557079: bone_00855_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:08:41.906413: predicting bone_00855_lesion_02
+2024-06-01 06:08:42.081727: bone_00855_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:08:48.384021: predicting bone_00934_lesion_01
+2024-06-01 06:08:48.509893: bone_00934_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:08:54.807519: predicting bone_01004_lesion_03
+2024-06-01 06:08:54.984512: bone_01004_lesion_03, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:09:01.251000: predicting bone_01012_lesion_04
+2024-06-01 06:09:01.431237: bone_01012_lesion_04, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:09:07.732256: predicting bone_01012_lesion_07
+2024-06-01 06:09:07.875189: bone_01012_lesion_07, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:09:14.162085: predicting bone_01022_lesion_01
+2024-06-01 06:09:14.336770: bone_01022_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:09:20.651678: predicting bone_01052_lesion_01
+2024-06-01 06:09:20.816445: bone_01052_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:09:27.114084: predicting bone_01052_lesion_07
+2024-06-01 06:09:27.344095: bone_01052_lesion_07, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:09:33.658614: predicting bone_01052_lesion_08
+2024-06-01 06:09:33.815073: bone_01052_lesion_08, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:09:40.101986: predicting bone_01052_lesion_09
+2024-06-01 06:09:40.273005: bone_01052_lesion_09, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:09:46.598792: predicting bone_01052_lesion_14
+2024-06-01 06:09:46.757277: bone_01052_lesion_14, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:09:53.056800: predicting bone_01052_lesion_17
+2024-06-01 06:09:53.200382: bone_01052_lesion_17, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:09:59.522474: predicting bone_01052_lesion_20
+2024-06-01 06:09:59.721928: bone_01052_lesion_20, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:10:06.037382: predicting bone_01052_lesion_21
+2024-06-01 06:10:06.165539: bone_01052_lesion_21, shape torch.Size([1, 84, 256, 212]), rank 0
+2024-06-01 06:10:10.322451: predicting bone_01056_lesion_02
+2024-06-01 06:10:10.453208: bone_01056_lesion_02, shape torch.Size([1, 128, 256, 238]), rank 0
+2024-06-01 06:10:16.770636: predicting bone_01072_lesion_04
+2024-06-01 06:10:16.920104: bone_01072_lesion_04, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:10:23.238788: predicting bone_01072_lesion_06
+2024-06-01 06:10:23.398367: bone_01072_lesion_06, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:10:29.693456: predicting bone_01083_lesion_06
+2024-06-01 06:10:29.835987: bone_01083_lesion_06, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:10:36.121667: predicting bone_01107_lesion_01
+2024-06-01 06:10:36.279299: bone_01107_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:10:42.583400: predicting bone_01140_lesion_02
+2024-06-01 06:10:42.738640: bone_01140_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:10:49.036683: predicting bone_01140_lesion_05
+2024-06-01 06:10:49.207168: bone_01140_lesion_05, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:10:55.534006: predicting bone_01140_lesion_12
+2024-06-01 06:10:55.707779: bone_01140_lesion_12, shape torch.Size([1, 126, 256, 256]), rank 0
+2024-06-01 06:11:01.972790: predicting bone_01154_lesion_01
+2024-06-01 06:11:02.119741: bone_01154_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:11:08.404118: predicting bone_01162_lesion_09
+2024-06-01 06:11:08.541137: bone_01162_lesion_09, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:11:14.848760: predicting bone_01162_lesion_10
+2024-06-01 06:11:15.008935: bone_01162_lesion_10, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:11:21.292911: predicting bone_01171_lesion_01
+2024-06-01 06:11:21.456661: bone_01171_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:11:27.742034: predicting bone_01171_lesion_05
+2024-06-01 06:11:27.862621: bone_01171_lesion_05, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:11:34.196604: predicting bone_01171_lesion_10
+2024-06-01 06:11:34.340288: bone_01171_lesion_10, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:11:40.641066: predicting bone_01171_lesion_12
+2024-06-01 06:11:40.775241: bone_01171_lesion_12, shape torch.Size([1, 105, 256, 204]), rank 0
+2024-06-01 06:11:45.961443: predicting bone_01172_lesion_04
+2024-06-01 06:11:46.153587: bone_01172_lesion_04, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:11:52.470096: predicting bone_01172_lesion_05
+2024-06-01 06:11:52.615788: bone_01172_lesion_05, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:11:58.907253: predicting bone_01173_lesion_02
+2024-06-01 06:11:59.043414: bone_01173_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:12:05.377331: predicting bone_01173_lesion_05
+2024-06-01 06:12:05.543285: bone_01173_lesion_05, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:12:11.833606: predicting bone_01173_lesion_11
+2024-06-01 06:12:11.987714: bone_01173_lesion_11, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:12:18.306096: predicting bone_01173_lesion_18
+2024-06-01 06:12:18.507404: bone_01173_lesion_18, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:12:24.824690: predicting bone_01187_lesion_05
+2024-06-01 06:12:24.939673: bone_01187_lesion_05, shape torch.Size([1, 124, 256, 256]), rank 0
+2024-06-01 06:12:31.072352: predicting bone_01188_lesion_01
+2024-06-01 06:12:31.221902: bone_01188_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:12:37.538061: predicting bone_01222_lesion_03
+2024-06-01 06:12:37.715019: bone_01222_lesion_03, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:12:44.030073: predicting bone_01222_lesion_05
+2024-06-01 06:12:44.175689: bone_01222_lesion_05, shape torch.Size([1, 95, 256, 256]), rank 0
+2024-06-01 06:12:48.894697: predicting bone_01222_lesion_11
+2024-06-01 06:12:49.063909: bone_01222_lesion_11, shape torch.Size([1, 93, 256, 256]), rank 0
+2024-06-01 06:12:53.656062: predicting bone_01298_lesion_01
+2024-06-01 06:12:53.776809: bone_01298_lesion_01, shape torch.Size([1, 128, 246, 256]), rank 0
+2024-06-01 06:13:00.078099: predicting bone_01298_lesion_07
+2024-06-01 06:13:00.216380: bone_01298_lesion_07, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:13:06.529344: predicting bone_01298_lesion_11
+2024-06-01 06:13:06.724471: bone_01298_lesion_11, shape torch.Size([1, 128, 256, 256]), rank 0
+2024-06-01 06:13:13.033921: predicting bone_01319_lesion_01
+2024-06-01 06:13:13.161867: bone_01319_lesion_01, shape torch.Size([1, 115, 256, 247]), rank 0
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+/home/ljulius/miniconda3/envs/uls/lib/python3.9/site-packages/albumentations/core/transforms_interface.py:121: UserWarning: CoarseDropout could work incorrectly in ReplayMode for other input data because its' params depend on targets.
+  warn(
+2024-06-01 06:13:38.121642: Validation complete
+2024-06-01 06:13:38.122002: Mean Validation Dice:  0.287932602303145
+Done at Sat Jun  1 00:39:19 CEST 2024
+
+JOB STATISTICS
+==============
+Job ID: 6457598
+Cluster: snellius
+User/Group: ljulius/ljulius
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 2-06:39:21
+CPU Efficiency: 54.47% of 4-04:21:00 core-walltime
+Job Wall-clock time: 05:34:30
+Memory Utilized: 7.64 GB
+Memory Efficiency: 76.36% of 10.00 GB

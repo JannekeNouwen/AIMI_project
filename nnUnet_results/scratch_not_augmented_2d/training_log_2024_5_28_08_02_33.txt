@@ -1,0 +1,696 @@
+
+#######################################################################
+Please cite the following paper when using nnU-Net:
+Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+#######################################################################
+ 
+
+This is the configuration used by this training:
+Configuration name: 2d
+ {'data_identifier': 'nnUNetPlans_2d', 'preprocessor_name': 'DefaultPreprocessor', 'batch_size': 49, 'patch_size': [256, 256], 'median_image_size_in_voxels': [255.0, 255.0], 'spacing': [0.7578125, 0.7578125], 'normalization_schemes': ['CTNormalization'], 'use_mask_for_norm': [False], 'UNet_class_name': 'PlainConvUNet', 'UNet_base_num_features': 32, 'n_conv_per_stage_encoder': [2, 2, 2, 2, 2, 2, 2], 'n_conv_per_stage_decoder': [2, 2, 2, 2, 2, 2], 'num_pool_per_axis': [6, 6], 'pool_op_kernel_sizes': [[1, 1], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2]], 'conv_kernel_sizes': [[3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3]], 'unet_max_num_features': 512, 'resampling_fn_data': 'no_resampling_data_or_seg_to_shape', 'resampling_fn_seg': 'no_resampling_data_or_seg_to_shape', 'resampling_fn_data_kwargs': {'is_seg': False, 'order': 3, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_seg_kwargs': {'is_seg': True, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_probabilities': 'no_resampling_data_or_seg_to_shape', 'resampling_fn_probabilities_kwargs': {'is_seg': False, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'batch_dice': True} 
+ 
+These are the global plan.json settings:
+ {'dataset_name': 'Dataset501_RadboudumcBone', 'plans_name': 'nnUNetPlans', 'original_median_spacing_after_transp': [0.800000011920929, 0.7578125, 0.7578125], 'original_median_shape_after_transp': [128, 256, 256], 'image_reader_writer': 'SimpleITKIO', 'transpose_forward': [0, 1, 2], 'transpose_backward': [0, 1, 2], 'experiment_planner_used': 'ExperimentPlannerNoResampling', 'label_manager': 'LabelManager', 'foreground_intensity_properties_per_channel': {'0': {'max': 2782.0, 'mean': 1175.083251953125, 'median': 1230.0, 'min': -935.0, 'percentile_00_5': 33.0, 'percentile_99_5': 2269.0, 'std': 513.393310546875}}} 
+ 
+2024-05-28 08:02:34.291876: unpacking dataset... 
+2024-05-28 08:02:45.239487: unpacking done... 
+2024-05-28 08:02:45.240420: do_dummy_2d_data_aug: False 
+2024-05-28 08:02:45.244627: Using splits from existing split file: /scratch-local/ljulius.6404192/nnUNet_preprocessed/Dataset501_RadboudumcBone/splits_final.json 
+2024-05-28 08:02:45.245394: The split file contains 5 splits. 
+2024-05-28 08:02:45.245492: Desired fold for training: 0 
+2024-05-28 08:02:45.245558: This split has 557 training and 140 validation cases. 
+2024-05-28 08:02:45.602717: Unable to plot network architecture: 
+2024-05-28 08:02:45.602918: No module named 'IPython' 
+2024-05-28 08:02:45.648005:  
+2024-05-28 08:02:45.648163: Epoch 0 
+2024-05-28 08:02:45.648371: Current learning rate: 0.005 
+2024-05-28 08:03:48.653331: train_loss -0.0081 
+2024-05-28 08:03:48.657907: val_loss -0.1031 
+2024-05-28 08:03:48.658063: Pseudo dice [0.04] 
+2024-05-28 08:03:48.658181: Epoch time: 63.01 s 
+2024-05-28 08:03:48.658278: Yayy! New best EMA pseudo Dice: 0.04 
+2024-05-28 08:03:50.436012:  
+2024-05-28 08:03:50.436583: Epoch 1 
+2024-05-28 08:03:50.436744: Current learning rate: 0.00491 
+2024-05-28 08:04:42.852371: train_loss -0.2665 
+2024-05-28 08:04:42.852926: val_loss -0.2973 
+2024-05-28 08:04:42.853049: Pseudo dice [0.3492] 
+2024-05-28 08:04:42.853157: Epoch time: 52.42 s 
+2024-05-28 08:04:42.853246: Yayy! New best EMA pseudo Dice: 0.0709 
+2024-05-28 08:04:44.686471:  
+2024-05-28 08:04:44.686690: Epoch 2 
+2024-05-28 08:04:44.686820: Current learning rate: 0.00482 
+2024-05-28 08:05:32.768565: train_loss -0.3686 
+2024-05-28 08:05:32.770771: val_loss -0.3321 
+2024-05-28 08:05:32.770920: Pseudo dice [0.3681] 
+2024-05-28 08:05:32.771035: Epoch time: 48.08 s 
+2024-05-28 08:05:32.771126: Yayy! New best EMA pseudo Dice: 0.1006 
+2024-05-28 08:05:34.690835:  
+2024-05-28 08:05:34.691261: Epoch 3 
+2024-05-28 08:05:34.691400: Current learning rate: 0.00473 
+2024-05-28 08:06:22.430600: train_loss -0.3835 
+2024-05-28 08:06:22.431605: val_loss -0.3737 
+2024-05-28 08:06:22.431736: Pseudo dice [0.4228] 
+2024-05-28 08:06:22.431848: Epoch time: 47.74 s 
+2024-05-28 08:06:22.431947: Yayy! New best EMA pseudo Dice: 0.1328 
+2024-05-28 08:06:24.308159:  
+2024-05-28 08:06:24.308433: Epoch 4 
+2024-05-28 08:06:24.308578: Current learning rate: 0.00464 
+2024-05-28 08:07:13.273359: train_loss -0.4347 
+2024-05-28 08:07:13.274129: val_loss -0.3683 
+2024-05-28 08:07:13.274248: Pseudo dice [0.4053] 
+2024-05-28 08:07:13.274354: Epoch time: 48.97 s 
+2024-05-28 08:07:13.274442: Yayy! New best EMA pseudo Dice: 0.1601 
+2024-05-28 08:07:15.202250:  
+2024-05-28 08:07:15.202475: Epoch 5 
+2024-05-28 08:07:15.202616: Current learning rate: 0.00455 
+2024-05-28 08:08:04.994265: train_loss -0.4257 
+2024-05-28 08:08:04.995101: val_loss -0.3143 
+2024-05-28 08:08:04.995232: Pseudo dice [0.347] 
+2024-05-28 08:08:04.995344: Epoch time: 49.79 s 
+2024-05-28 08:08:04.995432: Yayy! New best EMA pseudo Dice: 0.1788 
+2024-05-28 08:08:06.824211:  
+2024-05-28 08:08:06.824717: Epoch 6 
+2024-05-28 08:08:06.824928: Current learning rate: 0.00446 
+2024-05-28 08:08:56.390083: train_loss -0.4509 
+2024-05-28 08:08:56.390918: val_loss -0.3653 
+2024-05-28 08:08:56.391061: Pseudo dice [0.4064] 
+2024-05-28 08:08:56.391186: Epoch time: 49.57 s 
+2024-05-28 08:08:56.391278: Yayy! New best EMA pseudo Dice: 0.2015 
+2024-05-28 08:08:58.233395:  
+2024-05-28 08:08:58.233696: Epoch 7 
+2024-05-28 08:08:58.233827: Current learning rate: 0.00437 
+2024-05-28 08:09:46.226388: train_loss -0.4544 
+2024-05-28 08:09:46.227262: val_loss -0.3537 
+2024-05-28 08:09:46.227401: Pseudo dice [0.3897] 
+2024-05-28 08:09:46.227507: Epoch time: 47.99 s 
+2024-05-28 08:09:46.227603: Yayy! New best EMA pseudo Dice: 0.2204 
+2024-05-28 08:09:48.120543:  
+2024-05-28 08:09:48.120796: Epoch 8 
+2024-05-28 08:09:48.121001: Current learning rate: 0.00427 
+2024-05-28 08:10:34.694485: train_loss -0.4749 
+2024-05-28 08:10:34.695503: val_loss -0.3972 
+2024-05-28 08:10:34.695631: Pseudo dice [0.4379] 
+2024-05-28 08:10:34.695735: Epoch time: 46.58 s 
+2024-05-28 08:10:34.695825: Yayy! New best EMA pseudo Dice: 0.2421 
+2024-05-28 08:10:36.624753:  
+2024-05-28 08:10:36.624981: Epoch 9 
+2024-05-28 08:10:36.625121: Current learning rate: 0.00418 
+2024-05-28 08:11:25.001261: train_loss -0.4924 
+2024-05-28 08:11:25.002235: val_loss -0.4311 
+2024-05-28 08:11:25.002429: Pseudo dice [0.4795] 
+2024-05-28 08:11:25.002567: Epoch time: 48.38 s 
+2024-05-28 08:11:25.002658: Yayy! New best EMA pseudo Dice: 0.2658 
+2024-05-28 08:11:26.812455:  
+2024-05-28 08:11:26.812659: Epoch 10 
+2024-05-28 08:11:26.812786: Current learning rate: 0.00409 
+2024-05-28 08:12:15.925198: train_loss -0.4964 
+2024-05-28 08:12:15.926074: val_loss -0.3606 
+2024-05-28 08:12:15.926195: Pseudo dice [0.39] 
+2024-05-28 08:12:15.926296: Epoch time: 49.11 s 
+2024-05-28 08:12:15.926384: Yayy! New best EMA pseudo Dice: 0.2783 
+2024-05-28 08:12:17.733813:  
+2024-05-28 08:12:17.734048: Epoch 11 
+2024-05-28 08:12:17.734171: Current learning rate: 0.004 
+2024-05-28 08:13:06.872911: train_loss -0.5217 
+2024-05-28 08:13:06.873783: val_loss -0.3532 
+2024-05-28 08:13:06.873907: Pseudo dice [0.395] 
+2024-05-28 08:13:06.874127: Epoch time: 49.14 s 
+2024-05-28 08:13:06.874492: Yayy! New best EMA pseudo Dice: 0.2899 
+2024-05-28 08:13:08.680954:  
+2024-05-28 08:13:08.681394: Epoch 12 
+2024-05-28 08:13:08.681528: Current learning rate: 0.00391 
+2024-05-28 08:13:56.283640: train_loss -0.5225 
+2024-05-28 08:13:56.284446: val_loss -0.3751 
+2024-05-28 08:13:56.284570: Pseudo dice [0.4109] 
+2024-05-28 08:13:56.284677: Epoch time: 47.6 s 
+2024-05-28 08:13:56.284762: Yayy! New best EMA pseudo Dice: 0.302 
+2024-05-28 08:13:58.143178:  
+2024-05-28 08:13:58.143501: Epoch 13 
+2024-05-28 08:13:58.143656: Current learning rate: 0.00381 
+2024-05-28 08:14:47.884736: train_loss -0.5378 
+2024-05-28 08:14:47.885640: val_loss -0.3968 
+2024-05-28 08:14:47.887056: Pseudo dice [0.4395] 
+2024-05-28 08:14:47.887182: Epoch time: 49.74 s 
+2024-05-28 08:14:47.887282: Yayy! New best EMA pseudo Dice: 0.3158 
+2024-05-28 08:14:49.760981:  
+2024-05-28 08:14:49.761209: Epoch 14 
+2024-05-28 08:14:49.761344: Current learning rate: 0.00372 
+2024-05-28 08:15:38.016191: train_loss -0.5261 
+2024-05-28 08:15:38.017156: val_loss -0.4853 
+2024-05-28 08:15:38.017299: Pseudo dice [0.5294] 
+2024-05-28 08:15:38.017412: Epoch time: 48.26 s 
+2024-05-28 08:15:38.017510: Yayy! New best EMA pseudo Dice: 0.3371 
+2024-05-28 08:15:39.900596:  
+2024-05-28 08:15:39.900834: Epoch 15 
+2024-05-28 08:15:39.900980: Current learning rate: 0.00363 
+2024-05-28 08:16:29.889626: train_loss -0.5358 
+2024-05-28 08:16:29.890395: val_loss -0.4107 
+2024-05-28 08:16:29.890514: Pseudo dice [0.4397] 
+2024-05-28 08:16:29.890637: Epoch time: 49.99 s 
+2024-05-28 08:16:29.890726: Yayy! New best EMA pseudo Dice: 0.3474 
+2024-05-28 08:16:31.988885:  
+2024-05-28 08:16:31.989214: Epoch 16 
+2024-05-28 08:16:31.989353: Current learning rate: 0.00353 
+2024-05-28 08:17:20.796922: train_loss -0.5594 
+2024-05-28 08:17:20.797674: val_loss -0.3836 
+2024-05-28 08:17:20.797791: Pseudo dice [0.4193] 
+2024-05-28 08:17:20.797904: Epoch time: 48.81 s 
+2024-05-28 08:17:20.797997: Yayy! New best EMA pseudo Dice: 0.3546 
+2024-05-28 08:17:22.706412:  
+2024-05-28 08:17:22.706793: Epoch 17 
+2024-05-28 08:17:22.706938: Current learning rate: 0.00344 
+2024-05-28 08:18:12.157101: train_loss -0.553 
+2024-05-28 08:18:12.158338: val_loss -0.4331 
+2024-05-28 08:18:12.158456: Pseudo dice [0.4701] 
+2024-05-28 08:18:12.158622: Epoch time: 49.45 s 
+2024-05-28 08:18:12.158716: Yayy! New best EMA pseudo Dice: 0.3661 
+2024-05-28 08:18:14.059185:  
+2024-05-28 08:18:14.059436: Epoch 18 
+2024-05-28 08:18:14.059576: Current learning rate: 0.00335 
+2024-05-28 08:19:03.606311: train_loss -0.5663 
+2024-05-28 08:19:03.607076: val_loss -0.3741 
+2024-05-28 08:19:03.607204: Pseudo dice [0.4067] 
+2024-05-28 08:19:03.607306: Epoch time: 49.55 s 
+2024-05-28 08:19:03.607392: Yayy! New best EMA pseudo Dice: 0.3702 
+2024-05-28 08:19:05.502184:  
+2024-05-28 08:19:05.502428: Epoch 19 
+2024-05-28 08:19:05.502563: Current learning rate: 0.00325 
+2024-05-28 08:19:53.957896: train_loss -0.5548 
+2024-05-28 08:19:53.959889: val_loss -0.4219 
+2024-05-28 08:19:53.960189: Pseudo dice [0.4606] 
+2024-05-28 08:19:53.960361: Epoch time: 48.46 s 
+2024-05-28 08:19:53.960535: Yayy! New best EMA pseudo Dice: 0.3792 
+2024-05-28 08:19:56.030592:  
+2024-05-28 08:19:56.030818: Epoch 20 
+2024-05-28 08:19:56.030963: Current learning rate: 0.00316 
+2024-05-28 08:20:45.342147: train_loss -0.5622 
+2024-05-28 08:20:45.342806: val_loss -0.3382 
+2024-05-28 08:20:45.342937: Pseudo dice [0.3618] 
+2024-05-28 08:20:45.343046: Epoch time: 49.31 s 
+2024-05-28 08:20:46.990815:  
+2024-05-28 08:20:46.991086: Epoch 21 
+2024-05-28 08:20:46.991231: Current learning rate: 0.00306 
+2024-05-28 08:21:36.253649: train_loss -0.5818 
+2024-05-28 08:21:36.254430: val_loss -0.4402 
+2024-05-28 08:21:36.254555: Pseudo dice [0.4724] 
+2024-05-28 08:21:36.254656: Epoch time: 49.26 s 
+2024-05-28 08:21:36.254743: Yayy! New best EMA pseudo Dice: 0.387 
+2024-05-28 08:21:38.074112:  
+2024-05-28 08:21:38.074533: Epoch 22 
+2024-05-28 08:21:38.074668: Current learning rate: 0.00297 
+2024-05-28 08:22:27.724082: train_loss -0.5913 
+2024-05-28 08:22:27.724891: val_loss -0.427 
+2024-05-28 08:22:27.725017: Pseudo dice [0.4578] 
+2024-05-28 08:22:27.725368: Epoch time: 49.65 s 
+2024-05-28 08:22:27.725460: Yayy! New best EMA pseudo Dice: 0.3941 
+2024-05-28 08:22:29.539614:  
+2024-05-28 08:22:29.540003: Epoch 23 
+2024-05-28 08:22:29.540135: Current learning rate: 0.00287 
+2024-05-28 08:23:17.063960: train_loss -0.5958 
+2024-05-28 08:23:17.064728: val_loss -0.3622 
+2024-05-28 08:23:17.064849: Pseudo dice [0.3949] 
+2024-05-28 08:23:17.064989: Epoch time: 47.53 s 
+2024-05-28 08:23:17.065087: Yayy! New best EMA pseudo Dice: 0.3942 
+2024-05-28 08:23:18.855631:  
+2024-05-28 08:23:18.855844: Epoch 24 
+2024-05-28 08:23:18.855979: Current learning rate: 0.00278 
+2024-05-28 08:24:05.942469: train_loss -0.5984 
+2024-05-28 08:24:05.943268: val_loss -0.3313 
+2024-05-28 08:24:05.943395: Pseudo dice [0.3621] 
+2024-05-28 08:24:05.943501: Epoch time: 47.09 s 
+2024-05-28 08:24:07.496662:  
+2024-05-28 08:24:07.496868: Epoch 25 
+2024-05-28 08:24:07.497008: Current learning rate: 0.00268 
+2024-05-28 08:24:54.288005: train_loss -0.6074 
+2024-05-28 08:24:54.288790: val_loss -0.3969 
+2024-05-28 08:24:54.288914: Pseudo dice [0.429] 
+2024-05-28 08:24:54.289018: Epoch time: 46.79 s 
+2024-05-28 08:24:54.289104: Yayy! New best EMA pseudo Dice: 0.3948 
+2024-05-28 08:24:56.112535:  
+2024-05-28 08:24:56.112779: Epoch 26 
+2024-05-28 08:24:56.112921: Current learning rate: 0.00258 
+2024-05-28 08:25:42.880622: train_loss -0.6143 
+2024-05-28 08:25:42.881478: val_loss -0.4479 
+2024-05-28 08:25:42.881596: Pseudo dice [0.4857] 
+2024-05-28 08:25:42.881694: Epoch time: 46.77 s 
+2024-05-28 08:25:42.881779: Yayy! New best EMA pseudo Dice: 0.4038 
+2024-05-28 08:25:44.927496:  
+2024-05-28 08:25:44.927724: Epoch 27 
+2024-05-28 08:25:44.927861: Current learning rate: 0.00249 
+2024-05-28 08:26:33.655785: train_loss -0.6138 
+2024-05-28 08:26:33.656574: val_loss -0.4622 
+2024-05-28 08:26:33.656700: Pseudo dice [0.4988] 
+2024-05-28 08:26:33.656809: Epoch time: 48.73 s 
+2024-05-28 08:26:33.656910: Yayy! New best EMA pseudo Dice: 0.4133 
+2024-05-28 08:26:35.520428:  
+2024-05-28 08:26:35.520655: Epoch 28 
+2024-05-28 08:26:35.520785: Current learning rate: 0.00239 
+2024-05-28 08:27:22.651490: train_loss -0.6273 
+2024-05-28 08:27:22.656753: val_loss -0.4452 
+2024-05-28 08:27:22.656892: Pseudo dice [0.4892] 
+2024-05-28 08:27:22.657002: Epoch time: 47.13 s 
+2024-05-28 08:27:22.657089: Yayy! New best EMA pseudo Dice: 0.4209 
+2024-05-28 08:27:24.516365:  
+2024-05-28 08:27:24.516587: Epoch 29 
+2024-05-28 08:27:24.516726: Current learning rate: 0.00229 
+2024-05-28 08:28:11.451165: train_loss -0.6389 
+2024-05-28 08:28:11.452241: val_loss -0.3819 
+2024-05-28 08:28:11.452365: Pseudo dice [0.4119] 
+2024-05-28 08:28:11.452469: Epoch time: 46.94 s 
+2024-05-28 08:28:13.039748:  
+2024-05-28 08:28:13.039953: Epoch 30 
+2024-05-28 08:28:13.040078: Current learning rate: 0.00219 
+2024-05-28 08:29:01.002642: train_loss -0.647 
+2024-05-28 08:29:01.003565: val_loss -0.4258 
+2024-05-28 08:29:01.003695: Pseudo dice [0.4569] 
+2024-05-28 08:29:01.003804: Epoch time: 47.96 s 
+2024-05-28 08:29:01.003905: Yayy! New best EMA pseudo Dice: 0.4237 
+2024-05-28 08:29:02.871809:  
+2024-05-28 08:29:02.872073: Epoch 31 
+2024-05-28 08:29:02.872209: Current learning rate: 0.00209 
+2024-05-28 08:29:49.705282: train_loss -0.6365 
+2024-05-28 08:29:49.705938: val_loss -0.4059 
+2024-05-28 08:29:49.706063: Pseudo dice [0.4488] 
+2024-05-28 08:29:49.706181: Epoch time: 46.83 s 
+2024-05-28 08:29:49.706272: Yayy! New best EMA pseudo Dice: 0.4262 
+2024-05-28 08:29:51.570292:  
+2024-05-28 08:29:51.570508: Epoch 32 
+2024-05-28 08:29:51.570670: Current learning rate: 0.00199 
+2024-05-28 08:30:39.949886: train_loss -0.6411 
+2024-05-28 08:30:39.950701: val_loss -0.4109 
+2024-05-28 08:30:39.950862: Pseudo dice [0.4455] 
+2024-05-28 08:30:39.950995: Epoch time: 48.38 s 
+2024-05-28 08:30:39.951088: Yayy! New best EMA pseudo Dice: 0.4282 
+2024-05-28 08:30:42.025437:  
+2024-05-28 08:30:42.025666: Epoch 33 
+2024-05-28 08:30:42.025799: Current learning rate: 0.00189 
+2024-05-28 08:31:30.360861: train_loss -0.6519 
+2024-05-28 08:31:30.361818: val_loss -0.457 
+2024-05-28 08:31:30.361947: Pseudo dice [0.4952] 
+2024-05-28 08:31:30.362053: Epoch time: 48.34 s 
+2024-05-28 08:31:30.362288: Yayy! New best EMA pseudo Dice: 0.4349 
+2024-05-28 08:31:32.227201:  
+2024-05-28 08:31:32.227564: Epoch 34 
+2024-05-28 08:31:32.227697: Current learning rate: 0.00179 
+2024-05-28 08:32:21.891987: train_loss -0.6576 
+2024-05-28 08:32:21.892918: val_loss -0.4438 
+2024-05-28 08:32:21.893055: Pseudo dice [0.4814] 
+2024-05-28 08:32:21.893164: Epoch time: 49.67 s 
+2024-05-28 08:32:21.893408: Yayy! New best EMA pseudo Dice: 0.4395 
+2024-05-28 08:32:23.804376:  
+2024-05-28 08:32:23.804658: Epoch 35 
+2024-05-28 08:32:23.805685: Current learning rate: 0.00169 
+2024-05-28 08:33:11.327243: train_loss -0.6719 
+2024-05-28 08:33:11.328265: val_loss -0.44 
+2024-05-28 08:33:11.328397: Pseudo dice [0.4785] 
+2024-05-28 08:33:11.328509: Epoch time: 47.52 s 
+2024-05-28 08:33:11.328602: Yayy! New best EMA pseudo Dice: 0.4434 
+2024-05-28 08:33:13.418657:  
+2024-05-28 08:33:13.418951: Epoch 36 
+2024-05-28 08:33:13.419099: Current learning rate: 0.00159 
+2024-05-28 08:34:01.732654: train_loss -0.6713 
+2024-05-28 08:34:01.733477: val_loss -0.4642 
+2024-05-28 08:34:01.733630: Pseudo dice [0.4994] 
+2024-05-28 08:34:01.733755: Epoch time: 48.32 s 
+2024-05-28 08:34:01.733849: Yayy! New best EMA pseudo Dice: 0.449 
+2024-05-28 08:34:03.636589:  
+2024-05-28 08:34:03.637284: Epoch 37 
+2024-05-28 08:34:03.637462: Current learning rate: 0.00149 
+2024-05-28 08:34:51.086887: train_loss -0.6779 
+2024-05-28 08:34:51.087699: val_loss -0.3859 
+2024-05-28 08:34:51.087820: Pseudo dice [0.4242] 
+2024-05-28 08:34:51.087937: Epoch time: 47.45 s 
+2024-05-28 08:34:52.711061:  
+2024-05-28 08:34:52.711325: Epoch 38 
+2024-05-28 08:34:52.711456: Current learning rate: 0.00138 
+2024-05-28 08:35:40.155687: train_loss -0.6948 
+2024-05-28 08:35:40.156428: val_loss -0.3479 
+2024-05-28 08:35:40.156543: Pseudo dice [0.3819] 
+2024-05-28 08:35:40.156646: Epoch time: 47.45 s 
+2024-05-28 08:35:41.764744:  
+2024-05-28 08:35:41.765034: Epoch 39 
+2024-05-28 08:35:41.765178: Current learning rate: 0.00128 
+2024-05-28 08:36:30.772660: train_loss -0.7004 
+2024-05-28 08:36:30.773564: val_loss -0.4278 
+2024-05-28 08:36:30.773774: Pseudo dice [0.462] 
+2024-05-28 08:36:30.773910: Epoch time: 49.01 s 
+2024-05-28 08:36:32.436420:  
+2024-05-28 08:36:32.436891: Epoch 40 
+2024-05-28 08:36:32.437030: Current learning rate: 0.00117 
+2024-05-28 08:37:20.969365: train_loss -0.6982 
+2024-05-28 08:37:20.970222: val_loss -0.4111 
+2024-05-28 08:37:20.970395: Pseudo dice [0.4417] 
+2024-05-28 08:37:20.970528: Epoch time: 48.53 s 
+2024-05-28 08:37:22.632574:  
+2024-05-28 08:37:22.632843: Epoch 41 
+2024-05-28 08:37:22.632976: Current learning rate: 0.00107 
+2024-05-28 08:38:12.784228: train_loss -0.7062 
+2024-05-28 08:38:12.785006: val_loss -0.4038 
+2024-05-28 08:38:12.785170: Pseudo dice [0.4417] 
+2024-05-28 08:38:12.785277: Epoch time: 50.15 s 
+2024-05-28 08:38:14.333588:  
+2024-05-28 08:38:14.334029: Epoch 42 
+2024-05-28 08:38:14.334185: Current learning rate: 0.00096 
+2024-05-28 08:39:03.506589: train_loss -0.7105 
+2024-05-28 08:39:03.507411: val_loss -0.3356 
+2024-05-28 08:39:03.507530: Pseudo dice [0.3586] 
+2024-05-28 08:39:03.507638: Epoch time: 49.17 s 
+2024-05-28 08:39:05.066651:  
+2024-05-28 08:39:05.066854: Epoch 43 
+2024-05-28 08:39:05.066986: Current learning rate: 0.00085 
+2024-05-28 08:39:55.049996: train_loss -0.709 
+2024-05-28 08:39:55.050769: val_loss -0.4405 
+2024-05-28 08:39:55.050898: Pseudo dice [0.4716] 
+2024-05-28 08:39:55.051005: Epoch time: 49.98 s 
+2024-05-28 08:39:56.585236:  
+2024-05-28 08:39:56.585523: Epoch 44 
+2024-05-28 08:39:56.585662: Current learning rate: 0.00074 
+2024-05-28 08:40:46.341514: train_loss -0.7124 
+2024-05-28 08:40:46.342326: val_loss -0.4288 
+2024-05-28 08:40:46.342481: Pseudo dice [0.4643] 
+2024-05-28 08:40:46.342589: Epoch time: 49.76 s 
+2024-05-28 08:40:47.885717:  
+2024-05-28 08:40:47.885923: Epoch 45 
+2024-05-28 08:40:47.886048: Current learning rate: 0.00063 
+2024-05-28 08:41:35.080675: train_loss -0.721 
+2024-05-28 08:41:35.081568: val_loss -0.4436 
+2024-05-28 08:41:35.081742: Pseudo dice [0.4699] 
+2024-05-28 08:41:35.081849: Epoch time: 47.2 s 
+2024-05-28 08:41:36.609418:  
+2024-05-28 08:41:36.609626: Epoch 46 
+2024-05-28 08:41:36.609959: Current learning rate: 0.00051 
+2024-05-28 08:42:23.749687: train_loss -0.7347 
+2024-05-28 08:42:23.750511: val_loss -0.4121 
+2024-05-28 08:42:23.750632: Pseudo dice [0.4431] 
+2024-05-28 08:42:23.750744: Epoch time: 47.14 s 
+2024-05-28 08:42:25.293538:  
+2024-05-28 08:42:25.293736: Epoch 47 
+2024-05-28 08:42:25.293862: Current learning rate: 0.0004 
+2024-05-28 08:43:13.150397: train_loss -0.7336 
+2024-05-28 08:43:13.151371: val_loss -0.4514 
+2024-05-28 08:43:13.151500: Pseudo dice [0.4931] 
+2024-05-28 08:43:13.151607: Epoch time: 47.86 s 
+2024-05-28 08:43:14.692870:  
+2024-05-28 08:43:14.693499: Epoch 48 
+2024-05-28 08:43:14.693666: Current learning rate: 0.00028 
+2024-05-28 08:44:04.416126: train_loss -0.7419 
+2024-05-28 08:44:04.416900: val_loss -0.446 
+2024-05-28 08:44:04.417024: Pseudo dice [0.4848] 
+2024-05-28 08:44:04.417130: Epoch time: 49.72 s 
+2024-05-28 08:44:04.417215: Yayy! New best EMA pseudo Dice: 0.4519 
+2024-05-28 08:44:06.444228:  
+2024-05-28 08:44:06.444445: Epoch 49 
+2024-05-28 08:44:06.444619: Current learning rate: 0.00015 
+2024-05-28 08:44:56.892877: train_loss -0.7527 
+2024-05-28 08:44:56.893650: val_loss -0.4275 
+2024-05-28 08:44:56.893814: Pseudo dice [0.4696] 
+2024-05-28 08:44:56.893928: Epoch time: 50.45 s 
+2024-05-28 08:44:56.894020: Yayy! New best EMA pseudo Dice: 0.4536 
+2024-05-28 08:44:59.097479: Training done. 
+2024-05-28 08:44:59.298279: Using splits from existing split file: /scratch-local/ljulius.6404192/nnUNet_preprocessed/Dataset501_RadboudumcBone/splits_final.json 
+2024-05-28 08:44:59.328457: The split file contains 5 splits. 
+2024-05-28 08:44:59.328592: Desired fold for training: 0 
+2024-05-28 08:44:59.328663: This split has 557 training and 140 validation cases. 
+2024-05-28 08:44:59.330320: predicting bone_00002_lesion_01 
+2024-05-28 08:44:59.355120: bone_00002_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:45:02.943462: predicting bone_00002_lesion_05 
+2024-05-28 08:45:02.960985: bone_00002_lesion_05, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:45:05.937018: predicting bone_00018_lesion_01 
+2024-05-28 08:45:05.959154: bone_00018_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:45:08.969993: predicting bone_00020_lesion_03 
+2024-05-28 08:45:08.986733: bone_00020_lesion_03, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:45:12.005401: predicting bone_00030_lesion_01 
+2024-05-28 08:45:12.023057: bone_00030_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:45:14.978841: predicting bone_00078_lesion_01 
+2024-05-28 08:45:14.996850: bone_00078_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:45:17.950269: predicting bone_00110_lesion_02 
+2024-05-28 08:45:17.968803: bone_00110_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:45:20.966897: predicting bone_00131_lesion_03 
+2024-05-28 08:45:20.984627: bone_00131_lesion_03, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:45:23.973952: predicting bone_00143_lesion_07 
+2024-05-28 08:45:23.991425: bone_00143_lesion_07, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:45:26.997277: predicting bone_00143_lesion_08 
+2024-05-28 08:45:27.080929: bone_00143_lesion_08, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:45:30.034089: predicting bone_00143_lesion_09 
+2024-05-28 08:45:30.052554: bone_00143_lesion_09, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:45:33.015273: predicting bone_00147_lesion_02 
+2024-05-28 08:45:33.032522: bone_00147_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:45:35.986509: predicting bone_00149_lesion_03 
+2024-05-28 08:45:36.046890: bone_00149_lesion_03, shape torch.Size([1, 104, 256, 167]), rank 0 
+2024-05-28 08:45:38.455197: predicting bone_00194_lesion_03 
+2024-05-28 08:45:38.551709: bone_00194_lesion_03, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:45:41.507759: predicting bone_00194_lesion_07 
+2024-05-28 08:45:41.525710: bone_00194_lesion_07, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:45:44.499272: predicting bone_00198_lesion_09 
+2024-05-28 08:45:44.668937: bone_00198_lesion_09, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:45:47.621824: predicting bone_00203_lesion_02 
+2024-05-28 08:45:47.742586: bone_00203_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:45:50.701783: predicting bone_00203_lesion_11 
+2024-05-28 08:45:50.828197: bone_00203_lesion_11, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:45:53.784515: predicting bone_00209_lesion_01 
+2024-05-28 08:45:53.865715: bone_00209_lesion_01, shape torch.Size([1, 116, 256, 256]), rank 0 
+2024-05-28 08:45:56.542857: predicting bone_00209_lesion_05 
+2024-05-28 08:45:56.560507: bone_00209_lesion_05, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:45:59.514441: predicting bone_00209_lesion_09 
+2024-05-28 08:45:59.603997: bone_00209_lesion_09, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:46:02.574183: predicting bone_00209_lesion_13 
+2024-05-28 08:46:02.705845: bone_00209_lesion_13, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:46:05.664578: predicting bone_00217_lesion_04 
+2024-05-28 08:46:05.682948: bone_00217_lesion_04, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:46:08.722889: predicting bone_00217_lesion_05 
+2024-05-28 08:46:08.878165: bone_00217_lesion_05, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:46:11.829561: predicting bone_00217_lesion_06 
+2024-05-28 08:46:11.949620: bone_00217_lesion_06, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:46:14.871975: predicting bone_00222_lesion_01 
+2024-05-28 08:46:14.889704: bone_00222_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:46:17.821865: predicting bone_00222_lesion_03 
+2024-05-28 08:46:17.840096: bone_00222_lesion_03, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:46:20.859616: predicting bone_00222_lesion_04 
+2024-05-28 08:46:21.016475: bone_00222_lesion_04, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:46:23.970135: predicting bone_00222_lesion_09 
+2024-05-28 08:46:23.988010: bone_00222_lesion_09, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:46:27.065200: predicting bone_00222_lesion_15 
+2024-05-28 08:46:27.083900: bone_00222_lesion_15, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:46:30.039061: predicting bone_00222_lesion_19 
+2024-05-28 08:46:30.118306: bone_00222_lesion_19, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:46:33.043695: predicting bone_00223_lesion_09 
+2024-05-28 08:46:33.119876: bone_00223_lesion_09, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:46:36.057191: predicting bone_00223_lesion_10 
+2024-05-28 08:46:36.193333: bone_00223_lesion_10, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:46:39.168596: predicting bone_00223_lesion_14 
+2024-05-28 08:46:39.279317: bone_00223_lesion_14, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:46:42.206353: predicting bone_00228_lesion_12 
+2024-05-28 08:46:42.312155: bone_00228_lesion_12, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:46:45.235052: predicting bone_00229_lesion_04 
+2024-05-28 08:46:45.345946: bone_00229_lesion_04, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:46:48.271138: predicting bone_00233_lesion_02 
+2024-05-28 08:46:48.379720: bone_00233_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:46:51.301192: predicting bone_00238_lesion_01 
+2024-05-28 08:46:51.446335: bone_00238_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:46:54.363059: predicting bone_00240_lesion_02 
+2024-05-28 08:46:54.453832: bone_00240_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:46:57.384146: predicting bone_00245_lesion_01 
+2024-05-28 08:46:57.492960: bone_00245_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:47:00.461564: predicting bone_00245_lesion_02 
+2024-05-28 08:47:00.539335: bone_00245_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:47:03.467988: predicting bone_00245_lesion_03 
+2024-05-28 08:47:03.569191: bone_00245_lesion_03, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:47:06.514967: predicting bone_00261_lesion_02 
+2024-05-28 08:47:06.702416: bone_00261_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:47:09.620113: predicting bone_00261_lesion_05 
+2024-05-28 08:47:09.789780: bone_00261_lesion_05, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:47:12.737998: predicting bone_00273_lesion_05 
+2024-05-28 08:47:12.814227: bone_00273_lesion_05, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:47:15.804185: predicting bone_00273_lesion_09 
+2024-05-28 08:47:15.821661: bone_00273_lesion_09, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:47:18.812768: predicting bone_00273_lesion_15 
+2024-05-28 08:47:18.902149: bone_00273_lesion_15, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:47:21.876779: predicting bone_00283_lesion_02 
+2024-05-28 08:47:21.936719: bone_00283_lesion_02, shape torch.Size([1, 69, 256, 256]), rank 0 
+2024-05-28 08:47:23.541664: predicting bone_00292_lesion_02 
+2024-05-28 08:47:23.654339: bone_00292_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:47:26.569155: predicting bone_00292_lesion_03 
+2024-05-28 08:47:26.716238: bone_00292_lesion_03, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:47:29.673431: predicting bone_00293_lesion_01 
+2024-05-28 08:47:29.691254: bone_00293_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:47:32.803414: predicting bone_00298_lesion_02 
+2024-05-28 08:47:32.884205: bone_00298_lesion_02, shape torch.Size([1, 128, 256, 244]), rank 0 
+2024-05-28 08:47:35.873229: predicting bone_00298_lesion_04 
+2024-05-28 08:47:36.010110: bone_00298_lesion_04, shape torch.Size([1, 118, 256, 256]), rank 0 
+2024-05-28 08:47:38.735103: predicting bone_00298_lesion_06 
+2024-05-28 08:47:38.847250: bone_00298_lesion_06, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:47:41.788624: predicting bone_00298_lesion_12 
+2024-05-28 08:47:41.889887: bone_00298_lesion_12, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:47:44.839195: predicting bone_00299_lesion_03 
+2024-05-28 08:47:44.977012: bone_00299_lesion_03, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:47:47.934167: predicting bone_00299_lesion_04 
+2024-05-28 08:47:48.064481: bone_00299_lesion_04, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:47:51.045279: predicting bone_00299_lesion_06 
+2024-05-28 08:47:51.140090: bone_00299_lesion_06, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:47:54.109269: predicting bone_00299_lesion_07 
+2024-05-28 08:47:54.197562: bone_00299_lesion_07, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:47:57.160391: predicting bone_00302_lesion_01 
+2024-05-28 08:47:57.295227: bone_00302_lesion_01, shape torch.Size([1, 103, 256, 256]), rank 0 
+2024-05-28 08:47:59.687769: predicting bone_00309_lesion_04 
+2024-05-28 08:48:00.122568: bone_00309_lesion_04, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:48:03.095017: predicting bone_00316_lesion_03 
+2024-05-28 08:48:03.247085: bone_00316_lesion_03, shape torch.Size([1, 128, 256, 220]), rank 0 
+2024-05-28 08:48:06.205530: predicting bone_00316_lesion_06 
+2024-05-28 08:48:06.309837: bone_00316_lesion_06, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:48:09.271780: predicting bone_00316_lesion_10 
+2024-05-28 08:48:09.422946: bone_00316_lesion_10, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:48:12.327483: predicting bone_00316_lesion_13 
+2024-05-28 08:48:12.486727: bone_00316_lesion_13, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:48:15.380487: predicting bone_00346_lesion_14 
+2024-05-28 08:48:15.466254: bone_00346_lesion_14, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:48:18.374700: predicting bone_00374_lesion_04 
+2024-05-28 08:48:18.579115: bone_00374_lesion_04, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:48:21.490211: predicting bone_00374_lesion_06 
+2024-05-28 08:48:21.582366: bone_00374_lesion_06, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:48:24.503927: predicting bone_00384_lesion_02 
+2024-05-28 08:48:24.667395: bone_00384_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:48:27.583100: predicting bone_00411_lesion_01 
+2024-05-28 08:48:27.791693: bone_00411_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:48:30.688769: predicting bone_00444_lesion_02 
+2024-05-28 08:48:30.806598: bone_00444_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:48:33.731132: predicting bone_00451_lesion_01 
+2024-05-28 08:48:33.850761: bone_00451_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:48:36.783404: predicting bone_00469_lesion_02 
+2024-05-28 08:48:36.930667: bone_00469_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:48:39.851060: predicting bone_00480_lesion_01 
+2024-05-28 08:48:39.942229: bone_00480_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:48:42.868004: predicting bone_00497_lesion_03 
+2024-05-28 08:48:42.975332: bone_00497_lesion_03, shape torch.Size([1, 91, 256, 256]), rank 0 
+2024-05-28 08:48:45.059022: predicting bone_00497_lesion_04 
+2024-05-28 08:48:45.189297: bone_00497_lesion_04, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:48:48.111762: predicting bone_00501_lesion_01 
+2024-05-28 08:48:48.246711: bone_00501_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:48:51.159412: predicting bone_00504_lesion_04 
+2024-05-28 08:48:51.228109: bone_00504_lesion_04, shape torch.Size([1, 128, 256, 241]), rank 0 
+2024-05-28 08:48:54.178417: predicting bone_00507_lesion_05 
+2024-05-28 08:48:54.315223: bone_00507_lesion_05, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:48:57.238664: predicting bone_00522_lesion_01 
+2024-05-28 08:48:57.386489: bone_00522_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:49:00.314892: predicting bone_00523_lesion_03 
+2024-05-28 08:49:00.478808: bone_00523_lesion_03, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:49:03.363446: predicting bone_00575_lesion_01 
+2024-05-28 08:49:03.525589: bone_00575_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:49:06.436252: predicting bone_00578_lesion_01 
+2024-05-28 08:49:06.573248: bone_00578_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:49:09.484849: predicting bone_00639_lesion_01 
+2024-05-28 08:49:09.541634: bone_00639_lesion_01, shape torch.Size([1, 128, 256, 219]), rank 0 
+2024-05-28 08:49:12.477202: predicting bone_00639_lesion_02 
+2024-05-28 08:49:12.554750: bone_00639_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:49:15.471687: predicting bone_00639_lesion_07 
+2024-05-28 08:49:15.650894: bone_00639_lesion_07, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:49:18.579744: predicting bone_00639_lesion_09 
+2024-05-28 08:49:18.713796: bone_00639_lesion_09, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:49:21.706918: predicting bone_00797_lesion_01 
+2024-05-28 08:49:21.910135: bone_00797_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:49:24.878695: predicting bone_00798_lesion_01 
+2024-05-28 08:49:25.047297: bone_00798_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:49:28.001676: predicting bone_00816_lesion_01 
+2024-05-28 08:49:28.169479: bone_00816_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:49:31.118130: predicting bone_00816_lesion_02 
+2024-05-28 08:49:31.278060: bone_00816_lesion_02, shape torch.Size([1, 128, 255, 256]), rank 0 
+2024-05-28 08:49:34.253903: predicting bone_00816_lesion_03 
+2024-05-28 08:49:34.382381: bone_00816_lesion_03, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:49:37.352831: predicting bone_00818_lesion_02 
+2024-05-28 08:49:37.512818: bone_00818_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:49:40.483373: predicting bone_00818_lesion_05 
+2024-05-28 08:49:40.637735: bone_00818_lesion_05, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:49:43.571467: predicting bone_00818_lesion_09 
+2024-05-28 08:49:43.698873: bone_00818_lesion_09, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:49:46.675869: predicting bone_00855_lesion_01 
+2024-05-28 08:49:46.805521: bone_00855_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:49:49.743083: predicting bone_00855_lesion_02 
+2024-05-28 08:49:49.909239: bone_00855_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:49:52.875609: predicting bone_00934_lesion_01 
+2024-05-28 08:49:53.045989: bone_00934_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:49:55.985531: predicting bone_01004_lesion_03 
+2024-05-28 08:49:56.166149: bone_01004_lesion_03, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:49:59.139792: predicting bone_01012_lesion_04 
+2024-05-28 08:49:59.275197: bone_01012_lesion_04, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:50:02.249263: predicting bone_01012_lesion_07 
+2024-05-28 08:50:02.358218: bone_01012_lesion_07, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:50:05.297377: predicting bone_01022_lesion_01 
+2024-05-28 08:50:05.475849: bone_01022_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:50:08.447207: predicting bone_01052_lesion_01 
+2024-05-28 08:50:08.583606: bone_01052_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:50:11.512854: predicting bone_01052_lesion_07 
+2024-05-28 08:50:11.737281: bone_01052_lesion_07, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:50:14.660401: predicting bone_01052_lesion_08 
+2024-05-28 08:50:14.777254: bone_01052_lesion_08, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:50:17.696761: predicting bone_01052_lesion_09 
+2024-05-28 08:50:18.015862: bone_01052_lesion_09, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:50:20.938532: predicting bone_01052_lesion_14 
+2024-05-28 08:50:21.035708: bone_01052_lesion_14, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:50:24.005740: predicting bone_01052_lesion_17 
+2024-05-28 08:50:24.189404: bone_01052_lesion_17, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:50:27.139096: predicting bone_01052_lesion_20 
+2024-05-28 08:50:27.340910: bone_01052_lesion_20, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:50:30.314347: predicting bone_01052_lesion_21 
+2024-05-28 08:50:30.422305: bone_01052_lesion_21, shape torch.Size([1, 84, 256, 212]), rank 0 
+2024-05-28 08:50:32.366859: predicting bone_01056_lesion_02 
+2024-05-28 08:50:32.510188: bone_01056_lesion_02, shape torch.Size([1, 128, 256, 238]), rank 0 
+2024-05-28 08:50:35.489133: predicting bone_01072_lesion_04 
+2024-05-28 08:50:35.596371: bone_01072_lesion_04, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:50:38.568102: predicting bone_01072_lesion_06 
+2024-05-28 08:50:38.713542: bone_01072_lesion_06, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:50:41.661520: predicting bone_01083_lesion_06 
+2024-05-28 08:50:41.864497: bone_01083_lesion_06, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:50:44.831338: predicting bone_01107_lesion_01 
+2024-05-28 08:50:45.117911: bone_01107_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:50:48.039739: predicting bone_01140_lesion_02 
+2024-05-28 08:50:48.239850: bone_01140_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:50:51.165781: predicting bone_01140_lesion_05 
+2024-05-28 08:50:51.297576: bone_01140_lesion_05, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:50:54.263257: predicting bone_01140_lesion_12 
+2024-05-28 08:50:54.395102: bone_01140_lesion_12, shape torch.Size([1, 126, 256, 256]), rank 0 
+2024-05-28 08:50:57.267261: predicting bone_01154_lesion_01 
+2024-05-28 08:50:57.434664: bone_01154_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:51:00.363206: predicting bone_01162_lesion_09 
+2024-05-28 08:51:00.537937: bone_01162_lesion_09, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:51:03.507724: predicting bone_01162_lesion_10 
+2024-05-28 08:51:03.657753: bone_01162_lesion_10, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:51:06.587953: predicting bone_01171_lesion_01 
+2024-05-28 08:51:06.818140: bone_01171_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:51:09.787934: predicting bone_01171_lesion_05 
+2024-05-28 08:51:09.914685: bone_01171_lesion_05, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:51:12.846509: predicting bone_01171_lesion_10 
+2024-05-28 08:51:13.089971: bone_01171_lesion_10, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:51:16.015069: predicting bone_01171_lesion_12 
+2024-05-28 08:51:16.147389: bone_01171_lesion_12, shape torch.Size([1, 105, 256, 204]), rank 0 
+2024-05-28 08:51:18.594561: predicting bone_01172_lesion_04 
+2024-05-28 08:51:18.730546: bone_01172_lesion_04, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:51:21.652898: predicting bone_01172_lesion_05 
+2024-05-28 08:51:21.885266: bone_01172_lesion_05, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:51:24.849488: predicting bone_01173_lesion_02 
+2024-05-28 08:51:24.991409: bone_01173_lesion_02, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:51:27.955952: predicting bone_01173_lesion_05 
+2024-05-28 08:51:28.100839: bone_01173_lesion_05, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:51:31.082289: predicting bone_01173_lesion_11 
+2024-05-28 08:51:31.209812: bone_01173_lesion_11, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:51:34.172829: predicting bone_01173_lesion_18 
+2024-05-28 08:51:34.403454: bone_01173_lesion_18, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:51:37.359837: predicting bone_01187_lesion_05 
+2024-05-28 08:51:37.459283: bone_01187_lesion_05, shape torch.Size([1, 124, 256, 256]), rank 0 
+2024-05-28 08:51:40.327153: predicting bone_01188_lesion_01 
+2024-05-28 08:51:40.444125: bone_01188_lesion_01, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:51:43.404009: predicting bone_01222_lesion_03 
+2024-05-28 08:51:43.551771: bone_01222_lesion_03, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:51:46.502864: predicting bone_01222_lesion_05 
+2024-05-28 08:51:46.605691: bone_01222_lesion_05, shape torch.Size([1, 95, 256, 256]), rank 0 
+2024-05-28 08:51:48.777594: predicting bone_01222_lesion_11 
+2024-05-28 08:51:48.915475: bone_01222_lesion_11, shape torch.Size([1, 93, 256, 256]), rank 0 
+2024-05-28 08:51:51.054734: predicting bone_01298_lesion_01 
+2024-05-28 08:51:51.171852: bone_01298_lesion_01, shape torch.Size([1, 128, 246, 256]), rank 0 
+2024-05-28 08:51:54.144320: predicting bone_01298_lesion_07 
+2024-05-28 08:51:54.272013: bone_01298_lesion_07, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:51:57.238328: predicting bone_01298_lesion_11 
+2024-05-28 08:51:57.432909: bone_01298_lesion_11, shape torch.Size([1, 128, 256, 256]), rank 0 
+2024-05-28 08:52:00.397279: predicting bone_01319_lesion_01 
+2024-05-28 08:52:00.568578: bone_01319_lesion_01, shape torch.Size([1, 115, 256, 247]), rank 0 
+2024-05-28 08:52:13.622969: Validation complete 
+2024-05-28 08:52:13.623157: Mean Validation Dice:  0.29690041490346925 
